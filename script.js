@@ -1,4 +1,4 @@
-// A-Level Business Past-Paper Style Database (AQA & Edexcel Aligned)
+// Expanded A-Level Business Database (AQA & Edexcel Aligned - Diversified Curriculum Topics)
 const quizData = [
     {
         topic: "Finance - Investment Appraisal",
@@ -27,6 +27,34 @@ const quizData = [
         question: "Using Ansoff's Matrix, explain the risk profile associated with a 'Diversification' strategy.",
         modelAnswer: "Diversification involves selling new products to entirely new markets. It carries the highest level of risk because the business has no prior experience or customer data in the new market and lacks familiarity with the new product lines.",
         reasoning: "Examiners look for clear definitions of both dimensions of Ansoff's matrix (products and markets) combined with a justification of why lack of operational experience multiplies financial exposure."
+    },
+    {
+        topic: "Operations - Capacity Utilization",
+        difficulty: "Medium",
+        question: "Calculate the capacity utilization if a factory produces 8,000 units per week out of a maximum possible output of 10,000 units per week.",
+        modelAnswer: "80% capacity utilization. Calculation: (Actual Output / Maximum Possible Output) * 100 -> (8,000 / 10,000) * 100 = 80%.",
+        reasoning: "Standard quantitative skill mark. Candidates must show the formula or correct working out followed by the correct percentage sign to secure full marks."
+    },
+    {
+        topic: "Finance - Working Capital",
+        difficulty: "Medium",
+        question: "Explain why a rapidly growing retail business might experience cash flow problems despite making strong profits.",
+        modelAnswer: "The business suffers from overtrading. As sales grow, it has to tie up working capital in purchasing larger inventories and extending trade credit to customers before receiving cash from them.",
+        reasoning: "Examiners award marks for distinguishing between profit (an accounting concept) and cash (actual liquidity), showing how working capital gets trapped in receivables and inventory."
+    },
+    {
+        topic: "Marketing - Brand & Promotion",
+        difficulty: "Easy",
+        question: "State two differences between above-the-line and below-the-line promotion.",
+        modelAnswer: "Above-the-line uses mass media advertising directed at a wide audience (e.g., TV, radio) where the business pays an independent media agency. Below-the-line uses direct, controlled promotional methods targeted at specific individuals (e.g., direct mail, sales promotions, loyalty cards).",
+        reasoning: "Direct definition question. 1 mark for identifying media type/reach and 1 mark for control or targeting differences."
+    },
+    {
+        topic: "Strategy - External Environment",
+        difficulty: "Hard",
+        question: "Analyze how a depreciation of the domestic currency (e.g., British Pound falling against the US Dollar) impacts a UK-based manufacturing business that imports raw materials from the USA.",
+        modelAnswer: "Costs of production will rise because raw materials priced in dollars become more expensive to buy in pounds, squeezing profit margins unless the business passes costs onto customers through higher prices.",
+        reasoning: "Requires application of the 'SPICED' economic concept (Strong Pound Imports Cheap, Exports Dear -> Weak Pound means opposite). Chain of analysis must link currency change to cost of goods sold and profit margins."
     }
 ];
 
