@@ -15,11 +15,32 @@
           "reasoning": "1 mark for formula, 2 marks for figures, 1 mark for the final percentage value."
         },
         {
+          "topic": "Finance",
+          "marks": 8,
+          "question": "Analyse the impact of poor working capital management on a growing construction firm.",
+          "modelAnswer": "Tied-up cash in unpaid customer invoices (trade receivables) can cause severe liquidity crises, preventing the firm from purchasing raw materials for ongoing projects.",
+          "reasoning": "2 marks for working capital definition, 3 marks for construction sector application, 3 marks for liquidity consequences."
+        },
+        {
+          "topic": "Finance",
+          "marks": 10,
+          "question": "Evaluate whether an investor should rely solely on Return on Capital Employed (ROCE) when assessing the financial performance of two competing retail chains.",
+          "modelAnswer": "ROCE measures efficiency in generating profit from capital invested, allowing direct comparison regardless of company size. However, it ignores cash flow health and uses historical balance sheet values.",
+          "reasoning": "Award 4 marks for analytical understanding, 4 marks for balanced limitations, and 2 marks for conclusion."
+        },
+        {
           "topic": "Operations",
           "marks": 6,
           "question": "Explain one advantage and one disadvantage of capacity utilization falling below 70% for a hotel chain.",
           "modelAnswer": "Advantage: More time for deep cleaning and maintenance. Disadvantage: Higher unit fixed costs per occupied room, reducing profit margins.",
           "reasoning": "2 marks for capacity concept understanding, 2 marks for advantage explanation, 2 marks for disadvantage explanation."
+        },
+        {
+          "topic": "Operations",
+          "marks": 10,
+          "question": "Evaluate whether outsourcing manufacturing operations to low-cost overseas economies is always a successful long-term operational strategy.",
+          "modelAnswer": "Outsourcing drastically reduces direct unit labor costs and frees up capital. However, it can extend lead times, increase supply chain vulnerability to geopolitical shocks, and risk brand reputation if labor standards are compromised.",
+          "reasoning": "Award 4 marks for strategic knowledge, 4 marks for operational trade-offs, and 2 marks for evaluation."
         }
       ]
     }
