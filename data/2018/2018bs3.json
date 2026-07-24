@@ -13,6 +13,20 @@
           "question": "Evaluate whether corporate social responsibility (CSR) initiatives always lead to long-term profitability for a global clothing brand.",
           "modelAnswer": "CSR builds strong brand loyalty, ethical consumer support, and avoids PR scandals. However, ethical sourcing can significantly increase supply chain costs.",
           "reasoning": "Award up to 4 marks for knowledge and application, 4 marks for balanced analysis of pros and cons, and 4 marks for a reasoned evaluative conclusion."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 12,
+          "question": "Analyse and evaluate the potential impact of an economic recession on a luxury car manufacturer.",
+          "modelAnswer": "Luxury cars are income-elastic goods; during a recession, consumer disposable incomes drop sharply, causing disproportionately large falls in demand. Mitigation requires expanding into emerging international markets less affected by domestic downturns.",
+          "reasoning": "Award 4 marks for economic concepts, 4 marks for contextual application, and 4 marks for strategic evaluation."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 12,
+          "question": "Evaluate the strategic choices a traditional high-street bookstore faces when competing against online e-commerce giants like Amazon.",
+          "modelAnswer": "Physical bookstores cannot compete on price or breadth of inventory alone. They must pivot towards experiential strategies, such as hosting author events, in-store cafes, and personalized customer curation.",
+          "reasoning": "Award 4 marks for strategic alternatives analysis, 4 marks for balance, and 4 marks for final recommendation."
         }
       ]
     }
