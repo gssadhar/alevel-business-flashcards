@@ -2,17 +2,24 @@
   "year": "2017",
   "paper": "1",
   "reference": "9BS0/01",
-  "title": "Marketing, People and Global Businesses",
+  "title": "Marketing and People",
   "sections": [
     {
       "section": "Section A",
       "questions": [
         {
           "topic": "Marketing",
-          "marks": 4,
-          "question": "Calculate the percentage change in market share given a rise from 15% to 18%. Show your working.",
-          "modelAnswer": "Formula: ((New - Old) / Old) * 100 -> ((18 - 15) / 15) * 100 = 20%.",
-          "reasoning": "1 mark for correct formula, 1 mark for correct substitution, 1 mark for correct calculation, 1 mark for units (% or increase)."
+          "marks": 6,
+          "question": "Explain one benefit and one drawback of using secondary market research for a new coffee shop startup.",
+          "modelAnswer": "Benefit: It is cheap and quick to access existing data like Mintel reports. Drawback: The data may be out of date or not specific to the local target market.",
+          "reasoning": "2 marks for defining secondary research context, 2 marks for a clear benefit, 2 marks for a clear drawback."
+        },
+        {
+          "topic": "Human Resources",
+          "marks": 8,
+          "question": "Assess the impact of introducing piece-rate pay on the motivation and productivity of factory workers.",
+          "modelAnswer": "Piece-rate directly links pay to output, motivating workers to increase speed. However, it can compromise quality and create stress if machinery breaks down.",
+          "reasoning": "Award up to 2 marks for knowledge of piece rate, 2 marks for application, and 4 marks for balanced analysis."
         }
       ]
     }
