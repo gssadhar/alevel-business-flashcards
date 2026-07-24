@@ -2,17 +2,24 @@
   "year": "2018",
   "paper": "1",
   "reference": "9BS0/01",
-  "title": "Marketing, People and Global Businesses",
+  "title": "Marketing and People",
   "sections": [
     {
       "section": "Section A",
       "questions": [
         {
+          "topic": "Marketing",
+          "marks": 6,
+          "question": "Explain how a business might use dynamic pricing in the airline industry.",
+          "modelAnswer": "Dynamic pricing involves changing prices based on demand levels, time until departure, and seat availability to maximize total revenue.",
+          "reasoning": "2 marks for definition of dynamic pricing, 4 marks for context and application to airline booking behavior."
+        },
+        {
           "topic": "Human Resources",
-          "marks": 10,
-          "question": "Analyse the likely impact of high employee labor turnover on a retail business's operational efficiency.",
-          "modelAnswer": "High labor turnover results in constant recruitment costs and lost productivity while new staff are trained, disrupting workflow...",
-          "reasoning": "Award up to 2 marks for knowledge of labor turnover, 2 marks for application to retail, 3 marks for analysis of operational disruption."
+          "marks": 8,
+          "question": "Evaluate the importance of a low labor turnover rate for a call center business.",
+          "modelAnswer": "Low turnover reduces recruitment and training expenses, builds experienced staff expertise, and maintains customer service quality. However, retaining underperforming staff can stifle change.",
+          "reasoning": "Award up to 2 marks for knowledge of labor turnover, 2 marks for application, and 4 marks for evaluative conclusion."
         }
       ]
     }
