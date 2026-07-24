@@ -3,9 +3,14 @@ let currentTopic = '';
 let currentQuestionIndex = 0;
 let shuffledQuestions = [];
 
+// List all your past-paper JSON paths here
 const paperFiles = [
     'data/2017/2017bs1.json',
-    'data/2018/2018bs1.json'
+    'data/2017/2017bs2.json',
+    'data/2017/2017bs3.json',
+    'data/2018/2018bs1.json',
+    'data/2018/2018bs2.json',
+    'data/2018/2018bs3.json'
 ];
 
 async function loadQuestionData() {
@@ -67,7 +72,7 @@ function renderDashboard() {
     
     const topics = Object.keys(questionDatabase);
     if (topics.length === 0) {
-        grid.innerHTML = `<p class="text-slate-500 text-sm col-span-2 text-center">No questions found.</p>`;
+        grid.innerHTML = `<p class="text-slate-500 text-sm col-span-2 text-center">No questions found. Please check your JSON files.</p>`;
         return;
     }
 
@@ -120,8 +125,8 @@ function loadQuestion() {
 
 function checkAnswer() {
     const q = shuffledQuestions[currentQuestionIndex];
-    document.getElementById('model-answer-text').innerText = q.modelAnswer || q.indicativeContent || "Refer to official Edexcel mark scheme guidelines.";
-    document.getElementById('reasoning-text').innerText = q.reasoning || q.examinerAdvice || "Apply context from the extracts to achieve Level 4/5 marks.";
+    document.getElementById('model-answer-text').innerText = q.modelAnswer || q.indicativeContent || "Refer to official mark scheme guidelines.";
+    document.getElementById('reasoning-text').innerText = q.reasoning || q.examinerAdvice || "Apply context from the extracts to achieve top-band marks.";
     
     document.getElementById('submit-btn').classList.add('hidden');
     document.getElementById('feedback-section').classList.remove('hidden');
