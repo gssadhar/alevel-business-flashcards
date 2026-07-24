@@ -15,11 +15,32 @@
           "reasoning": "2 marks for defining secondary research context, 2 marks for a clear benefit, 2 marks for a clear drawback."
         },
         {
+          "topic": "Marketing",
+          "marks": 8,
+          "question": "Analyse how a local boutique hotel might use market segmentation to target high-income couples.",
+          "modelAnswer": "The hotel can use demographic and lifestyle segmentation to tailor luxury weekend spa packages, high-end dining promotions, and personalized customer service.",
+          "reasoning": "2 marks for knowledge of market segmentation, 3 marks for application to a hotel, 3 marks for analysis of impact."
+        },
+        {
+          "topic": "Marketing",
+          "marks": 10,
+          "question": "Evaluate whether building a strong brand is more important than offering the lowest price for a smartphone manufacturer.",
+          "modelAnswer": "Branding creates customer loyalty, premium pricing power, and product differentiation. However, in saturated tech markets, budget-conscious consumers often prioritize low price over brand prestige.",
+          "reasoning": "Award 4 marks for knowledge and application, 4 marks for balanced analysis, and 2 marks for a reasoned conclusion."
+        },
+        {
           "topic": "Human Resources",
           "marks": 8,
           "question": "Assess the impact of introducing piece-rate pay on the motivation and productivity of factory workers.",
           "modelAnswer": "Piece-rate directly links pay to output, motivating workers to increase speed. However, it can compromise quality and create stress if machinery breaks down.",
           "reasoning": "Award up to 2 marks for knowledge of piece rate, 2 marks for application, and 4 marks for balanced analysis."
+        },
+        {
+          "topic": "Human Resources",
+          "marks": 10,
+          "question": "Evaluate the view that non-financial motivators are more effective than financial incentives for retaining software engineers in a tech firm.",
+          "modelAnswer": "Non-financial motivators like flexible working, job enrichment, and autonomy foster long-term job satisfaction. Financial incentives provide short-term attraction but may not prevent burnout.",
+          "reasoning": "Award 4 marks for knowledge and application, 4 marks for balanced evaluation, and 2 marks for a final judgment."
         }
       ]
     }
