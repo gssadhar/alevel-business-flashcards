@@ -1,0 +1,20 @@
+{
+  "year": "2018",
+  "paper": "1",
+  "reference": "9BS0/01",
+  "title": "Marketing, People and Global Businesses",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Human Resources",
+          "marks": 10,
+          "question": "Analyse the likely impact of high employee labor turnover on a retail business's operational efficiency.",
+          "modelAnswer": "High labor turnover results in constant recruitment costs and lost productivity while new staff are trained, disrupting workflow...",
+          "reasoning": "Award up to 2 marks for knowledge of labor turnover, 2 marks for application to retail, 3 marks for analysis of operational disruption."
+        }
+      ]
+    }
+  ]
+}
