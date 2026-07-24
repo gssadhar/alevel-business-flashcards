@@ -44,5 +44,73 @@
         }
       ]
     }
-  ]
+  ],
+  "topics": {
+    "Marketing": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Percentage growth calculation",
+        "marks": 4,
+        "text": "Using the data from Extract A and the information above, calculate the difference in percentage growth in air passenger numbers between 2015 and 2016. You are advised to show your working."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Supply and demand diagram",
+        "marks": 4,
+        "text": "Using the data from Extract B, draw a supply and demand diagram for airline tickets to show the likely effects of the change in jet fuel prices between 2014 and 2015."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Online-only ticket sales consequences",
+        "marks": 10,
+        "text": "Assess the consequences to a business, such as Spirit Airlines, of only selling its tickets online."
+      },
+      {
+        "question_number": "1 (d)",
+        "topic": "Market positioning",
+        "marks": 12,
+        "text": "Assess the likely importance of its market positioning to the success of a business, such as Emirates."
+      },
+      {
+        "question_number": "2 (a)",
+        "topic": "Price skimming",
+        "marks": 4,
+        "text": "Explain how Pfizer could benefit from using a price skimming strategy."
+      }
+    ],
+    "Managing People": [
+      {
+        "question_number": "1 (e)",
+        "topic": "Organisational structures (tall vs flat)",
+        "marks": 20,
+        "text": "Despite Warren East's restructuring, Rolls-Royce still has a 'tall' organisational structure. Two options for the future of Rolls-Royce are to remain as a tall structure or to change to a flat organisational structure. Evaluate these two options and recommend which is most suitable for a business, such as Rolls-Royce."
+      }
+    ],
+    "Global Business & International Trade": [
+      {
+        "question_number": "2 (b)",
+        "topic": "Corporation tax savings calculation",
+        "marks": 4,
+        "text": "Using the data in Extracts E and F, calculate the amount Pfizer would have saved in 2014 if it had paid corporation tax in Ireland, rather than the USA. You are advised to show your working."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Specialisation in international trade",
+        "marks": 10,
+        "text": "Assess the ways in which specialisation might give a business, such as Pfizer, a competitive advantage when trading internationally."
+      },
+      {
+        "question_number": "2 (d)",
+        "topic": "Global mergers and acquisitions",
+        "marks": 12,
+        "text": "Assess the likely impact on a business such as Pfizer, of a global merger with a business such as Allergan."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Multinationals and economic impact / Government support",
+        "marks": 20,
+        "text": "The government of Ireland supports the location of multinationals, such as Pfizer, in their country if this benefits the local and national economy overall. Evaluate the likely impacts on the Irish economy of Pfizer locating there and recommend if the Irish government should have supported this decision or not."
+      }
+    ]
+  }
 }
