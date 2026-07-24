@@ -25,7 +25,7 @@
         <div id="dashboard-view" class="space-y-6">
             <div class="text-center space-y-2">
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Select a Topic to Revise</h2>
-                <p class="text-sm text-slate-500">Choose a section below to target your weaker areas with A-Level past paper questions.</p>
+                <p class="text-sm text-slate-500">Choose a section below to target your weaker areas with 30+ past-paper questions per topic.</p>
             </div>
             
             <div id="topics-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
@@ -37,7 +37,7 @@
         <div id="quiz-view" class="hidden">
             <div class="flex justify-between items-center mb-3">
                 <span id="card-topic" class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Topic</span>
-                <span id="progress-badge" class="bg-indigo-100 text-indigo-700 text-xs px-3 py-1 rounded-full font-semibold">Question 1 of 5</span>
+                <span id="progress-badge" class="bg-indigo-100 text-indigo-700 text-xs px-3 py-1 rounded-full font-semibold">Question 1 of 30</span>
             </div>
 
             <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-slate-100">
@@ -74,7 +74,7 @@
         A-Level Business Studies Revision Platform &bull; Powered by GitHub Pages
     </footer>
 
-    <!-- Massive Expanded Question Database -->
+    <!-- Comprehensive 150+ Question Database (30+ per topic across Easy/Medium/Hard) -->
     <script>
         const questionDatabase = {
             "Marketing": [
@@ -107,6 +107,156 @@
                     question: "Distinguish between market orientation and product orientation.",
                     modelAnswer: "Market orientation focuses heavily on conducting consumer market research to identify and meet customer needs. Product orientation focuses primarily on internal production capabilities and the quality of the product itself rather than consumer demand.",
                     reasoning: "Clear contrasting definitions. 1 mark for customer focus/research and 1 mark for internal engineering/product focus."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define the term 'market segmentation'.",
+                    modelAnswer: "Market segmentation is the process of dividing a broad target market into smaller, identifiable sub-groups of consumers with shared characteristics, needs, or behaviors.",
+                    reasoning: "Straightforward knowledge recall (AO1). Must identify the division of a market and the common grouping factors."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain one benefit of primary market research over secondary market research.",
+                    modelAnswer: "Primary research is collected first-hand directly from the target market, meaning it is completely up-to-date and tailored specifically to the exact questions or problems the business needs answered.",
+                    reasoning: "Award marks for identifying exclusivity/customization and currency of data compared to pre-existing secondary sources."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate whether penetration pricing is more effective than skimming pricing when launching a completely new technological gadget.",
+                    modelAnswer: "Penetration pricing sets a low initial price to capture mass market share quickly, which works well if demand is elastic and competition is high. Skimming sets a high price initially to recoup high R&D costs from early adopters, best used for unique, innovative products with inelastic demand.",
+                    reasoning: "Requires a balanced evaluative judgment considering R&D recovery, elasticity, competitive rivalry, and brand positioning."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two methods of demographic market segmentation.",
+                    modelAnswer: "Age and gender (other valid answers include income, social class, ethnicity, or family size).",
+                    reasoning: "Direct recall of segmentation variables."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how Income Elasticity of Demand (YED) differs for inferior goods compared to normal goods.",
+                    modelAnswer: "Normal goods have a positive YED, meaning demand rises as consumer incomes rise. Inferior goods have a negative YED, meaning demand falls as consumer incomes rise because consumers switch to better alternatives.",
+                    reasoning: "Requires clear theoretical understanding of consumer income behavior and mathematical sign distinction."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the potential marketing risks of relying heavily on social media influencers for promotion.",
+                    modelAnswer: "Relying on influencers exposes a brand to reputational damage if the influencer behaves unethically or faces a public scandal, instantly transferring negative public perception onto the endorsed brand.",
+                    reasoning: "Chain of analysis: Influencer scandal -> public backlash -> association with brand -> loss of consumer trust and plummeting sales."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "What is meant by a 'brand'?",
+                    modelAnswer: "A brand is a name, term, sign, symbol, design, or combination of these intended to identify the goods or services of one seller and differentiate them from those of competitors.",
+                    reasoning: "Standard definition question. Focus on differentiation and unique identity."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why niche marketing can allow smaller businesses to charge higher profit margins.",
+                    modelAnswer: "Niche marketing targets a specific, specialized segment with unique requirements. Because larger competitors often ignore these small segments, customers are willing to pay premium prices for specialized solutions.",
+                    reasoning: "Chain of analysis: Specialized focus -> lack of direct mass-market competition -> perceived unique value -> higher pricing power."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the usefulness of the Boston Matrix in managing a multi-product firm's portfolio.",
+                    modelAnswer: "The Boston Matrix categorizes products into Cash Cows, Stars, Question Marks, and Dogs based on market share and market growth, helping management allocate cash flow efficiently. However, it is overly simplistic and ignores complex external market dynamics.",
+                    reasoning: "Full evaluation balances strategic resource allocation benefits against the limitation of reducing complex portfolio analysis to a simple 2x2 grid."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two elements of the marketing mix (the 4 Ps).",
+                    modelAnswer: "Product and Price (Promotion and Place are also correct).",
+                    reasoning: "Direct recall of McCarthy's 4 Ps."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Calculate the percentage change in sales volume if a firm's sales increase from 40,000 units to 46,000 units.",
+                    modelAnswer: "15% increase. Calculation: ((46,000 - 40,000) / 40,000) * 100 = (6,000 / 40,000) * 100 = 15%.",
+                    reasoning: "Quantitative skills assessment. Correct formula utilization (change / original * 100) and calculation steps."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the impact of an economic recession on the sales volume of inferior goods.",
+                    modelAnswer: "During a recession, general consumer incomes fall, causing demand for inferior goods to actually increase as budget-conscious consumers substitute expensive branded goods for cheaper generic alternatives.",
+                    reasoning: "Chain of analysis: Economic downturn -> disposable incomes drop -> substitution effect towards low-cost goods -> sales volume of inferior goods rises."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'test marketing'.",
+                    modelAnswer: "Test marketing involves launching a new product in a small, restricted geographical market before a full-scale national or global rollout to test consumer reaction.",
+                    reasoning: "Basic marketing terminology recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how public relations (PR) differs from advertising.",
+                    modelAnswer: "Advertising involves paid placement of messages through mass media channels where the business maintains full creative control. PR focuses on building positive public relations and earned media coverage through press releases, sponsorships, and events without direct ad space payment.",
+                    reasoning: "Contrasting control, payment model, and credibility mechanisms."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Discuss whether multinational corporations should adopt a global marketing strategy or a localized marketing strategy.",
+                    modelAnswer: "A global strategy achieves significant economies of scale and uniform brand identity. However, a localized (multidomestic) strategy adapts the marketing mix to cultural, legal, and linguistic nuances, yielding higher customer relevance and conversion rates.",
+                    reasoning: "Balanced evaluation weighing cost efficiencies of standardization against revenue benefits of cultural adaptation."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State what is meant by 'dynamic pricing'.",
+                    modelAnswer: "Dynamic pricing is a pricing strategy where businesses flexibly adjust prices based on real-time market demand and supply fluctuations (e.g., airline tickets or ride-sharing apps).",
+                    reasoning: "Clear conceptual definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Analyze why a business might conduct qualitative market research rather than quantitative research.",
+                    modelAnswer: "Qualitative research explores consumer attitudes, motivations, and underlying opinions in-depth through focus groups or interviews, uncovering *why* consumers behave a certain way rather than just the numerical *what*.",
+                    reasoning: "Chain of analysis: Focus on deep psychological insights -> better understanding of emotional drivers -> enhanced product design or branding decisions."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the effectiveness of viral marketing campaigns for start-up businesses.",
+                    modelAnswer: "Viral marketing can achieve massive brand awareness rapidly at very low financial cost due to organic user sharing. However, it is unpredictable, difficult to control, and may generate high visibility without converting into actual long-term sales revenue.",
+                    reasoning: "Balanced assessment of low-cost exponential reach versus high uncertainty and risk of message distortion."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Identify two features of industrial (B2B) marketing compared to consumer (B2C) marketing.",
+                    modelAnswer: "B2B involves fewer buyers, higher transaction values, and longer sales cycles (any two valid points).",
+                    reasoning: "Knowledge recall comparing business-to-business and business-to-consumer characteristics."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how customer relationship management (CRM) systems can improve marketing efficiency.",
+                    modelAnswer: "CRM systems track customer purchase histories, preferences, and interactions centrally, enabling businesses to run highly targeted, personalized email and promotional campaigns that boost customer retention.",
+                    reasoning: "Chain of analysis: Data centralization -> targeted segmentation -> tailored communications -> higher customer lifetime value (LTV)."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic implications of high brand loyalty in an oligopolistic market.",
+                    modelAnswer: "High brand loyalty creates strong barriers to entry and makes demand price inelastic for existing firms, allowing them to engage in non-price competition and maintain high profit margins without risking severe customer loss.",
+                    reasoning: "Chain of analysis: Loyal customer base -> lower cross-price elasticity -> pricing power and insulated market share against rival price wars."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define the term 'loss leader'.",
+                    modelAnswer: "A loss leader is a pricing tactic where a product is priced below its cost of production to attract customers into a store or website in the hope they will purchase other profitable items.",
+                    reasoning: "Standard business definition recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why packaging can act as a crucial 'silent salesperson' in retail environments.",
+                    modelAnswer: "In self-service retail environments, packaging design, color schemes, and labeling communicate product quality, brand values, and key features directly to shoppers at the point of purchase.",
+                    reasoning: "Chain of analysis: Visual appeal on shelves -> captures consumer attention -> influences impulse buying decisions without direct sales staff intervention."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the use of ethical marketing as a long-term competitive strategy.",
+                    modelAnswer: "Ethical marketing builds deep consumer trust, enhances brand reputation, and attracts ethically conscious segments, leading to strong long-term loyalty. However, it can involve higher operational compliance costs and risks severe brand damage if ethical claims are perceived as greenwashing.",
+                    reasoning: "Comprehensive evaluation balancing brand equity and loyalty gains against cost burdens and public scrutiny risks."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two methods of direct marketing.",
+                    modelAnswer: "Direct mail and telemarketing (or email marketing / text message marketing).",
+                    reasoning: "Basic promotional channel recall."
                 }
             ],
             "Finance": [
@@ -139,6 +289,156 @@
                     question: "Analyze the impact of a high gearing ratio on a business during a period of rising interest rates.",
                     modelAnswer: "A high gearing ratio means the business relies heavily on long-term debt. When interest rates rise, loan repayments and interest expenses increase significantly, squeezing net profit and creating liquidity risks.",
                     reasoning: "Chain of analysis: High debt -> rate hikes increase finance costs -> profit before tax falls -> higher risk of default or inability to pay dividends."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define the term 'working capital'.",
+                    modelAnswer: "Working capital is the day-to-day finance needed to run a business, calculated as Current Assets minus Current Liabilities.",
+                    reasoning: "Core accounting definition recall (AO1)."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Calculate the net profit if a business has revenues of $500,000, cost of sales of $200,000, and total expenses of $180,000.",
+                    modelAnswer: "$120,000. Gross Profit = $500,000 - $200,000 = $300,000. Net Profit = $300,000 - $180,000 = $120,000.",
+                    reasoning: "Standard quantitative calculation covering gross profit deduction followed by operating/total expense subtraction."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the limitations of using historical financial statements to forecast future business performance.",
+                    modelAnswer: "Historical accounts reflect past results under past market conditions and do not account for sudden changes in external macro environments, technological disruption, or shifting competitor strategies.",
+                    reasoning: "Chain of analysis: Past data assumes trend continuation -> market volatility or disruption occurs -> forecasts become inaccurate, leading to poor strategic planning."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two sources of internal finance.",
+                    modelAnswer: "Retained profit and the sale of fixed assets (or owner's capital / working capital reduction).",
+                    reasoning: "Direct recall of internal capital sources."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how trade credit works as a source of short-term finance.",
+                    modelAnswer: "Trade credit allows a business to purchase supplies or raw materials from a supplier immediately and defer payment for an agreed period (e.g., 30 to 90 days), preserving short-term cash flow.",
+                    reasoning: "Award marks for identifying delayed payment terms and the conservation of immediate liquidity."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate whether issuing shares (equity finance) is better than taking out a bank loan (debt finance) for a growing public limited company.",
+                    modelAnswer: "Issuing shares does not require interest repayments and permanently strengthens the equity base, but dilutes ownership control and EPS. Debt finance preserves ownership control and interest is tax-deductible, but increases gearing and mandatory fixed repayment obligations.",
+                    reasoning: "Comprehensive evaluation balancing control dilution and gearing risk against interest burdens and repayment safety."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'break-even point'.",
+                    modelAnswer: "The break-even point is the level of output where total revenues equal total costs, meaning the business makes neither a profit nor a loss.",
+                    reasoning: "Standard financial terminology definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Calculate the break-even output if fixed costs are $40,000, selling price per unit is $20, and variable cost per unit is $12.",
+                    modelAnswer: "5,000 units. Calculation: Fixed Costs / Contribution per unit -> $40,000 / ($20 - $12) = $40,000 / $8 = 5,000 units.",
+                    reasoning: "Quantitative formula application covering contribution calculation and fixed cost division."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic usefulness of variance analysis for budget management.",
+                    modelAnswer: "Variance analysis compares actual financial outcomes against budgeted figures, allowing managers to identify favorable or adverse deviations quickly and take corrective operational action.",
+                    reasoning: "Chain of analysis: Budget tracking -> variance detected (e.g., higher material costs) -> investigation into root cause -> management intervention to control expenditure."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two external stakeholders who analyze a company's published accounts.",
+                    modelAnswer: "Banks/creditors and shareholders/investors (or tax authorities, competitors, customers).",
+                    reasoning: "Stakeholder identification recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain the difference between capital expenditure and revenue expenditure.",
+                    modelAnswer: "Capital expenditure is spending on long-term fixed assets (e.g., machinery, buildings) that stay in the business for over a year. Revenue expenditure is spending on day-to-day operating expenses (e.g., wages, utility bills, raw materials).",
+                    reasoning: "Clear contrasting definitions based on asset longevity and operational purpose."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the limitations of break-even analysis as a decision-making tool for managers.",
+                    modelAnswer: "Break-even assumes all output produced is sold at a constant price and that variable costs remain strictly linear. In reality, discounts, bulk purchasing, and shifting pricing models invalidate these static assumptions.",
+                    reasoning: "Balanced evaluation weighing visual simplicity and quick scenario planning against unrealistic linearity and constant price assumptions."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "What is meant by 'liquidity' in finance?",
+                    modelAnswer: "Liquidity refers to how quickly and easily an asset can be converted into cash to meet immediate short-term financial obligations.",
+                    reasoning: "Basic financial literacy definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why a business with high fixed costs faces high operating leverage.",
+                    modelAnswer: "High fixed costs mean that once the break-even point is surpassed, every additional unit sold generates a large contribution toward profit, but small drops in sales rapidly turn profits into severe losses.",
+                    reasoning: "Chain of analysis: High overhead structure -> magnified profit swings relative to small revenue shifts -> heightened financial risk."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the impact of inflation on a business holding high levels of cash and receivables.",
+                    modelAnswer: "Inflation erodes the real purchasing power of cash holdings and devalues the real worth of trade receivables owed to the business, reducing its real asset value over time.",
+                    reasoning: "Chain of analysis: Price levels rise -> purchasing power of nominal cash and money owed shrinks -> loss of real value for current assets."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two ways a business can improve its cash flow position immediately.",
+                    modelAnswer: "Delaying cash payments to suppliers (extending credit) and chasing trade receivables faster (offering early settlement discounts).",
+                    reasoning: "Practical short-term liquidity management recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Calculate the current ratio if current assets are $150,000 and current liabilities are $75,000.",
+                    modelAnswer: "2:1 (or 2). Calculation: Current Assets / Current Liabilities -> $150,000 / $75,000 = 2.",
+                    reasoning: "Standard liquidity formula execution and ratio formatting."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Discuss whether profitability is more important than liquidity for the long-term survival of a manufacturing firm.",
+                    modelAnswer: "Liquidity is critical for immediate daily survival—without cash, a firm enters insolvency immediately regardless of profit. However, long-term survival requires profitability to generate sustainable returns and reinvestment capital.",
+                    reasoning: "Comprehensive evaluation balancing short-term cash survival requirements against long-term capital accumulation and viability."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'dividends'.",
+                    modelAnswer: "Dividends are a portion of a company's after-tax profits distributed proportionately to its shareholders as a return on their investment.",
+                    reasoning: "Basic corporate finance definition recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how a sale-and-leaseback agreement improves short-term liquidity.",
+                    modelAnswer: "The business sells a valuable fixed asset (like a warehouse) to a financial institution for cash and immediately leases it back, turning an illiquid fixed asset into immediate liquid cash.",
+                    reasoning: "Chain of analysis: Asset monetization -> cash injection into working capital -> immediate alleviation of short-term cash shortages."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic risks associated with aggressive cost-minimization accounting policies.",
+                    modelAnswer: "Aggressive cost-cutting (such as slashing maintenance, R&D, or training budgets) can compromise product quality, damage staff morale, and erode long-term competitive advantage for short-term profit gains.",
+                    reasoning: "Chain of analysis: Short-term cost reduction -> reduction in quality or innovation -> long-term customer loss and diminished market standing."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State the formula for calculating ROCE (Return on Capital Employed).",
+                    modelAnswer: "ROCE = (Operating Profit / Capital Employed) * 100",
+                    reasoning: "Standard profitability formula recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why ROCE is considered a superior metric to net profit margin alone when assessing business performance.",
+                    modelAnswer: "ROCE measures how efficiently a business uses its entire capital base to generate profit, whereas net profit margin only looks at profit relative to sales revenue, ignoring how much capital was required to achieve those sales.",
+                    reasoning: "Contrasting efficiency relative to invested capital versus simple revenue percentage."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the use of zero-based budgeting (ZBB) compared to incremental budgeting.",
+                    modelAnswer: "ZBB requires every department to justify all expenses from scratch every cycle, eliminating legacy inefficiencies and aligning spending with strategic priorities. However, it is extremely time-consuming and administratively costly compared to incremental budgeting.",
+                    reasoning: "Comprehensive evaluation balancing resource allocation accuracy and waste reduction against administrative burden."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two limitations of financial ratio analysis.",
+                    modelAnswer: "Ratios are based on historical past data and can be distorted by differing accounting policies across firms (any two valid points).",
+                    reasoning: "Standard evaluation recall of financial statement analysis constraints."
                 }
             ],
             "Human Resources": [
@@ -163,8 +463,164 @@
                 {
                     difficulty: "Medium",
                     question: "Explain the difference between labor turnover and labor productivity.",
-                    modelAnswer: "Labor turnover measures the rate at which employees leave a business and need to be replaced. Labor productivity measures a measure of output per worker over a given time period.",
+                    modelAnswer: "Labor turnover measures the rate at which employees leave a business and need to be replaced. Labor productivity measures output per worker over a given time period.",
                     reasoning: "Straightforward comparative definition checking understanding of core HR workforce metrics."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define the term 'span of control'.",
+                    modelAnswer: "Span of control refers to the number of subordinates who report directly to a single manager or supervisor.",
+                    reasoning: "Basic organizational structure definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Calculate the labor turnover rate if 15 employees leave a total workforce of 150 employees over a 12-month period.",
+                    modelAnswer: "10%. Calculation: (Number of staff leaving / Average number of staff) * 100 -> (15 / 150) * 100 = 10%.",
+                    reasoning: "Quantitative formula application for HR metrics."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the operational and financial impact of high labor turnover on a service-sector business.",
+                    modelAnswer: "High labor turnover increases recruitment costs, places heavy burdens on training new staff, lowers overall service consistency, and reduces productivity.",
+                    reasoning: "Chain of analysis: Staff leave frequently -> high advertising and selection costs -> constant onboarding of inexperienced workers -> declining customer service quality."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two features of a centralized organizational structure.",
+                    modelAnswer: "Decision-making authority is retained at the top senior management level, and strict adherence to a chain of command is maintained.",
+                    reasoning: "Core structural features recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how empowerment can improve workforce motivation.",
+                    modelAnswer: "Empowerment gives employees greater autonomy and authority to make decisions regarding their tasks, fostering a sense of ownership, responsibility, and intrinsic job satisfaction.",
+                    reasoning: "Chain of analysis: Greater control given to workers -> increased trust and autonomy -> higher engagement and motivation."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the effectiveness of Frederick Taylor's scientific management theory in modern knowledge-based workplaces.",
+                    modelAnswer: "Taylor's theory assumes workers are motivated solely by money and thrive on repetitive, monitored tasks. While effective in routine manufacturing, it fails in modern knowledge-based industries where creativity, autonomy, and intellectual problem-solving are required.",
+                    reasoning: "Critical evaluation contrasting factory-floor piece-rate applicability against contemporary knowledge worker dynamics."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'delegation'.",
+                    modelAnswer: "Delegation is the passing down of authority and responsibility from a manager to a subordinate to perform specific tasks.",
+                    reasoning: "Basic management terminology recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why internal recruitment is generally cheaper and faster than external recruitment.",
+                    modelAnswer: "Internal recruitment avoids expensive external media advertising and lengthy vetting processes because the candidate's skills, cultural fit, and performance record are already known to the organization.",
+                    reasoning: "Chain of analysis: Existing employee database used -> reduced advertising/agency fees -> shorter onboarding and induction time."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic implications of delayering a business hierarchy during a downturn.",
+                    modelAnswer: "Delayering removes management layers to widen spans of control and cut overhead costs, but can temporarily reduce morale, increase workload stress, and disrupt communication channels if not managed effectively.",
+                    reasoning: "Chain of analysis: Middle management removed -> payroll costs drop -> remaining staff face heavier supervision loads -> potential stress and disruption."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two non-financial methods of motivation.",
+                    modelAnswer: "Job rotation and job enrichment (or teamwork, consultation, empowerment).",
+                    reasoning: "Direct recall of motivational techniques."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Calculate labor productivity if total output is 12,000 units produced by 40 workers in a week.",
+                    modelAnswer: "300 units per worker. Calculation: Total Output / Number of Workers -> 12,000 / 40 = 300.",
+                    reasoning: "Simple quantitative workforce calculation."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the role of trade unions in modern collective bargaining negotiations.",
+                    modelAnswer: "Trade unions protect worker rights, secure fair wages, and ensure safe working conditions through collective bargaining. However, aggressive union stance can lead to costly industrial disputes, strikes, and inflexibility in operational restructuring.",
+                    reasoning: "Balanced evaluation weighing workforce protection and safety benefits against strike risks and cost inflexibility."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'redundancy'.",
+                    modelAnswer: "Redundancy occurs when an employee is dismissed because their job role is no longer needed by the business (e.g., due to closure, downsizing, or automation).",
+                    reasoning: "Legal and structural employment definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how Maslow's Hierarchy of Needs can be applied by managers in the workplace.",
+                    modelAnswer: "Managers can satisfy different physiological, safety, social, esteem, and self-actualization needs sequentially (e.g., providing fair pay for basic needs, safe working conditions, team bonding, and recognition for esteem).",
+                    reasoning: "Chain of analysis: Identifying employee needs levels -> implementing matching workplace incentives -> progression towards higher productivity."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the challenges a multinational firm faces when managing culturally diverse international workforces.",
+                    modelAnswer: "Cultural diversity can lead to communication barriers, differing expectations regarding leadership styles, and conflicts over working norms, requiring culturally sensitive HR policies and leadership flexibility.",
+                    reasoning: "Chain of analysis: Different cultural norms -> communication misunderstandings or clash of management styles -> lower cohesion unless bridged by targeted HR training."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two methods of appraising employee performance.",
+                    modelAnswer: "Peer appraisal and 360-degree feedback (or management-by-objectives, self-appraisal).",
+                    reasoning: "Appraisal method recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why flexible working arrangements (like remote working) can improve staff retention.",
+                    modelAnswer: "Flexible working improves work-life balance, reduces commuting stress, and accommodates personal commitments, leading to higher job satisfaction and lower staff turnover rates.",
+                    reasoning: "Chain of analysis: Greater flexibility -> improved employee well-being -> higher loyalty and reduced desire to leave."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the effectiveness of financial profit-sharing schemes as long-term motivators.",
+                    modelAnswer: "Profit-sharing aligns employee interests directly with company financial success, fostering teamwork and commitment. However, individual performance impact gets diluted across the whole firm, weakening the direct motivational link for single workers.",
+                    reasoning: "Comprehensive evaluation balancing collective alignment and loyalty benefits against the free-rider problem and weak individual line-of-sight."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'induction training'.",
+                    modelAnswer: "Induction training is the introductory training given to new employees to familiarize them with workplace layout, colleagues, company policies, and job requirements.",
+                    reasoning: "Basic HR process definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain the purpose of a person specification in recruitment.",
+                    modelAnswer: "A person specification outlines the ideal profile of qualifications, experience, skills, and personal attributes required by a candidate to successfully perform a job role.",
+                    reasoning: "Clear HR recruitment process definition."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the impact of introducing advanced automated robotics on manufacturing workforce morale and structure.",
+                    modelAnswer: "Automation replaces manual routine labor, leading to job redundancies and anxiety among remaining staff regarding job security, while flattening structures and increasing demand for high-skilled technical operators.",
+                    reasoning: "Chain of analysis: Robots introduced -> manual roles eliminated -> fear of job loss lowers morale -> remaining workforce requires upskilling."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two legal responsibilities of employers regarding workplace health and safety.",
+                    modelAnswer: "Providing a safe working environment and supplying necessary protective safety equipment (PPE).",
+                    reasoning: "Employment law recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why autocratic leadership may be effective during a major crisis.",
+                    modelAnswer: "Autocratic leadership involves centralized, top-down decision-making without consultation, which allows for rapid, decisive action when immediate crisis management is required.",
+                    reasoning: "Chain of analysis: Emergency situation -> no time for debate -> swift autocratic instruction -> immediate crisis response."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the transition from traditional office hierarchies to agile, project-based matrix teams.",
+                    modelAnswer: "Matrix structures foster cross-functional collaboration, innovation, and flexibility. However, they introduce dual reporting lines, role ambiguity, and conflicting priorities between project managers and functional heads.",
+                    reasoning: "Balanced evaluation weighing collaboration and agility benefits against dual-reporting friction and confusion."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'zero-hour contract'.",
+                    modelAnswer: "A zero-hour contract is an employment agreement where the employer is not obliged to provide a set number of minimum working hours, and the worker is not obliged to accept offered work.",
+                    reasoning: "Contemporary employment contract definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how workforce planning helps a business achieve its strategic goals.",
+                    modelAnswer: "Workforce planning ensures the business forecasts its future staffing needs in terms of numbers and skill sets so it avoids labor shortages or costly surpluses while expanding.",
+                    reasoning: "Chain of analysis: Future business growth anticipated -> staffing requirements forecasted -> targeted recruitment and training executed on time."
                 }
             ],
             "Operations": [
@@ -185,6 +641,168 @@
                     question: "Explain the difference between lean production and batch production.",
                     modelAnswer: "Lean production focuses on minimizing waste and eliminating non-value-adding activities throughout the entire manufacturing process. Batch production involves producing a set group of identical products at the same time before moving on to the next batch.",
                     reasoning: "Candidates must contrast the continuous efficiency/waste-reduction focus of lean systems against the sequential batch methodology."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'capacity utilization'.",
+                    modelAnswer: "Capacity utilization is the proportion of a business's maximum potential output that is actually being produced over a given time period.",
+                    reasoning: "Basic operations management formula/definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Calculate unit cost if total monthly production costs are $50,000 and total output is 10,000 units.",
+                    modelAnswer: "$5 per unit. Calculation: Total Costs / Total Output -> $50,000 / 10,000 = $5.",
+                    reasoning: "Standard quantitative unit cost calculation."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic benefits of adopting Computer-Aided Design (CAD) and Computer-Aided Manufacturing (CAM) in engineering.",
+                    modelAnswer: "CAD and CAM enable rapid design prototyping, flawless manufacturing precision, reduced material waste, and seamless customization, boosting productivity and product quality.",
+                    reasoning: "Chain of analysis: Digital design and automation -> higher precision and lower error rates -> reduced material waste and faster time-to-market."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two methods of quality control.",
+                    modelAnswer: "Quality inspection and quality assurance (or total quality management - TQM).",
+                    reasoning: "Quality management methods recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how Kaizen (continuous improvement) differs from traditional quality inspection.",
+                    modelAnswer: "Traditional quality inspection checks products for defects at the end of the production line. Kaizen empowers all employees to make small, continuous, daily improvements to eliminate waste and prevent defects at every stage of the process.",
+                    reasoning: "Contrasting end-of-line reactive inspection with ongoing proactive employee-led process refinement."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the consequences of operating at excess capacity utilization (e.g., above 95%) for an extended period.",
+                    modelAnswer: "Operating near maximum capacity maximizes unit cost efficiency through economies of scale. However, it leaves no room for machinery maintenance, increases breakdown risks, causes staff burnout, and compromises quality.",
+                    reasoning: "Comprehensive evaluation balancing scale economies and revenue maximization against equipment strain, breakdown risks, and inflexibility."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'buffer inventory'.",
+                    modelAnswer: "Buffer inventory (or safety stock) is the minimum stock level held by a business to protect against unexpected delays in supplier deliveries or sudden surges in customer demand.",
+                    reasoning: "Basic inventory management definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why batch production is commonly used in commercial bakeries.",
+                    modelAnswer: "Commercial bakeries produce different types of bread or pastries in set batches using flexible equipment, allowing them to switch production lines easily to meet varied daily customer orders.",
+                    reasoning: "Chain of analysis: Flexible equipment setup -> ability to produce varied product lines in batches -> efficiency combined with product variety."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the impact of implementing Total Quality Management (TQM) on corporate culture and waste levels.",
+                    modelAnswer: "TQM instills a 'zero-defect' culture where every employee takes personal responsibility for quality, dramatically reducing scrap waste, rework costs, and customer complaints.",
+                    reasoning: "Chain of analysis: Cultural shift towards quality accountability -> errors caught or prevented early -> drop in defective output and operational waste."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two factors influencing a business's choice of location.",
+                    modelAnswer: "Proximity to markets and availability of skilled labor (or transport links, land costs, raw material access).",
+                    reasoning: "Location factor recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how economies of scale lower unit costs as a firm grows.",
+                    modelAnswer: "As a firm scales up production, fixed costs (like R&D or administrative overheads) are spread across a much larger volume of output, reducing the average cost per unit.",
+                    reasoning: "Chain of analysis: Output volume expands -> fixed overheads distributed across more units -> falling average unit production costs."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the strategic trade-offs between mass customization and mass production.",
+                    modelAnswer: "Mass production achieves ultra-low unit costs through standardization. Mass customization uses flexible manufacturing technology to tailor products to individual customer preferences, commanding premium prices but at higher operational complexity and cost.",
+                    reasoning: "Balanced evaluation weighing cost efficiency and standardization against customer personalization and flexibility."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'supply chain'.",
+                    modelAnswer: "A supply chain is the network of all individuals, organizations, resources, activities, and technology involved in the creation and distribution of a product, from raw materials to the final customer.",
+                    reasoning: "Basic supply chain definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain one advantage of outsourcing non-core operational activities (like IT or payroll).",
+                    modelAnswer: "Outsourcing allows a business to delegate non-core tasks to specialized external providers, freeing up internal management time and capital to focus entirely on core competencies.",
+                    reasoning: "Chain of analysis: Delegation of support functions -> specialized external efficiency -> internal management focus on core revenue-generating activities."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the operational risks associated with relying on a single sole supplier for critical raw materials.",
+                    modelAnswer: "Relying on a single supplier creates severe vulnerability. If that supplier faces bankruptcy, strikes, or fires, the manufacturer has no immediate backup source, leading to production shutdowns.",
+                    reasoning: "Chain of analysis: Sole supplier dependency -> supply disruption occurs -> no alternative vendor in place -> immediate manufacturing standstill."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two benefits of holding high levels of inventory.",
+                    modelAnswer: "Protection against unexpected demand surges and uninterrupted production continuity during supply delays.",
+                    reasoning: "Inventory management advantages recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how re-order level is calculated in inventory control charts.",
+                    modelAnswer: "Re-order level is calculated as (Lead Time in days * Average Daily Usage) + Buffer Stock Level, indicating the exact stock trigger point for placing a new supplier order.",
+                    reasoning: "Standard inventory formula explanation."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate whether lean production is suitable for all types of manufacturing businesses.",
+                    modelAnswer: "Lean production eliminates waste and maximizes efficiency, making it ideal for repetitive, stable manufacturing like automotive assembly. However, it lacks resilience against supply shocks and is poorly suited for unpredictable or custom artisan craft production.",
+                    reasoning: "Comprehensive evaluation balancing efficiency and waste reduction gains against vulnerability to shocks and rigidity in custom environments."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'productivity'.",
+                    modelAnswer: "Productivity is a measure of the efficiency of production, expressed as the ratio of output produced to input used (e.g., output per worker or per machine hour).",
+                    reasoning: "Basic operational efficiency definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why labor-intensive production might be preferred over capital-intensive production in developing countries.",
+                    modelAnswer: "In developing countries where labor is cheap and abundant while capital machinery is expensive to import, labor-intensive methods reduce capital outlay and create local employment.",
+                    reasoning: "Chain of analysis: Low local wage rates -> cheaper manual labor than automated machinery -> lower initial capital expenditure."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the operational impact of a sudden bottleneck occurring in an assembly line.",
+                    modelAnswer: "A bottleneck restricts the flow rate of the entire production line to the capacity speed of the slowest workstation, causing work-in-progress stock to pile up and total output to drop.",
+                    reasoning: "Chain of analysis: Slow workstation limits throughput -> preceding stations build up excess inventory -> overall factory output rate is throttled."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two objectives of operations management.",
+                    modelAnswer: "Minimizing unit production costs and ensuring high product quality (or maximizing speed of delivery, flexibility).",
+                    reasoning: "Operations objective recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how a computerized stock control system prevents over-stocking.",
+                    modelAnswer: "Computerized systems track inventory levels in real-time as items are scanned or used, automatically updating stock records and preventing unnecessary duplicate orders.",
+                    reasoning: "Chain of analysis: Real-time inventory visibility -> accurate tracking of turnover -> avoidance of capital tied up in excess unsold stock."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the strategic implications of relocating manufacturing operations offshore to low-wage economies.",
+                    modelAnswer: "Offshoring significantly reduces labor and production costs, boosting profit margins. However, it introduces longer supply chain lead times, communication hurdles, quality control risks, and potential brand damage from ethical scrutiny.",
+                    reasoning: "Balanced evaluation weighing cost reduction benefits against logistics delays, quality risks, and reputational exposure."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'flow production'.",
+                    modelAnswer: "Flow production (or mass production) involves the continuous, sequential movement of items along an assembly line, producing standardized products in very large volumes.",
+                    reasoning: "Core production method definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain the purpose of maintaining plant and machinery maintenance schedules.",
+                    modelAnswer: "Scheduled preventive maintenance prevents unexpected mechanical breakdowns, extends the operational lifespan of expensive capital equipment, and avoids costly assembly line downtime.",
+                    reasoning: "Chain of analysis: Regular servicing -> early detection of wear and tear -> avoidance of sudden machinery failure and production stoppages."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Discuss whether quality assurance is superior to traditional quality control for a global manufacturing firm.",
+                    modelAnswer: "Quality control relies on end-of-line inspection, which is reactive and allows defective waste to be produced. Quality assurance builds quality into every stage of the process proactively, preventing defects entirely and saving long-term scrap costs.",
+                    reasoning: "Comprehensive evaluation contrasting proactive process prevention against reactive end-of-line detection."
                 }
             ],
             "Strategy": [
@@ -205,6 +823,168 @@
                     question: "Explain the purpose of conducting a SWOT analysis for strategic planning.",
                     modelAnswer: "A SWOT analysis identifies internal Strengths and Weaknesses alongside external Opportunities and Threats, allowing a business to match its core competencies against market conditions to make informed strategic decisions.",
                     reasoning: "Examiners award marks for defining what SWOT stands for and linking internal capabilities with external market factors."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'strategic direction'.",
+                    modelAnswer: "Strategic direction refers to the long-term path and vision chosen by a business, outlining where the organization wants to go and how it plans to get there.",
+                    reasoning: "Basic strategic definition recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain the difference between a mission statement and a corporate vision statement.",
+                    modelAnswer: "A mission statement outlines a business's core purpose, values, and what it does in the present day. A vision statement outlines an inspirational, aspirational long-term view of what the business hopes to achieve in the future.",
+                    reasoning: "Contrasting present operational purpose with future inspirational goals."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the usefulness of Porter's Five Forces model in analyzing industry attractiveness.",
+                    modelAnswer: "Porter's Five Forces analyzes competitive intensity across rivalry, threat of entry, substitutes, buyer power, and supplier power, helping firms determine profit potential and strategic positioning. However, it provides a static snapshot and struggles to account for dynamic, rapidly converging digital markets.",
+                    reasoning: "Comprehensive evaluation balancing structural industry analysis benefits against static nature and rapid market disruption challenges."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two elements of Porter's Generic Strategies framework.",
+                    modelAnswer: "Cost leadership and differentiation (or focus/cost focus).",
+                    reasoning: "Strategic framework recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Analyze why a firm pursuing a cost-leadership strategy must maintain tight control over operational expenses.",
+                    modelAnswer: "A cost-leadership strategy relies on achieving the lowest unit cost in the industry to undercut rivals and maintain high margins, requiring rigorous control over wages, waste, and supply chain expenditure.",
+                    reasoning: "Chain of analysis: Low price strategy -> razor-thin margins per unit -> necessity of relentless cost-cutting across all operations to stay profitable."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the risks and rewards of pursuing an aggressive inorganic growth strategy through corporate takeovers.",
+                    modelAnswer: "Takeovers provide rapid market entry, instant elimination of competitors, and immediate synergy gains. However, they carry massive financial integration risks, culture clashes, and high failure rates due to over-optimistic synergy valuations.",
+                    reasoning: "Comprehensive evaluation balancing rapid expansion and synergy benefits against integration friction and cultural clash hazards."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'organic growth'.",
+                    modelAnswer: "Organic growth (or internal growth) occurs when a business expands its own existing operations from within, such as launching new products, opening new branches, or increasing sales volume, rather than merging with other firms.",
+                    reasoning: "Basic growth definition recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how PESTLE analysis helps managers evaluate the external macro-environment.",
+                    modelAnswer: "PESTLE analyzes Political, Economic, Social, Technological, Legal, and Environmental external factors, enabling management to identify emerging macro trends, threats, and opportunities before shaping long-term strategy.",
+                    reasoning: "Chain of analysis: Systematic scanning of macro environment -> identification of regulatory or economic shifts -> proactive strategic adaptation."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic rationale behind corporate core competencies as defined by Prahalad and Hamel.",
+                    modelAnswer: "Core competencies are unique, difficult-to-imitate collective skills and technologies that provide a firm with access to multiple diverse markets and form the sustainable bedrock of its competitive advantage.",
+                    reasoning: "Chain of analysis: Unique internal capabilities -> leverage across multiple product lines -> high barriers to imitation by competitors."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two methods of inorganic growth.",
+                    modelAnswer: "Mergers and takeovers (or acquisitions, joint ventures).",
+                    reasoning: "Inorganic growth classification recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why a joint venture might be chosen over a full takeover when expanding into a foreign market.",
+                    modelAnswer: "A joint venture allows two companies to share risks, capital costs, and local market expertise while avoiding the massive financial outlay and cultural friction of a complete corporate takeover.",
+                    reasoning: "Chain of analysis: Shared risk and local market knowledge -> lower capital commitment -> safer international expansion."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the usefulness of the Boston Consulting Group (BCG) Matrix in strategic portfolio planning.",
+                    modelAnswer: "The BCG Matrix helps diversified firms balance cash flows between Cash Cows, Stars, Question Marks, and Dogs. However, it oversimplifies market dynamics to a 2x2 grid and ignores complex cross-synergies between product divisions.",
+                    reasoning: "Balanced evaluation weighing cash-allocation clarity against oversimplification and neglect of inter-product synergies."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'core competency'.",
+                    modelAnswer: "A core competency is a defining capability or strength that gives a business a distinct competitive advantage over its rivals.",
+                    reasoning: "Strategic terminology recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how corporate social responsibility (CSR) can enhance a firm's long-term strategic brand equity.",
+                    modelAnswer: "Embracing CSR through ethical sourcing, environmental sustainability, and community investment builds consumer trust and positive brand reputation, fostering long-term customer loyalty and brand equity.",
+                    reasoning: "Chain of analysis: Ethical and sustainable practices -> enhanced public perception and consumer trust -> stronger brand loyalty and differentiation."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic challenges faced by a business experiencing 'organizational inertia' during a rapidly changing market.",
+                    modelAnswer: "Organizational inertia occurs when established firms become rigid, bureaucratic, and resistant to change, making it difficult to pivot strategies when disruptive technologies or new competitors enter the market.",
+                    reasoning: "Chain of analysis: Cultural rigidity and bureaucratic legacy -> slow response to market shifts -> loss of market share to agile disruptors."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two financial indicators used to assess corporate performance.",
+                    modelAnswer: "Return on Capital Employed (ROCE) and net profit margin (or earnings per share, gearing).",
+                    reasoning: "Financial performance metric recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain why turnaround strategy is necessary for a business experiencing severe decline.",
+                    modelAnswer: "A turnaround strategy involves radical cost-cutting, asset disposals, and operational restructuring to halt plunging revenues, restore liquidity, and prevent corporate insolvency.",
+                    reasoning: "Chain of analysis: Business crisis identified -> drastic restructuring and cost removal -> stabilization of cash flow and survival."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate whether retrenchment strategies (downsizing and closing loss-making divisions) guarantee long-term business recovery.",
+                    modelAnswer: "Retrenchment stops immediate cash bleeding and cuts overhead costs, helping stabilize a struggling firm. However, if overdone, it can damage core capabilities, demoralize remaining staff, and eliminate growth engines necessary for future revival.",
+                    reasoning: "Comprehensive evaluation balancing immediate cost relief and survival benefits against the risk of crippling future growth and capacity."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'divestment'.",
+                    modelAnswer: "Divestment is the disposal or sale of a corporate subsidiary, business unit, or major asset by a company.",
+                    reasoning: "Basic strategic restructuring definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how scenario planning helps businesses prepare for uncertain future environments.",
+                    modelAnswer: "Scenario planning involves constructing multiple plausible alternative future macro environments, allowing management to develop flexible contingency plans and stress-test their strategies against unexpected disruptions.",
+                    reasoning: "Chain of analysis: Future uncertainty mapped out -> alternative scenarios tested -> agile preparedness and reduced strategic vulnerability."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Analyze the strategic implications of globalization on local small-and-medium enterprises (SMEs).",
+                    modelAnswer: "Globalization exposes local SMEs to intense international competition from low-cost multinational giants, threatening their market share, but also opens up global digital export markets and access to cheaper global supply chains.",
+                    reasoning: "Chain of analysis: Borderless trade -> increased competitive pressure from global firms -> necessity to find niche differentiation or leverage global digital tools."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "State two reasons why strategic implementation fails.",
+                    modelAnswer: "Poor communication of strategy and lack of employee buy-in or leadership alignment (any two valid points).",
+                    reasoning: "Strategic failure factor recall."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain the difference between strategic decisions and tactical decisions.",
+                    modelAnswer: "Strategic decisions are long-term, high-risk, organization-wide choices made by senior management. Tactical decisions are short-term, medium-risk, day-to-day choices made by middle managers to execute the broader strategy.",
+                    reasoning: "Contrasting scope, timeframe, risk level, and management level."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Discuss whether corporate governance codes are effective in preventing corporate fraud and executive excess.",
+                    modelAnswer: "Corporate governance codes enforce board transparency, independent non-executive directors, and audit accountability, deterring malpractice. However, compliance can sometimes become a superficial box-ticking exercise that fails to stop determined executive fraud.",
+                    reasoning: "Balanced evaluation weighing transparency and accountability benefits against token compliance and enforcement limitations."
+                },
+                {
+                    difficulty: "Easy",
+                    question: "Define 'stakeholder conflict'.",
+                    modelAnswer: "Stakeholder conflict occurs when the differing objectives and priorities of various stakeholder groups (e.g., shareholders wanting high dividends versus employees wanting higher wages) clash.",
+                    reasoning: "Basic business stakeholder concept definition."
+                },
+                {
+                    difficulty: "Medium",
+                    question: "Explain how a business can use stakeholder mapping (The Mendelow Matrix) to manage competing interests.",
+                    modelAnswer: "The Mendelow Matrix maps stakeholders based on their power and interest, guiding managers on whether to 'keep satisfied', 'manage closely', 'keep informed', or 'monitor' each group during strategic changes.",
+                    reasoning: "Chain of analysis: Stakeholder power and interest evaluated -> targeted communication and engagement strategy applied -> minimization of stakeholder resistance."
+                },
+                {
+                    difficulty: "Hard",
+                    question: "Evaluate the long-term strategic viability of pursuing aggressive market penetration in a mature, saturated market.",
+                    modelAnswer: "Market penetration can boost short-term sales volume and squeeze out weaker competitors through heavy promotion or price cutting. However, in a saturated market, this often triggers destructive price wars, depressing industry-wide profit margins without expanding total market size.",
+                    reasoning: "Comprehensive evaluation balancing market share gains against destructive price-war risks and margin erosion in zero-growth sectors."
                 }
             ]
         };
