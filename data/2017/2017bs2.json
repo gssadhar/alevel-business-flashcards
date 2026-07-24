@@ -44,5 +44,75 @@
         }
       ]
     }
-  ]
+  ],
+  "topics": {
+    "Business Objectives and Strategy": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Mission statements",
+        "marks": 4,
+        "text": "Explain how Morrisons may benefit from having a mission statement."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Competitive environment",
+        "marks": 10,
+        "text": "Assess the likely effects on a business, such as Morrisons, of a more competitive environment."
+      },
+      {
+        "question_number": "1 (e)",
+        "topic": "Strategic options (price cutting vs customer experience)",
+        "marks": 20,
+        "text": "Morrisons aims to regain its market share. The two options the management are considering are either to cut prices further, or to improve its overall customer experience. Evaluate these two options and recommend which option might be preferred by Morrisons' shareholders."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Stakeholder vs shareholder objectives",
+        "marks": 20,
+        "text": "Unilever's Chief Executive believes that Unilever should aim to consider all of its stakeholders in its main business decisions. Some business analysts consider that Unilever should instead consider an aim of focusing purely on its shareholders. Evaluate these two aims and recommend which is most suitable for a business, such as Unilever."
+      }
+    ],
+    "Finance and Accounting": [
+      {
+        "question_number": "1 (b)",
+        "topic": "Acid test ratio calculation",
+        "marks": 4,
+        "text": "Using the data in Extract B, calculate the difference in Morrisons' acid test ratio between 2014 and 2015. You are advised to show your working."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Sources of finance / minority share sale",
+        "marks": 10,
+        "text": "Assess whether Innocent Drinks Ltd should have raised finance by selling a minority of its shares to a business, such as Coca-Cola."
+      }
+    ],
+    "Human Resources and Leadership": [
+      {
+        "question_number": "1 (d)",
+        "topic": "Transformational leadership",
+        "marks": 12,
+        "text": "Assess whether the transformational leadership shown by David Potts is the main cause of Morrisons' improved performance."
+      }
+    ],
+    "Operations Management": [
+      {
+        "question_number": "2 (a)",
+        "topic": "Network analysis (EST, LFT, critical path)",
+        "marks": 4,
+        "text": "Using the data in the network diagram above, calculate the Earliest Start Times (EST) and Latest Finishing Times (LFT) for each activity and identify the critical path."
+      },
+      {
+        "question_number": "2 (b)",
+        "topic": "Capacity utilisation calculation and implications",
+        "marks": 4,
+        "text": "Using the data in Extract F, explain one implication of the level of capacity utilisation for the soft drinks manufacturer A, compared to B. You are advised to show your working."
+      },
+      {
+        "question_number": "2 (d)",
+        "topic": "Takeovers and takeovers impact",
+        "marks": 12,
+        "text": "Assess the likely effects for AG Barr of taking over Funkin, the cocktail mixer business."
+      }
+    ]
+  }
 }
