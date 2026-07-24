@@ -5,11 +5,7 @@ let shuffledQuestions = [];
 
 const paperFiles = [
     'data/2017/2017bs1.json',
-    'data/2017/2017bs2.json',
-    'data/2017/2017bs3.json',
-    'data/2018/2018bs1.json',
-    'data/2018/2018bs2.json',
-    'data/2018/2018bs3.json'
+    'data/2018/2018bs1.json'
 ];
 
 async function loadQuestionData() {
@@ -61,7 +57,7 @@ async function loadQuestionData() {
         renderDashboard();
     } catch (error) {
         console.error("Error loading data:", error);
-        document.getElementById('topics-grid').innerHTML = `<p class="text-red-500 text-sm col-span-2 text-center">Failed to load paper files. Check console for path errors.</p>`;
+        document.getElementById('topics-grid').innerHTML = `<p class="text-red-500 text-sm col-span-2 text-center">Failed to load paper files.</p>`;
     }
 }
 
@@ -71,7 +67,7 @@ function renderDashboard() {
     
     const topics = Object.keys(questionDatabase);
     if (topics.length === 0) {
-        grid.innerHTML = `<p class="text-slate-500 text-sm col-span-2 text-center">No questions found. Make sure your JSON files are populated and in the correct year folders.</p>`;
+        grid.innerHTML = `<p class="text-slate-500 text-sm col-span-2 text-center">No questions found.</p>`;
         return;
     }
 
