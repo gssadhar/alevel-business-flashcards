@@ -12,14 +12,14 @@
           "marks": 4,
           "question": "Calculate net profit margin if a business has total revenues of 500,000 pounds and net profit of 75,000 pounds.",
           "modelAnswer": "Formula: (Net Profit / Revenue) * 100 -> (75000 / 500000) * 100 = 15%.",
-          "reasoning": "1 mark for formula, 2 marks for correct figures, 1 mark for the final percentage value."
+          "reasoning": "1 mark for formula, 2 marks for figures, 1 mark for the final percentage value."
         },
         {
           "topic": "Operations",
           "marks": 6,
           "question": "Explain one advantage and one disadvantage of capacity utilization falling below 70% for a hotel chain.",
           "modelAnswer": "Advantage: More time for deep cleaning and maintenance. Disadvantage: Higher unit fixed costs per occupied room, reducing profit margins.",
-          "reasoning": "2 marks for capacity concept understanding, 2 marks for advantage explanation, 2 marks for disadvantage explanation linked to fixed overhead absorption."
+          "reasoning": "2 marks for capacity concept understanding, 2 marks for advantage explanation, 2 marks for disadvantage explanation."
         }
       ]
     }
