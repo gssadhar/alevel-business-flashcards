@@ -2,31 +2,71 @@
   "year": "2018",
   "paper": "3",
   "reference": "9BS0/03",
-  "title": "Micro and Macro Economic Environment",
+  "title": "Investigating Business in a Competitive Environment",
   "sections": [
     {
       "section": "Section A",
       "questions": [
         {
           "topic": "Strategy",
+          "marks": 8,
+          "question": "Using the data in Extract A, assess two benefits of branding for a chocolate manufacturer, such as Mars UK Ltd.",
+          "modelAnswer": "Branding creates customer loyalty and repeat purchases, allowing top brands like Maltesers and Galaxy to maintain strong revenues (£49.7m and £36.6m respectively) and secure prime retail shelf space against competitors like Cadbury.",
+          "reasoning": "Award 4 marks per benefit: 2 marks for analytical point, 2 marks for data application from Extract A."
+        },
+        {
+          "topic": "Human Resources",
+          "marks": 10,
+          "question": "Assess the likely value of having a flexible workforce for a business, such as Nestlé.",
+          "modelAnswer": "Flexible working (such as working from home, flexible hours, or cross-departmental roles) improves work-life balance, enhances employee retention, and boosts productivity across Nestlé's global operations. However, managing dispersed or flexible teams introduces communication barriers and operational control challenges.",
+          "reasoning": "Award 4 marks for knowledge and application, 4 marks for balance, and 2 marks for conclusion."
+        },
+        {
+          "topic": "Global Markets",
           "marks": 12,
-          "question": "Evaluate whether corporate social responsibility (CSR) initiatives always lead to long-term profitability for a global clothing brand.",
-          "modelAnswer": "CSR builds strong brand loyalty, ethical consumer support, and avoids PR scandals. However, ethical sourcing can significantly increase supply chain costs.",
-          "reasoning": "Award up to 4 marks for knowledge and application, 4 marks for balanced analysis of pros and cons, and 4 marks for a reasoned evaluative conclusion."
+          "question": "Assess the importance of cultural and social factors that might affect the sales of dark chocolate in emerging economies, such as India.",
+          "modelAnswer": "Rising incomes, urbanization, and changing dietary habits are driving demand for dark chocolate in developing nations like India (making it the fastest-growing chocolate market). Cultural shifts toward health benefits (improved blood flow and metabolism) heavily boost sales, though local flavor preferences and lower baseline purchasing power in rural areas remain hurdles.",
+          "reasoning": "Award 4 marks for cultural/social economic concepts, 4 marks for application to India/Kit Kat Senses, and 4 marks for overall assessment."
         },
         {
           "topic": "Strategy",
-          "marks": 12,
-          "question": "Analyse and evaluate the potential impact of an economic recession on a luxury car manufacturer.",
-          "modelAnswer": "Luxury cars are income-elastic goods; during a recession, consumer disposable incomes drop sharply, causing disproportionately large falls in demand. Mitigation requires expanding into emerging international markets less affected by domestic downturns.",
-          "reasoning": "Award 4 marks for economic concepts, 4 marks for contextual application, and 4 marks for strategic evaluation."
+          "marks": 20,
+          "question": "Using the data in Extract D, evaluate these two takeovers and recommend which one is most likely to have affected the profits of Ferrero International.",
+          "modelAnswer": "The Oltan Group acquisition (world's largest hazelnut processor with £600m turnover in Turkey) secured a critical supply chain commodity used directly in Ferrero Rocher, Nutella, and Kinder Bueno, protecting cost margins. The Thorntons acquisition (£112m purchase price) expanded UK retail presence in a £6bn market, but Thorntons had a history of struggling to revive manufacturing. Oltan provides fundamental supply chain cost control and export strength, making it more reliably profitable than fixing Thorntons' retail struggles.",
+          "reasoning": "Level 4 (16-20 marks) requires detailed comparative analysis of both takeovers using financial and operational data from Extract D, leading to a justified recommendation."
+        }
+      ]
+    },
+    {
+      "section": "Section B",
+      "questions": [
+        {
+          "topic": "Operations",
+          "marks": 8,
+          "question": "Assess two benefits of quality control for a business, such as Cadbury.",
+          "modelAnswer": "Quality control ensures product consistency and protects brand reputation (vital for iconic brands like Dairy Milk). It prevents defective products or ingredient compromises (such as mixing sultanas vs raisins) from reaching consumers, avoiding costly product recalls and customer dissatisfaction.",
+          "reasoning": "Award 4 marks per benefit: 2 marks for operational explanation, 2 marks for context relating to Cadbury."
         },
         {
           "topic": "Strategy",
+          "marks": 10,
+          "question": "Assess the likely value of Corporate Social Responsibility to a business, such as Cadbury.",
+          "modelAnswer": "CSR initiatives (such as reducing sugar content in single-serving bars to under 250 calories to meet government anti-obesity targets, or previous Fairtrade sourcing) build ethical brand image and consumer trust. However, shifting away from Fairtrade to Cocoa Life or cutting pensioner perks shows that CSR can be compromised when parent companies (Mondelēz) face pressure to cut costs and plug pension deficits.",
+          "reasoning": "Award 4 marks for application, 4 marks for balanced limitations/trade-offs, and 2 marks for conclusion."
+        },
+        {
+          "topic": "Finance",
           "marks": 12,
-          "question": "Evaluate the strategic choices a traditional high-street bookstore faces when competing against online e-commerce giants like Amazon.",
-          "modelAnswer": "Physical bookstores cannot compete on price or breadth of inventory alone. They must pivot towards experiential strategies, such as hosting author events, in-store cafes, and personalized customer curation.",
-          "reasoning": "Award 4 marks for strategic alternatives analysis, 4 marks for balance, and 4 marks for final recommendation."
+          "question": "Using the data in Extract G, the Net Present Value (NPV) and Payback, assess Mondelēz International's investment in Cadbury's modernisation.",
+          "modelAnswer": "Initial investment = £75m. Payback calculation: Year 0: (75); Year 1: 20 (remains -55); Year 2: 25 (remains -30); Year 3: 30 (Payback reached exactly in 3 years). Net Present Value calculation: Year 1: 20 * 0.909 = 18.18; Year 2: 25 * 0.826 = 20.65; Year 3: 30 * 0.751 = 22.53; Year 4: 22 * 0.683 = 15.03; Year 5: 20 * 0.621 = 12.42. Total present value = 88.81. NPV = 88.81 - 75 = £13.81m. The positive NPV (£13.81m) and quick 3-year payback confirm the modernization project is financially viable and will boost factory efficiency.",
+          "reasoning": "Award 4 marks for accurate payback calculation, 4 marks for accurate NPV calculation using discount factors, and 4 marks for strategic assessment of the investment."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 20,
+          "question": "Evaluate these two strategies and recommend which one would be better to achieve a global competitive advantage for a business, such as Cadbury.",
+          "modelAnswer": "Cost competitiveness (achieved through scale economies, modernizing production lines like the £75m Birmingham factory investment, and outsourcing) lowers unit costs to compete on price. Product differentiation (through unique recipes, iconic branding like Dairy Milk, and quality design) allows command of premium pricing and shields against price wars. For a global confectionery giant like Cadbury, product differentiation driven by powerful brand heritage and continuous product innovation is more sustainable than competing purely on cost.",
+          "reasoning": "Level 4 (16-20 marks) requires comprehensive evaluation of cost competitiveness vs product differentiation using conceptual frameworks (Extract H) and Cadbury context, with a justified recommendation."
         }
       ]
     }
