@@ -12,14 +12,14 @@
           "marks": 6,
           "question": "Calculate the acid test ratio given current assets of 45,000 pounds, inventories of 15,000 pounds, and current liabilities of 20,000 pounds.",
           "modelAnswer": "Formula: (Current Assets - Inventory) / Current Liabilities -> (45000 - 15000) / 20000 = 30000 / 20000 = 1.5:1.",
-          "reasoning": "1 mark for identifying correct formula, 2 marks for accurate data substitution, 2 marks for correct calculation, 1 mark for proper ratio formatting (:1)."
+          "reasoning": "1 mark for formula, 2 marks for substitution, 2 marks for calculation, 1 mark for proper ratio formatting (:1)."
         },
         {
           "topic": "Operations",
           "marks": 8,
           "question": "Assess the benefits of lean production methods for a car manufacturing business.",
-          "modelAnswer": "Lean production reduces waste, lowers holding costs through just-in-time (JIT), and improves overall product quality by catching defects early...",
-          "reasoning": "Award up to 2 marks for knowledge of lean production, 2 marks for application to car manufacturing, and 4 marks for balanced analysis of advantages."
+          "modelAnswer": "Lean production reduces waste, lowers holding costs through just-in-time (JIT), and improves overall product quality by catching defects early.",
+          "reasoning": "Award up to 2 marks for knowledge of lean production, 2 marks for application, and 4 marks for balanced analysis."
         }
       ]
     }
