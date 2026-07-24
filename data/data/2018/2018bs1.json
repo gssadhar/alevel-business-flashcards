@@ -1,0 +1,20 @@
+{
+  "year": 2018,
+  "paper": 1,
+  "reference": "9BS0/01",
+  "title": "Marketing, people and global businesses",
+  "sections": [
+    {
+      "section": "A",
+      "questions": [
+        {
+          "qNumber": "1 (a)",
+          "marks": 4,
+          "topic": "Income Elasticity of Demand",
+          "commandWord": "Calculate",
+          "text": "Using the data in Extract A, calculate, to 2 decimal places, the income elasticity of demand for takeaway meals."
+        }
+      ]
+    }
+  ]
+}
