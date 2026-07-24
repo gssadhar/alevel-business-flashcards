@@ -15,11 +15,32 @@
           "reasoning": "2 marks for definition of dynamic pricing, 4 marks for context and application to airline booking behavior."
         },
         {
+          "topic": "Marketing",
+          "marks": 8,
+          "question": "Analyse the role of social media influencers in the marketing mix of a cosmetics brand.",
+          "modelAnswer": "Influencers provide targeted peer-to-peer marketing that builds trust and authenticity, directly affecting the 'Promotion' element of the marketing mix.",
+          "reasoning": "2 marks for marketing mix knowledge, 3 marks for application, 3 marks for analysis of promotional outcomes."
+        },
+        {
+          "topic": "Marketing",
+          "marks": 10,
+          "question": "Evaluate whether product differentiation through unique design is more effective than low-cost leadership for an electronics manufacturer.",
+          "modelAnswer": "Unique design allows command of premium prices and protects profit margins from price wars. However, it requires heavy R&D expenditure and leaves the firm vulnerable if consumer tastes abruptly change.",
+          "reasoning": "Award 4 marks for application, 4 marks for balance, and 2 marks for conclusion."
+        },
+        {
           "topic": "Human Resources",
           "marks": 8,
           "question": "Evaluate the importance of a low labor turnover rate for a call center business.",
           "modelAnswer": "Low turnover reduces recruitment and training expenses, builds experienced staff expertise, and maintains customer service quality. However, retaining underperforming staff can stifle change.",
           "reasoning": "Award up to 2 marks for knowledge of labor turnover, 2 marks for application, and 4 marks for evaluative conclusion."
+        },
+        {
+          "topic": "Human Resources",
+          "marks": 10,
+          "question": "Assess the operational and financial impacts of moving a large office workforce to a permanent hybrid working model.",
+          "modelAnswer": "Financially, it reduces real estate overhead costs and improves employee retention. Operationally, it requires robust digital communication tools and introduces challenges in tracking remote productivity.",
+          "reasoning": "Award 4 marks for identifying impacts, 4 marks for balancing operational vs financial factors, and 2 marks for final appraisal."
         }
       ]
     }
