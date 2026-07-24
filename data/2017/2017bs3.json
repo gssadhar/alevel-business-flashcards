@@ -13,6 +13,20 @@
           "question": "Analyse the usefulness of Porter's Strategic Matrix when a retail firm decides to target budget consumers.",
           "modelAnswer": "Porter's matrix highlights cost leadership strategy. By achieving the lowest operational costs, the retailer can offer lower prices than competitors to capture market share.",
           "reasoning": "Award up to 2 marks for understanding Porter's matrix, 3 marks for application to retail, and 5 marks for analytical depth."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 12,
+          "question": "Evaluate the impact of a rapid depreciation of the domestic currency on a UK-based manufacturing firm that imports all its raw materials.",
+          "modelAnswer": "Depreciation makes imported raw materials significantly more expensive, raising production costs and compressing profit margins. Conversely, it can make exported finished goods cheaper overseas if overseas demand is price-elastic.",
+          "reasoning": "Award 4 marks for knowledge of exchange rates, 4 marks for balanced application, and 4 marks for structural evaluation."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 12,
+          "question": "Evaluate whether implementing intense technological innovation is the best strategy for a traditional publishing house to maintain competitive advantage.",
+          "modelAnswer": "Innovation into e-readers and digital audiobooks broadens market reach and captures younger audiences. However, high development costs and alienating core physical book readers present major risks.",
+          "reasoning": "Award 4 marks for strategic context knowledge, 4 marks for evaluation, and 4 marks for a reasoned final judgment."
         }
       ]
     }
