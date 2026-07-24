@@ -2,45 +2,85 @@
   "year": "2018",
   "paper": "1",
   "reference": "9BS0/01",
-  "title": "Marketing and People",
+  "title": "Marketing, People and Global Businesses",
   "sections": [
     {
       "section": "Section A",
       "questions": [
         {
           "topic": "Marketing",
-          "marks": 6,
-          "question": "Explain how a business might use dynamic pricing in the airline industry.",
-          "modelAnswer": "Dynamic pricing involves changing prices based on demand levels, time until departure, and seat availability to maximize total revenue.",
-          "reasoning": "2 marks for definition of dynamic pricing, 4 marks for context and application to airline booking behavior."
+          "marks": 4,
+          "question": "Using the data in Extract A, calculate, to 2 decimal places, the income elasticity of demand for takeaway meals. You are advised to show your working.",
+          "modelAnswer": "Formula: % change in quantity demanded / % change in income. % change in quantity = ((144 - 140) / 140) * 100 = 2.857%. % change in income = ((27195 - 27000) / 27000) * 100 = 0.7222%. YED = 2.857 / 0.7222 = 3.96.",
+          "reasoning": "1 mark for formula, 1 mark for calculating percentage changes, 1 mark for correct substitution, 1 mark for final answer correct to 2 decimal places."
         },
         {
           "topic": "Marketing",
-          "marks": 8,
-          "question": "Analyse the role of social media influencers in the marketing mix of a cosmetics brand.",
-          "modelAnswer": "Influencers provide targeted peer-to-peer marketing that builds trust and authenticity, directly affecting the 'Promotion' element of the marketing mix.",
-          "reasoning": "2 marks for marketing mix knowledge, 3 marks for application, 3 marks for analysis of promotional outcomes."
+          "marks": 4,
+          "question": "Using Extracts B and C, explain one way in which Hot Chip could change elements of its design mix to reflect eating behaviours at fast food restaurants.",
+          "modelAnswer": "Hot Chip could change the 'function' or 'aesthetic' elements of its product design to include more adventurous toppings and sauces (such as hot salt beef, gherkin relish, or Swiss cheese), reflecting customer demand for more variety beyond standard chips as shown in Extract C.",
+          "reasoning": "1 mark for identifying an element of the design mix, 1 mark for context from Extract C/B, 2 marks for explanation of how it reflects customer behavior."
         },
         {
           "topic": "Marketing",
           "marks": 10,
-          "question": "Evaluate whether product differentiation through unique design is more effective than low-cost leadership for an electronics manufacturer.",
-          "modelAnswer": "Unique design allows command of premium prices and protects profit margins from price wars. However, it requires heavy R&D expenditure and leaves the firm vulnerable if consumer tastes abruptly change.",
+          "question": "Assess the likely reasons for Hot Chip using mainly quantitative market research data.",
+          "modelAnswer": "Quantitative data provides hard numerical facts (such as sales figures showing cheesy chips popularity or percentage of fish and shop sales from chips) which reduce risk and offer clear, measurable trends. However, it lacks depth regarding customer emotions or why preferences change.",
+          "reasoning": "Award 4 marks for knowledge and application, 4 marks for balanced analysis of limitations, and 2 marks for a concluding judgment."
+        },
+        {
+          "topic": "Entrepreneurship",
+          "marks": 12,
+          "question": "Assess whether creating and setting up a business is the most important role of an entrepreneur, such as Lord Somerleyton.",
+          "modelAnswer": "Initial creation involves spotting opportunities, taking financial risks, and organizing resources (e.g., setting up Hot Chip). However, ongoing roles such as strategic adaptation, managing growth, and spotting new revenue streams (like vans or saloons) are equally vital for long-term survival.",
+          "reasoning": "Award up to 4 marks for knowledge and application, 4 marks for balanced discussion of other roles, and 4 marks for a reasoned evaluative conclusion."
+        },
+        {
+          "topic": "People",
+          "marks": 20,
+          "question": "Evaluate these two options and recommend which is the most suitable leadership style for a business such as Hot Chip.",
+          "modelAnswer": "Autocratic leadership ensures strict quality control and consistency across multiple outlets (crucial for a developing brand). Democratic leadership empowers staff, lowers turnover (which is notoriously high in fast food, as noted in Extract D), and encourages motivation. Given the need for rapid expansion and standardized quality, a blend leaning towards structured support or democratic empowerment for store managers is key.",
+          "reasoning": "Level 4 (16-20 marks) requires deep contextual evaluation of both leadership styles applied to Hot Chip, balancing control vs motivation, with a supported recommendation."
+        }
+      ]
+    },
+    {
+      "section": "Section B",
+      "questions": [
+        {
+          "topic": "Global Business",
+          "marks": 4,
+          "question": "Using the data in Extract E, calculate the percentage of the world's top 25 exporting economies that have costs of production above those of the United Kingdom in 2014. You are advised to show your working.",
+          "modelAnswer": "Looking at the chart (25 countries listed from largest to smallest exporting country), count how many have bars higher than the United Kingdom. Countries with costs above UK: Germany, France, Italy, Belgium, Netherlands, Switzerland, Austria, Sweden. Total count = 8. Percentage = (8 / 25) * 100 = 32%.",
+          "reasoning": "1 mark for identifying data from Extract E, 2 marks for correct identification/counting of countries above the UK, 1 mark for correct percentage calculation."
+        },
+        {
+          "topic": "Global Business",
+          "marks": 4,
+          "question": "Explain how Ebac Ltd could benefit from exporting its products.",
+          "modelAnswer": "Exporting allows Ebac Ltd to access larger overseas markets beyond the UK, spreading risk across different geographical regions and increasing total sales revenue and economies of scale.",
+          "reasoning": "1 mark for identifying a benefit, 1 mark for applying it to Ebac Ltd's context."
+        },
+        {
+          "topic": "Global Business",
+          "marks": 10,
+          "question": "Assess the likely consequences of Ebac Ltd continuing to operate as a private limited company.",
+          "modelAnswer": "Operating as a private limited company protects family ownership and control, aligning with the Ebac Ltd Foundation's community and reinvestment principles. However, it limits access to large-scale equity finance compared to a PLC, which could constrain massive capital-intensive expansions.",
           "reasoning": "Award 4 marks for application, 4 marks for balance, and 2 marks for conclusion."
         },
         {
-          "topic": "Human Resources",
-          "marks": 8,
-          "question": "Evaluate the importance of a low labor turnover rate for a call center business.",
-          "modelAnswer": "Low turnover reduces recruitment and training expenses, builds experienced staff expertise, and maintains customer service quality. However, retaining underperforming staff can stifle change.",
-          "reasoning": "Award up to 2 marks for knowledge of labor turnover, 2 marks for application, and 4 marks for evaluative conclusion."
+          "topic": "Global Business",
+          "marks": 12,
+          "question": "Assess the likely impact on Ebac Ltd of choosing the UK as a production location.",
+          "modelAnswer": "Choosing the UK (specifically the North East where labor costs are below the UK average) provides skilled manufacturing heritage and fills gaps left by competitors like Indesit. However, it exposes the firm to UK-specific economic shocks, wage inflation, and potential exchange rate fluctuations when exporting to Europe.",
+          "reasoning": "Award 4 marks for knowledge and application, 4 marks for balance, and 4 marks for evaluation."
         },
         {
-          "topic": "Human Resources",
-          "marks": 10,
-          "question": "Assess the operational and financial impacts of moving a large office workforce to a permanent hybrid working model.",
-          "modelAnswer": "Financially, it reduces real estate overhead costs and improves employee retention. Operationally, it requires robust digital communication tools and introduces challenges in tracking remote productivity.",
-          "reasoning": "Award 4 marks for identifying impacts, 4 marks for balancing operational vs financial factors, and 2 marks for final appraisal."
+          "topic": "Global Business",
+          "marks": 20,
+          "question": "Evaluate these two options and recommend which approach is most suitable for Haier.",
+          "modelAnswer": "Global niche markets allow targeting specific unserved consumer needs (e.g., mini washing machines for students or specific garments like heavy robes). Global mass markets offer massive volume and economies of scale to compete with giants like Bosch and Whirlpool. Given Haier's track record of targeting specific cultural habits (like hand-washing underclothes), niche adaptation serves as a powerful springboard into mass markets.",
+          "reasoning": "Level 4 (16-20 marks) requires comprehensive evaluation of niche vs mass strategies for Haier, utilizing white goods market context, with a justified final recommendation."
         }
       ]
     }
