@@ -1,4 +1,9 @@
-// Categorized A-Level Business Past-Paper Database (AQA & Edexcel Aligned)
+// ==========================================
+// A-LEVEL BUSINESS HUB - FULL MERGED SCRIPT.JS
+// ==========================================
+// This script keeps all your original questions and safely integrates 
+// the new 2017 past-paper questions without any duplicates.
+
 const questionDatabase = {
     "Marketing": [
         {
@@ -38,6 +43,13 @@ const questionDatabase = {
             question: "Evaluate the usefulness of payback period compared to net present value (NPV) when choosing between two long-term investment projects.",
             modelAnswer: "Payback calculates how quickly cash is recovered, making it simple and useful for assessing liquidity risk. However, NPV discounts future cash flows to account for the time value of money and total profitability over the project's entire life.",
             reasoning: "Full evaluation requires balancing the simplicity and focus on cash liquidity of payback against NPV's superior financial accuracy and long-term perspective."
+        },
+        {
+            difficulty: "Hard",
+            marks: 20,
+            question: "Using Extracts G and H data for The Gym Group, evaluate whether Pure Gym should have targeted The Gym Group or LA Fitness for takeover.",
+            modelAnswer: "The Gym Group offered low-cost operational synergies aligning with Pure Gym's model, though financial statements showed net losses in 2015. LA Fitness required a £20m refurbishment and culture change but faced fewer CMA regulatory blocks.",
+            reasoning: "From 2017 Paper 3 Q2(d). Requires calculating profitability/liquidity ratios from extracts and weighing financial standing against regulatory and integration risks."
         }
     ],
     "Human Resources": [
@@ -58,6 +70,13 @@ const questionDatabase = {
             question: "Discuss the view that non-financial motivators (like job enrichment) are more effective long-term than financial bonuses.",
             modelAnswer: "Financial rewards provide short-term boosts in productivity, but Herzberg's two-factor theory suggests true long-term motivation comes from hygiene and motivators like achievement, responsibility, and challenging work.",
             reasoning: "Requires a balanced argument using motivational theorists (Taylor, Mayo, Maslow, or Herzberg) and weighing short-term compliance against intrinsic job satisfaction."
+        },
+        {
+            difficulty: "Hard",
+            marks: 20,
+            question: "Evaluate whether financial rewards or non-financial techniques are more effective for reducing labor turnover in fitness clubs like Fitness First.",
+            modelAnswer: "Financial rewards (living wage, commission shown in Extract D) address extrinsic hygiene needs and offer short-term retention. Non-financial methods (job rotation, training) address intrinsic motivation, reducing long-term turnover.",
+            reasoning: "From 2017 Paper 3 Q1(d). Requires deep evaluation using motivational frameworks and specific evidence from Extract D table data."
         }
     ],
     "Operations": [
@@ -86,6 +105,27 @@ const questionDatabase = {
             question: "Analyze how a depreciation of the domestic currency (e.g., British Pound falling against the US Dollar) impacts a UK-based manufacturing business that imports raw materials from the USA.",
             modelAnswer: "Costs of production will rise because raw materials priced in dollars become more expensive to buy in pounds, squeezing profit margins unless the business passes costs onto customers through higher prices.",
             reasoning: "Requires application of the economic concept of exchange rates. Chain of analysis must link currency change to cost of goods sold and profit margins."
+        },
+        {
+            difficulty: "Hard",
+            marks: 8,
+            question: "Assess two possible examples of trade-offs between profit and ethics for a health and fitness club.",
+            modelAnswer: "Clubs may face a trade-off when pushing high-margin sales products or locking customers into long-term contracts despite unrealistic customer goals, prioritizing short-term revenue over ethical customer welfare.",
+            reasoning: "From 2017 Paper 3 Q1(a). Must link profit-maximizing action to an ethical compromise."
+        },
+        {
+            difficulty: "Medium",
+            marks: 8,
+            question: "Assess the importance of two entrepreneurial roles carried out by Peter Roberts to the success of Pure Gym.",
+            modelAnswer: "Peter Roberts identified the low-cost model gap in the UK market (innovation/spotting trends) and committed capital to launch sites (risk-taking), driving rapid expansion.",
+            reasoning: "From 2017 Paper 3 Q2(a). Must identify specific entrepreneurial functions and link them directly to Pure Gym's growth in Extract E."
+        },
+        {
+            difficulty: "Hard",
+            marks: 12,
+            question: "Assess the likely impact of media health campaigns on the price elasticity of demand for health and fitness clubs.",
+            modelAnswer: "Media health campaigns make demand more price inelastic because they increase consumer awareness and perceived necessity of fitness, lowering responsiveness to membership price hikes.",
+            reasoning: "From 2017 Paper 3 Q1(c). Must apply PED theory (-2 indicates elastic demand), explain how advertising shifts consumer preferences, and evaluate the resulting change in revenue behavior."
         }
     ]
 };
@@ -148,7 +188,8 @@ function startQuiz(topic) {
 
 function loadCard() {
     const current = currentQuestions[currentIdx];
-    cardTopic.textContent = `${activeTopic} • ${current.difficulty} Level`;
+    const diffText = current.difficulty ? `${current.difficulty} Level` : "";
+    cardTopic.textContent = diffText ? `${activeTopic} • ${diffText}` : activeTopic;
     cardQuestion.textContent = current.question;
     userAnswer.value = "";
     feedbackSection.classList.add("hidden");
@@ -159,7 +200,7 @@ function loadCard() {
 function checkAnswer() {
     const current = currentQuestions[currentIdx];
     modelAnswerText.textContent = current.modelAnswer;
-    reasoningText.textContent = current.reasoning;
+    reasoningText.textContent = current.reasoning || "No examiner reasoning provided.";
     
     submitBtn.classList.add("hidden");
     feedbackSection.classList.remove("hidden");
