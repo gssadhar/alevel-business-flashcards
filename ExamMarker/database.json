@@ -1,10 +1,38 @@
 {
   "1a": {
+    "theme": "Theme 1: Marketing & People",
+    "year": "2019",
+    "question_number": "1a",
     "question": "Calculate the Income Elasticity of Demand (YED) when income changes from 27,000 to 27,195 and quantity changes from 140 to 144.",
+    "extract": "Context: Extract A details changing consumer demographics and rising average disposable incomes in regional test markets for a startup snack manufacturer.",
     "min_acceptable": 3.96,
     "max_acceptable": 3.98,
     "correct_answer": "3.97 (Income elastic)",
     "max_marks": 4,
     "explanation": "Calculated by % change in quantity demanded (2.86%) divided by % change in income (0.72%)."
+  },
+  "1b": {
+    "theme": "Theme 1: Marketing & People",
+    "year": "2020",
+    "question_number": "1b",
+    "question": "Assess the importance of market segmentation for a small retail start-up launching a new product line.",
+    "extract": "Extract B: Boutique Apparel Co operates in a crowded clothing market dominated by fast-fashion giants. Managing Director Sarah plans to target vegan consumers aged 18-25 who prioritize ethical sourcing.",
+    "min_acceptable": null,
+    "max_acceptable": null,
+    "correct_answer": "Exemplar model covers targeting precise demographic/psychographic groups, minimizing waste on mass advertising, and capturing a profitable niche.",
+    "max_marks": 12,
+    "explanation": "Start-ups face liability of newness. Focusing on a distinct segment ensures higher marketing productivity and builds an initial loyal customer base."
+  },
+  "2a": {
+    "theme": "Theme 1: Marketing & People",
+    "year": "2021",
+    "question_number": "2a",
+    "question": "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.",
+    "extract": "Extract C: CoffeeCorner operates in a saturated high street market where consumers can easily switch to automated vending or rival artisan cafés across the street.",
+    "min_acceptable": null,
+    "max_acceptable": null,
+    "correct_answer": "Exemplar model addresses disproportionate fall in demand leading to severe total revenue drop, unless offset by strong brand differentiation.",
+    "max_marks": 10,
+    "explanation": "When PED is elastic (>1), consumers are highly sensitive to price changes. Raising prices forces consumers to switch competitors instantly, destroying sales volume."
   }
 }
