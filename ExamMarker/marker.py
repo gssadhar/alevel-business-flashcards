@@ -35,17 +35,26 @@ def mark_student_answer(question_id, student_value):
             "explanation": q_data["explanation"]
         }
 
-# --- Example Execution ---
 if __name__ == "__main__":
-    # Simulating a student entering 3.97
-    test_question = "1a"
-    student_input = 3.97
+    database = load_database()
     
-    result = mark_student_answer(test_question, student_input)
+    print("=== A-LEVEL BUSINESS EXAM MARKER ===")
+    q_id = input("Enter Question ID to mark (e.g., 1a): ").strip()
     
-    print("--- MARKING REPORT ---")
-    print(f"Status: {result['status']}")
-    print(f"Marks: {result['awarded_marks']}/{result['max_marks']}")
-    print(f"Correct Answer: {result['correct_answer']}")
-    if "explanation" in result:
-        print(f"Explanation: {result['explanation']}")
+    if q_id in database:
+        print(f"\nQuestion: {database[q_id]['question']}")
+        try:
+            student_input = float(input("Enter student's numerical answer: "))
+            result = mark_student_answer(q_id, student_input)
+            
+            print("\n--- MARKING REPORT ---")
+            print(f"Status: {result['status']}")
+            print(f"Marks: {result['awarded_marks']}/{result['max_marks']}")
+            print(f"Correct Answer: {result['correct_answer']}")
+            if "explanation" in result:
+                print(f"Explanation: {result['explanation']}")
+                
+        except ValueError:
+            print("Error: Please enter a valid number for the student's answer.")
+    else:
+        print(f"Error: Question ID '{q_id}' not found in database.")
