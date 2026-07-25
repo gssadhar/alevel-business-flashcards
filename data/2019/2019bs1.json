@@ -1,1 +1,23 @@
-
+{
+  "year": "2019",
+  "paper": "Paper 1",
+  "title": "Marketing, People and Global Businesses",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "marks": 4,
+      "topic": "Marketing - Percentage Change",
+      "stimulus": "Extract A provides music streaming subscriber figures showing growth from 80m to 100m.",
+      "question_text": "Using the data in Extract A, calculate, to 2 decimal places, the percentage increase in subscribers. Show your working.",
+      "mark_scheme": "1 mark for formula ((Change / Original) * 100), 1 mark for absolute change (20m), 1 mark for substitution, 1 mark for correct final answer (25.00%)."
+    },
+    {
+      "question_number": "1(e)",
+      "marks": 20,
+      "topic": "Marketing - Product Life Cycle & Growth",
+      "stimulus": "Extracts detail Spotify's market strategy and extension strategies in digital media.",
+      "question_text": "Evaluate whether extending the product life cycle is the most effective strategy for a music streaming business to achieve long-term growth.",
+      "mark_scheme": "Level 4 (16-20 marks): Balanced evaluation of extension strategies (e.g., updating features, international expansion) versus continuous innovation, supported by contextual application to digital streaming."
+    }
+  ]
+}
