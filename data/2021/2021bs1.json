@@ -1,0 +1,44 @@
+{
+  "year": "2021",
+  "paper": "1",
+  "reference": "9BS0/01",
+  "title": "Marketing, People and Global Businesses",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Global Business",
+          "marks": 4,
+          "question": "Using the data in Extract B, calculate the relative unit labour cost percentage change. Show your working.",
+          "modelAnswer": "Formula: ((New Value - Original Value) / Original Value) * 100. Correct substitution yields the percentage shift.",
+          "reasoning": "1 mark formula identification, 2 marks working steps, 1 mark correct final numerical output."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Marketing & Design": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Demographic trends and percentage change",
+        "marks": 4,
+        "text": "Calculate percentage change and interpret demographic data trends from extract tables."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Brand extension",
+        "marks": 10,
+        "text": "Assess the importance of brand extension as a marketing strategy for established businesses."
+      }
+    ],
+    "Global Business & Ethics": [
+      {
+        "question_number": "2 (e)",
+        "topic": "Ethical dilemmas in supply chains",
+        "marks": 20,
+        "text": "Evaluate the ethical dilemmas faced by multinational corporations operating supply chains in developing nations."
+      }
+    ]
+  }
+}

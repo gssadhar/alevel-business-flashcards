@@ -260,8 +260,4 @@ function returnToDashboard() {
 
 window.onload = () => {
     renderDashboard();
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> bffd419922547cd2df7e0e8c9a46bf92ba7214f7

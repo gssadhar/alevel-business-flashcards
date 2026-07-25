@@ -1,0 +1,88 @@
+{
+  "year": "2018",
+  "paper": "2",
+  "reference": "9BS0/02",
+  "title": "Managing Business Activities, Decisions and Strategy",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Finance",
+          "marks": 4,
+          "question": "Explain one reason Mumtaz has always used internal finance to establish and expand its business.",
+          "modelAnswer": "Internal finance (such as retained profits) avoids interest payments and debt servicing costs, allowing the Akbar family to retain complete ownership and control without diluting shares or involving external lenders.",
+          "reasoning": "2 marks for identifying/explaining internal finance, 2 marks for contextual application to Mumtaz."
+        },
+        {
+          "topic": "Finance",
+          "marks": 4,
+          "question": "Using the data in Extract B, calculate the margin of safety. You are advised to show your working.",
+          "modelAnswer": "Contribution per unit = Selling price (£5) - Variable cost (£2) = £3. Break-even point = Fixed costs (£3m) / Contribution per unit (£3) = 1,000,000 units. Margin of safety = Actual sales (1,500,000 units) - Break-even output (1,000,000 units) = 500,000 units.",
+          "reasoning": "1 mark for formula/contribution, 1 mark for break-even calculation, 2 marks for final margin of safety units."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 10,
+          "question": "Assess whether expanding by organic growth was the right decision for Mumtaz.",
+          "modelAnswer": "Organic growth (such as opening a second factory in Bradford from retained profits) maintains brand integrity, product quality, and family control. However, it can be slower than external growth, potentially missing fast-moving international opportunities in Asia.",
+          "reasoning": "Award 4 marks for application, 4 marks for balanced drawbacks, and 2 marks for conclusion."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 12,
+          "question": "Using the data in Extract C, assess the likely impact of the forecast changes in the UK economy on a business such as Mumtaz.",
+          "modelAnswer": "Rising inflation (from 1.2% to 2.7%) and increasing unemployment (from 4.8% to 6.5%) by 2020 will squeeze consumer disposable incomes. However, premium ready meals may benefit if consumers substitute eating out at expensive restaurants for premium ready meals at home ('staying in is the new going out'). The depreciation of the pound (US$ to £ exchange rate moving from 1.23 to 0.99) will make imported raw materials more expensive while boosting export competitiveness.",
+          "reasoning": "Award 4 marks for economic data interpretation, 4 marks for contextual application to Mumtaz, and 4 marks for overall assessment."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 20,
+          "question": "Evaluate these two options and recommend which is most suitable for Mumtaz to achieve its aim.",
+          "modelAnswer": "Producing supermarket own-label ready meals offers massive volume and guaranteed distribution through retail giants (who hold 68% market share). Focusing on the Mumtaz premium brand builds brand loyalty, higher profit margins, and protects unique identity. Given Mumtaz's strong growth and brand recognition, protecting the premium brand is more sustainable for long-term profit leadership.",
+          "reasoning": "Level 4 (16-20 marks) requires balanced evaluation of own-label vs branded strategy, utilizing market share data and financial implications, with a clear recommendation."
+        }
+      ]
+    },
+    {
+      "section": "Section B",
+      "questions": [
+        {
+          "topic": "Business Failure",
+          "marks": 4,
+          "question": "Explain one internal cause of the business failure of MG Rover Group.",
+          "modelAnswer": "Failure to invest in new and improved car models meant their vehicles became outdated and uncompetitive against rapidly changing consumer preferences for foreign cars.",
+          "reasoning": "2 marks for identifying an internal cause, 2 marks for explanation linked to MG Rover."
+        },
+        {
+          "topic": "Operations",
+          "marks": 4,
+          "question": "Using the data in Extract F, calculate the monthly labour cost per car. You are advised to show your working.",
+          "modelAnswer": "Total workers = 400. Labour cost per worker per month = £2,000. Total monthly labour cost = 400 * £2,000 = £800,000. Monthly output = 20,000 cars. Monthly labour cost per car = £800,000 / 20,000 = £40.",
+          "reasoning": "1 mark for total wage bill calculation, 1 mark for output figures, 2 marks for final unit labor cost."
+        },
+        {
+          "topic": "Human Resources",
+          "marks": 10,
+          "question": "Assess the likely effects of employee legislation on a business such as VW.",
+          "modelAnswer": "Employment laws and labor regulations protect worker rights, improve morale, and can reduce costly turnover. However, strict regulations can increase fixed labor overheads and reduce operational flexibility when restructuring or cutting jobs (such as VW's global job cuts following emissions scandals).",
+          "reasoning": "Award 4 marks for application, 4 marks for balance, and 2 marks for conclusion."
+        },
+        {
+          "topic": "Finance",
+          "marks": 12,
+          "question": "Assess Toyota's decision to issue 'Model AA' shares as a means of raising finance.",
+          "modelAnswer": "Model AA shares protect management from short-term stock market pressures by locking in long-term investors for five years with guaranteed rising dividends. This allows heavy investment in future technologies like electric/hybrid cars. However, guaranteeing dividends and restricting trading can deter standard institutional investors and tie up company financial obligations.",
+          "reasoning": "Award 4 marks for financial knowledge/application, 4 marks for balance, and 4 marks for evaluation."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 20,
+          "question": "Evaluate these two options and recommend which is most suitable to achieve the aim of increasing profitability, for a business such as VW.",
+          "modelAnswer": "Developing self-driving cars positions VW at the forefront of future mobility trends (partnering with services like Gett) and opens new high-margin revenue streams. Improving productivity (such as modernizing factories and cutting inefficient jobs/costs) directly repairs weak profitability damaged by emission fines and high labor costs. Improving productivity provides immediate financial relief, while self-driving cars secure long-term survival.",
+          "reasoning": "Level 4 (16-20 marks) requires thorough evaluation of product development vs productivity gains for VW, weighing short-term financial recovery against long-term competitiveness."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "year": "2017",
+  "paper": "3",
+  "reference": "9BS0/03",
+  "title": "Micro and Macro Economic Environment",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Strategy",
+          "marks": 10,
+          "question": "Analyse the usefulness of Porter's Strategic Matrix when a retail firm decides to target budget consumers.",
+          "modelAnswer": "Porter's matrix highlights cost leadership strategy. By achieving the lowest operational costs, the retailer can offer lower prices than competitors to capture market share.",
+          "reasoning": "Award up to 2 marks for understanding Porter's matrix, 3 marks for application to retail, and 5 marks for analytical depth."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 12,
+          "question": "Evaluate the impact of a rapid depreciation of the domestic currency on a UK-based manufacturing firm that imports all its raw materials.",
+          "modelAnswer": "Depreciation makes imported raw materials significantly more expensive, raising production costs and compressing profit margins. Conversely, it can make exported finished goods cheaper overseas if overseas demand is price-elastic.",
+          "reasoning": "Award 4 marks for knowledge of exchange rates, 4 marks for balanced application, and 4 marks for structural evaluation."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 12,
+          "question": "Evaluate whether implementing intense technological innovation is the best strategy for a traditional publishing house to maintain competitive advantage.",
+          "modelAnswer": "Innovation into e-readers and digital audiobooks broadens market reach and captures younger audiences. However, high development costs and alienating core physical book readers present major risks.",
+          "reasoning": "Award 4 marks for strategic context knowledge, 4 marks for evaluation, and 4 marks for a reasoned final judgment."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Business Ethics and Environment": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Ethics vs profit trade-offs",
+        "marks": 8,
+        "text": "Assess two possible examples of trade-offs between profit and ethics for a health and fitness club."
+      }
+    ],
+    "External Influences and Demand": [
+      {
+        "question_number": "1 (b)",
+        "topic": "Sales forecasting",
+        "marks": 10,
+        "text": "Assess the usefulness of sales forecasting to a health and fitness club, such as Virgin Active."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Price elasticity of demand (PED)",
+        "marks": 12,
+        "text": "Assess the likely impact of media health campaigns on the price elasticity of demand for health and fitness clubs."
+      }
+    ],
+    "Workforce and Motivation": [
+      {
+        "question_number": "1 (d)",
+        "topic": "Labour turnover and motivation (financial vs non-financial rewards)",
+        "marks": 20,
+        "text": "Health and fitness clubs in the UK have high levels of labour turnover. To reduce this, health and fitness chains could offer either better financial rewards, or use non-financial techniques, to improve employee performance. Evaluate these two options and recommend which one a health and fitness club, such as Fitness First, should adopt to reduce labour turnover."
+      }
+    ],
+    "Entrepreneurship and Growth": [
+      {
+        "question_number": "2 (a)",
+        "topic": "Entrepreneurial roles",
+        "marks": 8,
+        "text": "Assess the importance of two entrepreneurial roles carried out by Peter Roberts to the success of Pure Gym."
+      },
+      {
+        "question_number": "2 (b)",
+        "topic": "International expansion factors",
+        "marks": 10,
+        "text": "Assess the likely importance of these factors to Pure Gym's expansion into emerging markets, such as those in Asia, South America or Africa."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Corporate culture integration after takeover",
+        "marks": 12,
+        "text": "Assess whether Pure Gym is likely to overcome the possible difficulties of changing LA Fitness's culture, as a result of the takeover."
+      },
+      {
+        "question_number": "2 (d)",
+        "topic": "Accounting ratios analysis and strategic recommendation",
+        "marks": 20,
+        "text": "Using the data in Extracts G and H calculate appropriate accounting ratios for The Gym Group and, using other non-financial information, evaluate these two options. Recommend which company it would have been better for Pure Gym to take over to achieve its growth target."
+      }
+    ]
+  }
+}

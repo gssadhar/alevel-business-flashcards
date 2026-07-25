@@ -1,0 +1,118 @@
+{
+  "year": "2017",
+  "paper": "2",
+  "reference": "9BS0/02",
+  "title": "Managing Business Activities",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Finance",
+          "marks": 6,
+          "question": "Calculate the acid test ratio given current assets of 45,000 pounds, inventories of 15,000 pounds, and current liabilities of 20,000 pounds.",
+          "modelAnswer": "Formula: (Current Assets - Inventory) / Current Liabilities -> (45000 - 15000) / 20000 = 30000 / 20000 = 1.5:1.",
+          "reasoning": "1 mark for formula, 2 marks for substitution, 2 marks for calculation, 1 mark for proper ratio formatting (:1)."
+        },
+        {
+          "topic": "Finance",
+          "marks": 8,
+          "question": "Analyse the usefulness of cash flow forecasts for a seasonal retail business operating a brick-and-mortar store.",
+          "modelAnswer": "Cash flow forecasts help identify upcoming liquidity gaps during quiet months (e.g., post-Christmas), allowing the business to arrange overdrafts early.",
+          "reasoning": "2 marks for knowledge of cash flow, 3 marks for context application, 3 marks for analytical consequences."
+        },
+        {
+          "topic": "Finance",
+          "marks": 10,
+          "question": "Evaluate whether raising finance through a share issue (equity) is always better than taking out a bank loan (debt) for a growing manufacturing enterprise.",
+          "modelAnswer": "Equity does not require interest repayments and doesn't increase gearing, reducing financial risk. However, it dilutes existing ownership control, whereas debt preserves control but adds fixed interest burdens.",
+          "reasoning": "Award 4 marks for understanding methods, 4 marks for comparative analysis, and 2 marks for conclusion."
+        },
+        {
+          "topic": "Operations",
+          "marks": 8,
+          "question": "Assess the benefits of lean production methods for a car manufacturing business.",
+          "modelAnswer": "Lean production reduces waste, lowers holding costs through just-in-time (JIT), and improves overall product quality by catching defects early.",
+          "reasoning": "Award up to 2 marks for knowledge of lean production, 2 marks for application, and 4 marks for balanced analysis."
+        },
+        {
+          "topic": "Operations",
+          "marks": 10,
+          "question": "Evaluate the importance of quality assurance compared to quality control for a global food processing company.",
+          "modelAnswer": "Quality assurance builds quality into every stage of production, preventing errors proactively. Quality control catches faults at the end, which leads to higher waste if batch failures occur.",
+          "reasoning": "Award 4 marks for conceptual knowledge, 4 marks for comparative analysis, and 2 marks for evaluation."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Business Objectives and Strategy": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Mission statements",
+        "marks": 4,
+        "text": "Explain how Morrisons may benefit from having a mission statement."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Competitive environment",
+        "marks": 10,
+        "text": "Assess the likely effects on a business, such as Morrisons, of a more competitive environment."
+      },
+      {
+        "question_number": "1 (e)",
+        "topic": "Strategic options (price cutting vs customer experience)",
+        "marks": 20,
+        "text": "Morrisons aims to regain its market share. The two options the management are considering are either to cut prices further, or to improve its overall customer experience. Evaluate these two options and recommend which option might be preferred by Morrisons' shareholders."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Stakeholder vs shareholder objectives",
+        "marks": 20,
+        "text": "Unilever's Chief Executive believes that Unilever should aim to consider all of its stakeholders in its main business decisions. Some business analysts consider that Unilever should instead consider an aim of focusing purely on its shareholders. Evaluate these two aims and recommend which is most suitable for a business, such as Unilever."
+      }
+    ],
+    "Finance and Accounting": [
+      {
+        "question_number": "1 (b)",
+        "topic": "Acid test ratio calculation",
+        "marks": 4,
+        "text": "Using the data in Extract B, calculate the difference in Morrisons' acid test ratio between 2014 and 2015. You are advised to show your working."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Sources of finance / minority share sale",
+        "marks": 10,
+        "text": "Assess whether Innocent Drinks Ltd should have raised finance by selling a minority of its shares to a business, such as Coca-Cola."
+      }
+    ],
+    "Human Resources and Leadership": [
+      {
+        "question_number": "1 (d)",
+        "topic": "Transformational leadership",
+        "marks": 12,
+        "text": "Assess whether the transformational leadership shown by David Potts is the main cause of Morrisons' improved performance."
+      }
+    ],
+    "Operations Management": [
+      {
+        "question_number": "2 (a)",
+        "topic": "Network analysis (EST, LFT, critical path)",
+        "marks": 4,
+        "text": "Using the data in the network diagram above, calculate the Earliest Start Times (EST) and Latest Finishing Times (LFT) for each activity and identify the critical path."
+      },
+      {
+        "question_number": "2 (b)",
+        "topic": "Capacity utilisation calculation and implications",
+        "marks": 4,
+        "text": "Using the data in Extract F, explain one implication of the level of capacity utilisation for the soft drinks manufacturer A, compared to B. You are advised to show your working."
+      },
+      {
+        "question_number": "2 (d)",
+        "topic": "Takeovers and takeovers impact",
+        "marks": 12,
+        "text": "Assess the likely effects for AG Barr of taking over Funkin, the cocktail mixer business."
+      }
+    ]
+  }
+}

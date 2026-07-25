@@ -1,0 +1,71 @@
+{
+  "year": "2020",
+  "paper": "2",
+  "reference": "9BS0/02",
+  "title": "Business Activities, Decisions and Strategy",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Finance",
+          "marks": 4,
+          "question": "Calculate the break-even output level using the cost and revenue data provided in Extract A. Show your working.",
+          "modelAnswer": "Break-even output = Fixed Costs / Contribution per unit. Correct substitution yields the target units.",
+          "reasoning": "1 mark for identifying formula, 2 marks for calculating contribution and substitution, 1 mark for final numerical output."
+        },
+        {
+          "topic": "Strategy",
+          "marks": 20,
+          "question": "Evaluate alternative growth strategies using Ansoff's Matrix for a mature retail corporation.",
+          "modelAnswer": "Market penetration offers low risk using existing products in existing markets. Diversification offers high growth potential but extreme risk. The choice depends on core competencies and existing financial buffers.",
+          "reasoning": "Award up to 4 marks for knowledge, 8 marks for balanced analysis of Ansoff options, and 8 marks for a justified corporate recommendation."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Finance": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Break-even output calculation",
+        "marks": 4,
+        "text": "Calculate the break-even output level using the data provided in Extract A. Show your working."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Working capital management",
+        "marks": 4,
+        "text": "Explain one benefit of using working capital management effectively for a growing retail firm."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Cash flow forecasts",
+        "marks": 10,
+        "text": "Assess the usefulness of cash flow forecasts for a growing small business experiencing seasonal demand."
+      }
+    ],
+    "Operations": [
+      {
+        "question_number": "2 (a)",
+        "topic": "Labour productivity calculation",
+        "marks": 4,
+        "text": "Calculate labour productivity ratios from the given workforce data in the extract."
+      },
+      {
+        "question_number": "2 (b)",
+        "topic": "Lean production techniques",
+        "marks": 4,
+        "text": "Explain one advantage of implementing lean production techniques such as Just-In-Time (JIT)."
+      }
+    ],
+    "Strategy": [
+      {
+        "question_number": "2 (e)",
+        "topic": "Ansoff's Matrix & Growth Strategy",
+        "marks": 20,
+        "text": "Evaluate alternative growth strategies using Ansoff's Matrix for a mature retail corporation facing market saturation."
+      }
+    ]
+  }
+}

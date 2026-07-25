@@ -1,0 +1,57 @@
+{
+  "year": "2021",
+  "paper": "3",
+  "reference": "9BS0/03",
+  "title": "Investigating Business in a Competitive Environment",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Strategy",
+          "marks": 10,
+          "question": "Assess the usefulness of decision trees in strategic decision-making under conditions of uncertainty.",
+          "modelAnswer": "Decision trees provide a quantitative, visual framework mapping out expected values and probabilities of different outcomes. However, they rely heavily on subjective probability estimates and ignore qualitative factors like brand reputation.",
+          "reasoning": "Award 2 marks for knowledge of expected values, 2 marks for contextual application, and 6 marks for balanced analytical evaluation."
+        },
+        {
+          "topic": "Global Business",
+          "marks": 20,
+          "question": "Evaluate whether corporate agility and rapid innovation or economies of scale and stability are more vital for long-term market survival.",
+          "modelAnswer": "Agility allows firms to pivot quickly in fast-moving digital markets. Conversely, economies of scale drive lower unit costs and pricing power. Market structure ultimately dictates which trait is prioritized.",
+          "reasoning": "Level 4 (16-20 marks) deep evaluation contrasting scale vs agility with industry-specific justification."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Strategic Decision Making": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Barriers to entry",
+        "marks": 8,
+        "text": "Assess two methods a business can use to build barriers to entry in a concentrated market."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Government regulation",
+        "marks": 10,
+        "text": "Assess the role of government intervention and regulation in controlling anti-competitive business behaviour."
+      },
+      {
+        "question_number": "2 (b)",
+        "topic": "Decision trees",
+        "marks": 10,
+        "text": "Assess the usefulness of decision trees in strategic decision-making under conditions of uncertainty."
+      }
+    ],
+    "External Environment": [
+      {
+        "question_number": "1 (c)",
+        "topic": "Technological change",
+        "marks": 12,
+        "text": "Assess the impact of rapid technological change, such as AI and automation, on established industry structures."
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "year": "2021",
+  "paper": "2",
+  "reference": "9BS0/02",
+  "title": "Business Activities, Decisions and Strategy",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Finance",
+          "marks": 4,
+          "question": "Calculate the Net Present Value (NPV) for the proposed project using the discount factors provided in Extract A. Show your working.",
+          "modelAnswer": "Multiply each year's net cash flow by its respective discount factor, then sum them up and subtract the initial capital outlay.",
+          "reasoning": "1 mark for identifying discount factor multiplication, 2 marks for correct mathematical products, 1 mark for final subtraction yielding correct NPV total."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Finance": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Net Present Value (NPV) calculation",
+        "marks": 4,
+        "text": "Calculate the Net Present Value (NPV) for the proposed project using the discount factors provided. Show your working."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Limitations of quantitative appraisal",
+        "marks": 4,
+        "text": "Explain one limitation of relying solely on quantitative investment appraisal techniques."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Published financial statements",
+        "marks": 10,
+        "text": "Assess the usefulness of published financial statements (Income Statement and Balance Sheet) for potential investors."
+      }
+    ],
+    "Operations & Strategy": [
+      {
+        "question_number": "2 (b)",
+        "topic": "Capacity utilisation calculation",
+        "marks": 4,
+        "text": "Calculate capacity utilisation given maximum capacity and actual output levels."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Capacity utilisation consequences",
+        "marks": 10,
+        "text": "Assess the operational consequences of operating at high capacity utilisation versus excess capacity."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Cost minimisation vs workforce flexibility",
+        "marks": 20,
+        "text": "Evaluate whether cost minimisation through automation or workforce flexibility is more critical for long-term competitiveness."
+      }
+    ]
+  }
+}

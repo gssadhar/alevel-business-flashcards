@@ -1,0 +1,116 @@
+{
+  "year": "2017",
+  "paper": "1",
+  "reference": "9BS0/01",
+  "title": "Marketing and People",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Marketing",
+          "marks": 6,
+          "question": "Explain one benefit and one drawback of using secondary market research for a new coffee shop startup.",
+          "modelAnswer": "Benefit: It is cheap and quick to access existing data like Mintel reports. Drawback: The data may be out of date or not specific to the local target market.",
+          "reasoning": "2 marks for defining secondary research context, 2 marks for a clear benefit, 2 marks for a clear drawback."
+        },
+        {
+          "topic": "Marketing",
+          "marks": 8,
+          "question": "Analyse how a local boutique hotel might use market segmentation to target high-income couples.",
+          "modelAnswer": "The hotel can use demographic and lifestyle segmentation to tailor luxury weekend spa packages, high-end dining promotions, and personalized customer service.",
+          "reasoning": "2 marks for knowledge of market segmentation, 3 marks for application to a hotel, 3 marks for analysis of impact."
+        },
+        {
+          "topic": "Marketing",
+          "marks": 10,
+          "question": "Evaluate whether building a strong brand is more important than offering the lowest price for a smartphone manufacturer.",
+          "modelAnswer": "Branding creates customer loyalty, premium pricing power, and product differentiation. However, in saturated tech markets, budget-conscious consumers often prioritize low price over brand prestige.",
+          "reasoning": "Award 4 marks for knowledge and application, 4 marks for balanced analysis, and 2 marks for a reasoned conclusion."
+        },
+        {
+          "topic": "Human Resources",
+          "marks": 8,
+          "question": "Assess the impact of introducing piece-rate pay on the motivation and productivity of factory workers.",
+          "modelAnswer": "Piece-rate directly links pay to output, motivating workers to increase speed. However, it can compromise quality and create stress if machinery breaks down.",
+          "reasoning": "Award up to 2 marks for knowledge of piece rate, 2 marks for application, and 4 marks for balanced analysis."
+        },
+        {
+          "topic": "Human Resources",
+          "marks": 10,
+          "question": "Evaluate the view that non-financial motivators are more effective than financial incentives for retaining software engineers in a tech firm.",
+          "modelAnswer": "Non-financial motivators like flexible working, job enrichment, and autonomy foster long-term job satisfaction. Financial incentives provide short-term attraction but may not prevent burnout.",
+          "reasoning": "Award 4 marks for knowledge and application, 4 marks for balanced evaluation, and 2 marks for a final judgment."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Marketing": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Percentage growth calculation",
+        "marks": 4,
+        "text": "Using the data from Extract A and the information above, calculate the difference in percentage growth in air passenger numbers between 2015 and 2016. You are advised to show your working."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Supply and demand diagram",
+        "marks": 4,
+        "text": "Using the data from Extract B, draw a supply and demand diagram for airline tickets to show the likely effects of the change in jet fuel prices between 2014 and 2015."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Online-only ticket sales consequences",
+        "marks": 10,
+        "text": "Assess the consequences to a business, such as Spirit Airlines, of only selling its tickets online."
+      },
+      {
+        "question_number": "1 (d)",
+        "topic": "Market positioning",
+        "marks": 12,
+        "text": "Assess the likely importance of its market positioning to the success of a business, such as Emirates."
+      },
+      {
+        "question_number": "2 (a)",
+        "topic": "Price skimming",
+        "marks": 4,
+        "text": "Explain how Pfizer could benefit from using a price skimming strategy."
+      }
+    ],
+    "Managing People": [
+      {
+        "question_number": "1 (e)",
+        "topic": "Organisational structures (tall vs flat)",
+        "marks": 20,
+        "text": "Despite Warren East's restructuring, Rolls-Royce still has a 'tall' organisational structure. Two options for the future of Rolls-Royce are to remain as a tall structure or to change to a flat organisational structure. Evaluate these two options and recommend which is most suitable for a business, such as Rolls-Royce."
+      }
+    ],
+    "Global Business & International Trade": [
+      {
+        "question_number": "2 (b)",
+        "topic": "Corporation tax savings calculation",
+        "marks": 4,
+        "text": "Using the data in Extracts E and F, calculate the amount Pfizer would have saved in 2014 if it had paid corporation tax in Ireland, rather than the USA. You are advised to show your working."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Specialisation in international trade",
+        "marks": 10,
+        "text": "Assess the ways in which specialisation might give a business, such as Pfizer, a competitive advantage when trading internationally."
+      },
+      {
+        "question_number": "2 (d)",
+        "topic": "Global mergers and acquisitions",
+        "marks": 12,
+        "text": "Assess the likely impact on a business such as Pfizer, of a global merger with a business such as Allergan."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Multinationals and economic impact / Government support",
+        "marks": 20,
+        "text": "The government of Ireland supports the location of multinationals, such as Pfizer, in their country if this benefits the local and national economy overall. Evaluate the likely impacts on the Irish economy of Pfizer locating there and recommend if the Irish government should have supported this decision or not."
+      }
+    ]
+  }
+}

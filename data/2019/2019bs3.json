@@ -1,0 +1,36 @@
+{
+  "year": "2019",
+  "paper": "3",
+  "reference": "9BS0/03",
+  "title": "Investigating Business in a Competitive Environment",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Strategy & Marketing",
+          "marks": 8,
+          "question": "Assess two reasons why the demand for holidays is typically income elastic.",
+          "modelAnswer": "Holidays are generally luxury discretionary goods. When consumer disposable incomes rise, demand increases disproportionately; conversely, in economic downturns, bookings drop sharply.",
+          "reasoning": "Award 2 marks for knowledge of YED, 2 marks for application to travel markets, and 4 marks for analytical chains of reasoning regarding income shifts."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "External Environment": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Income elasticity of demand (YED)",
+        "marks": 8,
+        "text": "Assess two reasons why the demand for holidays is typically income elastic."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "International location choice",
+        "marks": 10,
+        "text": "Assess the factors that a global leisure business should consider when choosing an international location."
+      }
+    ]
+  }
+}

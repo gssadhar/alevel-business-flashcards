@@ -1,0 +1,44 @@
+{
+  "year": "2020",
+  "paper": "1",
+  "reference": "9BS0/01",
+  "title": "Marketing, People and Global Businesses",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Marketing",
+          "marks": 4,
+          "question": "Calculate percentage market share using the sales data tables provided in Extract A. Show your working.",
+          "modelAnswer": "Market Share = (Firm Sales / Total Market Sales) * 100. Correct substitution yields the final percentage rounded to 2 decimal places.",
+          "reasoning": "1 mark for formula selection, 2 marks for data extraction and substitution, 1 mark for correct final percentage calculation."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Marketing": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Market share calculation",
+        "marks": 4,
+        "text": "Calculate percentage market share or sales growth using extract tables."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Primary market research",
+        "marks": 10,
+        "text": "Assess the value of primary market research when launching a new product line."
+      }
+    ],
+    "Global Business": [
+      {
+        "question_number": "2 (e)",
+        "topic": "Standardisation vs Glocalisation",
+        "marks": 20,
+        "text": "Evaluate whether multinational corporations should adopt a glocalisation strategy or standardise their global marketing mix."
+      }
+    ]
+  }
+}

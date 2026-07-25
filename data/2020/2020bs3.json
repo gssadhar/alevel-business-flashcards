@@ -1,0 +1,44 @@
+{
+  "year": "2020",
+  "paper": "3",
+  "reference": "9BS0/03",
+  "title": "Investigating Business in a Competitive Environment",
+  "sections": [
+    {
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Strategy",
+          "marks": 8,
+          "question": "Assess two factors that influence price elasticity of demand (PED) in a competitive retail market.",
+          "modelAnswer": "Availability of close substitutes and brand loyalty heavily dictate PED. If many substitutes exist, demand is price elastic; strong brand loyalty reduces elasticity.",
+          "reasoning": "Award 2 marks for knowledge of PED influencers, 2 marks for contextual retail application, and 4 marks for analytical reasoning."
+        }
+      ]
+    }
+  ],
+  "topics": {
+    "Strategic Analysis": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Price elasticity of demand (PED) factors",
+        "marks": 8,
+        "text": "Assess two factors that influence price elasticity of demand (PED) in a competitive retail market."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "International location decision",
+        "marks": 10,
+        "text": "Assess the challenges faced by a business choosing a new international production location."
+      }
+    ],
+    "Operations & Project Management": [
+      {
+        "question_number": "2 (b)",
+        "topic": "Network diagrams / Critical Path Analysis",
+        "marks": 10,
+        "text": "Assess the value of using network diagrams (critical path analysis) for managing complex corporate projects."
+      }
+    ]
+  }
+}
