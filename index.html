@@ -4,159 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A-Level Business Hub (Edexcel)</title>
-    <!-- Bootstrap CSS for clean styling matching your UI -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
         }
-        .header-bg {
-            background-color: #4f46e5;
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
             color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.25rem;
+        }
+
+        main {
+            flex: 1;
+            max-width: 900px;
+            width: 100%;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Theme Selection View */
+        #theme-selection {
             text-align: center;
         }
+
+        #theme-selection h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #theme-selection p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 1.5rem;
+            text-align: left;
+        }
+
         .theme-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
         }
+
         .theme-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
+
+        .theme-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        .theme-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Question Container View */
+        #question-container {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #question-meta {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        #question-counter {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
         .extract-box {
             background-color: #f1f5f9;
-            border-left: 4px solid #4f46e5;
+            border-left: 4px solid var(--primary);
             padding: 1rem;
+            border-radius: 4px;
             margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            font-style: italic;
+            color: #334155;
         }
-        .student-answer-box {
-            background-color: #eef2ff;
-            border: 1px solid #c7d2fe;
-            border-radius: 6px;
-            padding: 1rem;
+
+        #question-text {
+            font-size: 1.15rem;
+            font-weight: 600;
             margin-bottom: 1.5rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 140px;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box;
+            resize: vertical;
+            margin-bottom: 1rem;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        button.primary-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button.primary-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        button.secondary-btn {
+            background-color: #e2e8f0;
+            color: var(--text-main);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 0.75rem;
+        }
+
+        button.secondary-btn:hover {
+            background-color: #cbd5e1;
+        }
+
+        /* Feedback Section */
+        #feedback-section {
+            background-color: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feedback-block {
+            margin-bottom: 1rem;
+        }
+
+        .feedback-block h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .feedback-block p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .action-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            background-color: white;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <div class="header-bg shadow-sm">
-        <h1 class="fw-bold">A-Level Business Hub (Edexcel)</h1>
-    </div>
+    <header>
+        <h1>A-Level Business Hub (Edexcel)</h1>
+    </header>
 
-    <div class="container mb-5" style="max-width: 900px;">
-        
-        <!-- VIEW 1: Theme Selection -->
+    <main>
+        <!-- Theme Selection View -->
         <div id="theme-selection">
-            <div class="text-center mb-4">
-                <h3 class="fw-bold">Select a Theme to Revise</h3>
-                <p class="text-muted">Choose an Edexcel Business theme below. Complete detailed feedback, model answers, reasoning, and key terminology are provided on-screen after every submission.</p>
-            </div>
+            <h2>Select a Theme to Revise</h2>
+            <p>Choose an Edexcel Business theme below. Complete detailed feedback, model answers, reasoning, and key terminology are provided on-screen after every submission.</p>
             
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 1')">
-                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 1: Marketing & People</h5>
-                        <p class="text-muted mb-0">Meeting customer needs, market research, marketing mix, and human resource management.</p>
-                    </div>
+            <div class="theme-grid">
+                <div class="theme-card" onclick="selectTheme('Theme 1')">
+                    <h3>Theme 1: Marketing & People</h3>
+                    <p>Meeting customer needs, market research, marketing mix, and human resource management.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 2')">
-                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 2: Managing Business Activities</h5>
-                        <p class="text-muted mb-0">Raising finance, financial planning, managing resources, quality, and economic influences.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 3')">
-                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 3: Business Decisions & Strategy</h5>
-                        <p class="text-muted mb-0">Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 4')">
-                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 4: Global Business</h5>
-                        <p class="text-muted mb-0">Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- VIEW 2: Question & Feedback Container (Hidden by default) -->
-        <div id="question-container" class="card shadow p-4 border-0 rounded-4" style="display: none;">
-            
-            <!-- Meta & Counter Header -->
-            <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
-                <span id="question-meta" class="badge bg-light text-primary p-2 fs-6 border" style="color: #4f46e5 !important;">Theme 1 (Marks: 10)</span>
-                <span id="question-counter" class="text-muted fw-semibold">Question 1 of 2</span>
-            </div>
-
-            <!-- Reading Material / Extract Context -->
-            <div id="extract-text" class="extract-box text-secondary fst-italic">
-                Extract loading...
-            </div>
-
-            <!-- Question Text -->
-            <h4 id="question-text" class="fw-bold mb-4 text-dark">
-                Question loading...
-            </h4>
-
-            <!-- INPUT SECTION -->
-            <div id="input-section">
-                <textarea id="student-answer-input" class="form-control mb-4 p-3" rows="6" placeholder="Type your detailed answer or numerical calculation here..."></textarea>
-                <div class="d-flex gap-2">
-                    <button class="btn text-white px-4 py-2 fw-semibold" style="background-color: #4f46e5;" onclick="submitAnswer()">Submit & View Detailed Feedback</button>
-                    <button class="btn btn-secondary px-4 py-2 fw-semibold" onclick="backToThemes()">Back to Themes</button>
-                </div>
-            </div>
-
-            <!-- FEEDBACK SECTION (Hidden by default) -->
-            <div id="feedback-section" style="display: none;">
                 
-                <!-- NEW: Student Answer Display Box -->
-                <div class="student-answer-box">
-                    <h6 class="fw-bold text-uppercase text-secondary mb-1" style="font-size: 0.8rem;">Your Submitted Answer:</h6>
-                    <p id="displayed-student-answer" class="mb-0 fw-medium text-dark fst-italic"></p>
+                <div class="theme-card" onclick="selectTheme('Theme 2')">
+                    <h3>Theme 2: Managing Business Activities</h3>
+                    <p>Raising finance, financial planning, managing resources, quality, and economic influences.</p>
                 </div>
-
-                <!-- Marks Awarded Display -->
-                <h4 id="marks-awarded-display" class="fw-bold mb-3" style="color: #4f46e5;">Marks Awarded: 0 / 10</h4>
-                <hr>
-
-                <!-- Model Answer -->
-                <div class="mb-4">
-                    <h6 class="fw-bold text-dark">1. Complete Exemplar Model Answer:</h6>
-                    <p id="model-answer-text" class="text-secondary mb-0"></p>
+                
+                <div class="theme-card" onclick="selectTheme('Theme 3')">
+                    <h3>Theme 3: Business Decisions & Strategy</h3>
+                    <p>Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
                 </div>
-
-                <!-- Economic & Business Reasoning -->
-                <div class="mb-4">
-                    <h6 class="fw-bold text-dark">2. Deep Economic & Business Reasoning:</h6>
-                    <p id="explanation-text" class="text-secondary mb-0"></p>
+                
+                <div class="theme-card" onclick="selectTheme('Theme 4')">
+                    <h3>Theme 4: Global Business</h3>
+                    <p>Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
                 </div>
-
-                <div class="d-flex gap-2 mt-4 pt-2 border-top">
-                    <button class="btn text-white px-4 py-2 fw-semibold" style="background-color: #4f46e5;" onclick="nextQuestion()">Next Question ➜</button>
-                    <button class="btn btn-secondary px-4 py-2 fw-semibold" onclick="backToThemes()">Back to Themes</button>
-                </div>
-
             </div>
-
         </div>
 
-    </div>
+        <!-- Question Container View (Hidden Initially) -->
+        <div id="question-container" style="display: none;">
+            <div class="question-header">
+                <span id="question-meta">Theme 1 (Marks: 4)</span>
+                <span id="question-counter">Question 1 of 4</span>
+            </div>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 text-muted border-top mt-5" style="font-size: 0.9rem;">
-        A-Level Business Studies Revision Platform • Edexcel Aligned
+            <div class="extract-box" id="extract-text">
+                Extract details go here...
+            </div>
+
+            <div id="question-text">
+                Question statement goes here...
+            </div>
+
+            <!-- Input Section -->
+            <div id="input-section">
+                <textarea id="student-answer-input" placeholder="Type your structured exam answer or calculation response here..."></textarea>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <button class="secondary-btn" onclick="backToThemes()">Back to Themes</button>
+                    <button class="primary-btn" onclick="submitAnswer()">Submit Answer</button>
+                </div>
+            </div>
+
+            <!-- Feedback Section (Hidden Initially) -->
+            <div id="feedback-section" style="display: none;">
+                <div class="feedback-block">
+                    <h4>Your Answer:</h4>
+                    <p id="displayed-student-answer" style="font-style: italic; color: #475569;"></p>
+                </div>
+
+                <div class="feedback-block" style="margin-top: 1rem;">
+                    <h4 id="marks-awarded-display" style="color: var(--primary); font-weight: 700;">Marks Awarded: 0 / 0</h4>
+                </div>
+
+                <div class="feedback-block" style="margin-top: 1rem;">
+                    <h4>Model Answer / Guidance:</h4>
+                    <p id="model-answer-text" style="white-space: pre-line;"></p>
+                </div>
+
+                <div class="feedback-block" style="margin-top: 1rem;">
+                    <h4>Examiner Explanation & Theory:</h4>
+                    <p id="explanation-text"></p>
+                </div>
+
+                <div class="action-row">
+                    <button class="secondary-btn" onclick="backToThemes()">Back to Themes</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next Question &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        A-Level Business Studies Revision Platform &bull; Edexcel Aligned
     </footer>
 
-    <!-- Connect Frontend Script -->
     <script src="script.js"></script>
 </body>
 </html>
