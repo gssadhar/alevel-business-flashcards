@@ -1,96 +1,53 @@
-/**
- * Edexcel A-Level Business Hub - Main Application Script
- */
-
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Edexcel Business Hub loaded successfully.");
     
     initNavigation();
-    loadTopicsOrFallback();
+    loadQuestionsDirectly();
     initMarkSchemeEvaluator();
 });
 
-function initNavigation() {
-    const navLinks = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll(".content-section");
-
-    if (navLinks.length === 0 || sections.length === 0) return;
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute("data-target");
-
-            navLinks.forEach(l => l.classList.remove("active"));
-            sections.forEach(s => s.classList.remove("active"));
-
-            link.classList.add("active");
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.classList.add("active");
-            }
-        });
-    });
-}
-
-function loadTopicsOrFallback() {
-    // Look for a topic container, or create one dynamically if it doesn't exist yet
-    let container = document.getElementById("topics-container");
+function loadQuestionsDirectly() {
+    const container = document.getElementById("topics-container") || document.getElementById("questions-container");
     
     if (!container) {
-        // If your HTML doesn't have a container div yet, create it right below the subtitle
-        const subtitle = document.querySelector("p");
-        container = document.createElement("div");
-        container.id = "topics-container";
-        container.style.cssText = "display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; padding: 0 20px;";
-        if (subtitle && subtitle.parentNode) {
-            subtitle.parentNode.appendChild(container);
-        } else {
-            document.body.appendChild(container);
-        }
+        console.error("Target container for questions not found in HTML.");
+        return;
     }
 
-    // Populate with standard Edexcel Business revision topics
-    const sampleTopics = [
-        { title: "Theme 1: Marketing & People", desc: "Markets, marketing mix, and managing people." },
-        { title: "Theme 2: Managing Business Activities", desc: "Finance, operations, and resource management." },
-        { title: "Theme 3: Business Decisions & Strategy", desc: "Business objectives, growth, and competitive strategy." },
-        { title: "Theme 4: Global Business", desc: "Globalisation, multinational corporations, and trade." }
+    // Embed questions directly in script.js to guarantee 0 load time and prevent fetch errors
+    const allQuestions = [
+        {
+            theme: "Theme 1: Marketing & People",
+            year: "2017",
+            question: "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.",
+            marks: 10
+        },
+        {
+            theme: "Theme 2: Managing Business Activities",
+            year: "2018",
+            question: "Assess the usefulness of cash flow forecasts for a small retail startup.",
+            marks: 12
+        },
+        {
+            theme: "Theme 3: Business Decisions & Strategy",
+            year: "2022",
+            question: "Discuss the potential benefits and drawbacks of organic growth versus external growth through a merger.",
+            marks: 20
+        },
+        {
+            theme: "Theme 4: Global Business",
+            year: "2024",
+            question: "Evaluate the impact of trade protectionism (such as tariffs) on a multinational manufacturing firm.",
+            marks: 25
+        }
     ];
 
-    container.innerHTML = sampleTopics.map(topic => `
-        <div style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px; width: 260px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; text-align: left;" onclick="alert('Loading questions for: ${topic.title}')">
-            <h3 style="font-size: 1.1rem; color: #333; margin-bottom: 8px;">${topic.title}</h3>
-            <p style="font-size: 0.9rem; color: #666; margin: 0;">${topic.desc}</p>
+    // Render questions instantly without waiting for external fetches
+    container.innerHTML = allQuestions.map((q, index) => `
+        <div style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left;">
+            <span style="font-size: 0.8rem; background: #e0e7ff; color: #3730a3; padding: 3px 8px; border-radius: 4px; font-weight: bold;">${q.year} - ${q.theme}</span>
+            <h3 style="font-size: 1.05rem; color: #333; margin: 10px 0;">Q${index + 1}: ${q.question}</h3>
+            <p style="font-size: 0.9rem; color: #555; margin: 0;"><strong>Marks:</strong> ${q.marks}</p>
         </div>
     `).join('');
-}
-
-function initMarkSchemeEvaluator() {
-    const evaluateBtn = document.getElementById("evaluate-btn");
-    const studentAnswerInput = document.getElementById("student-answer");
-    const feedbackOutput = document.getElementById("feedback-output");
-
-    if (!evaluateBtn || !studentAnswerInput || !feedbackOutput) return;
-
-    evaluateBtn.addEventListener("click", () => {
-        const answerText = studentAnswerInput.value.trim();
-
-        if (answerText.length < 10) {
-            feedbackOutput.innerHTML = `<p style="color: red;">Please enter a more detailed response.</p>`;
-            return;
-        }
-
-        feedbackOutput.innerHTML = `<p style="color: blue;">Analyzing response against Edexcel mark scheme...</p>`;
-
-        setTimeout(() => {
-            feedbackOutput.innerHTML = `
-                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 10px;">
-                    <h4>Mark Scheme Evaluation</h4>
-                    <p><strong>Estimated Mark:</strong> 8 / 10</p>
-                    <p><strong>Analysis:</strong> Strong contextual application and clear logical chains.</p>
-                </div>
-            `;
-        }, 800);
-    });
 }
