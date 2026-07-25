@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-Level Business Studies Exam Hub (Edexcel)</title>
+    <title>A-Level Business Hub (Edexcel)</title>
     <style>
         :root {
-            --primary: #4338ca; /* Deep Indigo */
-            --primary-hover: #3730a3;
-            --accent: #06b6d4; /* Vibrant Cyan */
-            --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
-            --text-main: #334155;
+            --text-main: #475569;
             --text-heading: #0f172a;
             --border: #e2e8f0;
-            --shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.08);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 10px 15px -3px rgba(79, 70, 229, 0.1), 0 4px 6px -2px rgba(79, 70, 229, 0.05);
         }
 
         body {
@@ -31,33 +30,25 @@
         }
 
         header {
-            background: var(--card-bg);
-            border-bottom: 2px solid #e0e7ff;
-            padding: 1.25rem 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background-color: var(--primary);
+            color: white;
+            padding: 2.25rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
         }
 
         header h1 {
-            font-size: 1.25rem;
+            font-size: 2.25rem;
             font-weight: 800;
             margin: 0;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             letter-spacing: -0.025em;
         }
 
         main {
             flex: 1;
-            max-width: 960px;
+            max-width: 1000px;
             width: 100%;
-            margin: 2.5rem auto;
+            margin: 3rem auto;
             padding: 0 1.5rem;
             box-sizing: border-box;
         }
@@ -69,129 +60,137 @@
             padding: 2.5rem;
             box-shadow: var(--shadow);
             margin-bottom: 1.5rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .card h2 {
+        .center-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .center-heading h2 {
             color: var(--text-heading);
-            font-size: 1.6rem;
+            font-size: 2rem;
             margin-top: 0;
+            margin-bottom: 0.75rem;
             letter-spacing: -0.02em;
+            font-weight: 800;
+        }
+
+        .center-heading p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin: 0;
+            line-height: 1.5;
         }
 
         .theme-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 1.25rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+            gap: 1.5rem;
         }
 
         .theme-btn {
-            background: linear-gradient(to bottom, #ffffff, #fafafa);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem 1.25rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 2rem;
             font-size: 1rem;
-            font-weight: 700;
-            color: var(--text-heading);
+            color: var(--text-main);
             cursor: pointer;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: left;
-            position: relative;
-            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
-        .theme-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--accent-gradient);
-            opacity: 0;
-            transition: opacity 0.2s ease;
+        .theme-btn h3 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+            letter-spacing: -0.01em;
+        }
+
+        .theme-btn p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            line-height: 1.5;
         }
 
         .theme-btn:hover {
-            border-color: #6366f1;
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px -5px rgba(99, 102, 241, 0.15);
-            background-color: #f5f3ff;
-        }
-
-        .theme-btn:hover::before {
-            opacity: 1;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
         }
 
         .primary-btn {
-            background: var(--accent-gradient);
+            background-color: var(--primary);
             color: white;
             border: none;
             border-radius: 8px;
-            padding: 0.85rem 1.75rem;
-            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
             font-size: 0.95rem;
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+            transition: background-color 0.15s ease;
         }
 
         .primary-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
-            filter: brightness(1.05);
+            background-color: var(--primary-hover);
         }
 
         .secondary-btn {
             background-color: white;
             color: var(--primary);
-            border: 2px solid #e0e7ff;
+            border: 1px solid #c7d2fe;
             border-radius: 8px;
-            padding: 0.75rem 1.4rem;
-            font-weight: 700;
+            padding: 0.65rem 1.25rem;
+            font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.15s ease;
         }
 
         .secondary-btn:hover {
             background-color: #eef2ff;
-            border-color: #c7d2fe;
-            transform: translateY(-1px);
+            border-color: var(--primary);
         }
 
         .meta-tag {
             display: inline-block;
-            background: #e0e7ff;
-            color: #4338ca;
-            padding: 0.35rem 1rem;
-            border-radius: 20px;
+            background: #eef2ff;
+            color: var(--primary);
+            padding: 0.3rem 0.85rem;
+            border-radius: 6px;
             font-size: 0.8rem;
-            font-weight: 800;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 1rem;
         }
 
         .extract-box {
-            background: linear-gradient(to right, #f8fafc, #f1f5f9);
+            background-color: #f8fafc;
             border: 1px solid var(--border);
-            border-left: 5px solid #4f46e5;
-            padding: 1.25rem 1.5rem;
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
             margin: 1.25rem 0;
             font-style: italic;
             color: #475569;
-            border-radius: 0 8px 8px 0;
-            line-height: 1.6;
+            border-radius: 0 6px 6px 0;
+            line-height: 1.5;
         }
 
         textarea {
             width: 100%;
             height: 140px;
             padding: 1rem;
-            border: 2px solid var(--border);
-            border-radius: 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
             font-family: inherit;
             font-size: 0.95rem;
             box-sizing: border-box;
@@ -199,22 +198,20 @@
             margin-top: 0.5rem;
             background-color: #ffffff;
             color: var(--text-heading);
-            transition: all 0.2s ease;
         }
 
         textarea:focus {
             outline: none;
-            border-color: #6366f1;
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
         }
 
         .feedback-box {
-            background: linear-gradient(to bottom, #f0fdf4, #dcfce7);
+            background-color: #f0fdf4;
             border: 1px solid #bbf7d0;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 1.5rem;
-            box-shadow: 0 4px 12px rgba(22, 101, 52, 0.05);
+            padding: 1.75rem;
+            border-radius: 8px;
+            margin-top: 1.25rem;
         }
 
         .action-bar {
@@ -222,28 +219,48 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 2rem;
-            border-top: 2px solid var(--border);
+            border-top: 1px solid var(--border);
             padding-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .theme-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>A-Level Business Studies Exam Hub</h1>
-        <button class="secondary-btn" onclick="backToThemes()" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Switch Theme</button>
+        <h1>A-Level Business Hub (Edexcel)</h1>
     </header>
 
     <main>
         <!-- Theme Selection Screen -->
-        <div id="theme-selection" class="card">
-            <h2>Select Exam Theme</h2>
-            <p style="color: var(--text-muted);">Choose a theme to practice high-frequency A-Level Business questions complete with extracts, calculations, and model mark schemes.</p>
+        <div id="theme-selection">
+            <div class="center-heading">
+                <h2>Select a Theme to Revise</h2>
+                <p>Choose an Edexcel Business theme below. Complete past paper extracts, detailed mark schemes, calculations, examiner tips, and essay self-assessment are provided on-screen after every submission.</p>
+            </div>
+            
             <div class="theme-grid">
-                <button class="theme-btn" onclick="selectTheme('Theme 1')">Theme 1<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Marketing & People</span></button>
-                <button class="theme-btn" onclick="selectTheme('Theme 2')">Theme 2<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Managing Business Activities</span></button>
-                <button class="theme-btn" onclick="selectTheme('Theme 3')">Theme 3<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Business Decisions & Strategy</span></button>
-                <button class="theme-btn" onclick="selectTheme('Theme 4')">Theme 4<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Global Business</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 1')">
+                    <h3>Theme 1: Marketing & People</h3>
+                    <p>Meeting customer needs, market research, marketing mix, and human resource management.</p>
+                </button>
+                <button class="theme-btn" onclick="selectTheme('Theme 2')">
+                    <h3>Theme 2: Managing Business Activities</h3>
+                    <p>Raising finance, financial planning, managing resources, quality, and economic influences.</p>
+                </button>
+                <button class="theme-btn" onclick="selectTheme('Theme 3')">
+                    <h3>Theme 3: Business Decisions & Strategy</h3>
+                    <p>Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
+                </button>
+                <button class="theme-btn" onclick="selectTheme('Theme 4')">
+                    <h3>Theme 4: Global Business</h3>
+                    <p>Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
+                </button>
             </div>
         </div>
 
@@ -251,7 +268,7 @@
         <div id="question-container" class="card" style="display: none;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span id="question-meta" class="meta-tag">Theme 1 (Marks: 4)</span>
-                <span id="question-counter" style="font-size: 0.85rem; font-weight: 600; color: #64748b;">Question 1 of 10</span>
+                <button class="secondary-btn" onclick="backToThemes()" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Switch Theme</button>
             </div>
             
             <div id="extract-text" class="extract-box">Loading extract...</div>
