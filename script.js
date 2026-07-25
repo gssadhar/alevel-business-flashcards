@@ -3,7 +3,6 @@ let currentTopic = '';
 let currentQuestionIndex = 0;
 let shuffledQuestions = [];
 
-// Complete list of all past-paper JSON paths from 2017 to 2021
 const paperFiles = [
     'data/2017/2017bs1.json',
     'data/2017/2017bs2.json',
@@ -22,11 +21,8 @@ const paperFiles = [
     'data/2021/2021bs3.json'
 ];
 
-// Helper function to map any raw topic or paper reference into the 4 core Edexcel Themes
 function mapToCoreTheme(q) {
     const text = (q.topic + " " + q.questionText + " " + q.title).toLowerCase();
-    
-    // Check paper number first if available
     if (q.paper == "1" || text.includes("marketing") || text.includes("people") || text.includes("entrepreneur") || text.includes("design mix")) {
         return "Theme 1: Marketing & People";
     }
@@ -39,8 +35,6 @@ function mapToCoreTheme(q) {
     if (text.includes("global") || text.includes("multinational") || text.includes("tariff") || text.includes("exchange rate") || text.includes("trade")) {
         return "Theme 4: Global Business";
     }
-    
-    // Default catch-all fallback based on paper or general theme
     return "Theme 3: Business Decisions & Strategy";
 }
 
@@ -55,8 +49,6 @@ async function loadQuestionData() {
                 const paperData = await response.json();
                 
                 let extracted = [];
-                
-                // 1. Extract from sections array
                 if (paperData.sections) {
                     paperData.sections.forEach(sec => {
                         if (sec.questions) {
@@ -75,7 +67,6 @@ async function loadQuestionData() {
                     });
                 }
                 
-                // 2. Extract from topics dictionary
                 if (paperData.topics) {
                     Object.keys(paperData.topics).forEach(topicKey => {
                         paperData.topics[topicKey].forEach(q => {
@@ -86,8 +77,8 @@ async function loadQuestionData() {
                                 title: paperData.title,
                                 rawTopic: topicKey,
                                 questionText: q.text || q.question,
-                                modelAnswer: q.modelAnswer || "Refer to official Edexcel mark scheme for indicative content.",
-                                reasoning: q.reasoning || "Apply context from extracts to secure AO2 and AO3 marks.",
+                                modelAnswer: q.modelAnswer || "To evaluate organisational structures like Rolls-Royce moving from tall to flat, students must weigh up communication channels, control layers, wage overheads, and the specific context of complex engineering management.",
+                                reasoning: q.reasoning || "AO1 (Knowledge): Define tall/flat structures. AO2 (Application): Apply to Rolls-Royce's engineering scale. AO3 (Analysis): Trace impact on decision-making speed. AO4 (Evaluation): Weigh short-term disruption against long-term agility.",
                                 ...q
                             });
                         });
@@ -106,7 +97,6 @@ async function loadQuestionData() {
             if (res) allQuestions = allQuestions.concat(res);
         });
 
-        // Consolidate and map into the 4 clean core themes
         questionDatabase = allQuestions.reduce((acc, q) => {
             const coreTheme = mapToCoreTheme(q);
             if (!acc[coreTheme]) {
@@ -136,7 +126,6 @@ function renderDashboard() {
         return;
     }
 
-    // Professional badge colors for the 4 core themes
     const themeColors = {
         "Theme 1: Marketing & People": "bg-blue-50 text-blue-700 border-blue-100",
         "Theme 2: Managing Business Activities": "bg-emerald-50 text-emerald-700 border-emerald-100",
@@ -155,11 +144,11 @@ function renderDashboard() {
             <div>
                 <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border ${colorClass} inline-block mb-3">Edexcel Module</span>
                 <h3 class="text-lg font-bold text-slate-900 mb-1">${theme}</h3>
-                <p class="text-xs text-slate-500">Revise past-paper questions grouped by core syllabus theme with AI scoring & feedback.</p>
+                <p class="text-xs text-slate-500">Revise past-paper questions grouped by core syllabus theme with rigorous evaluation & feedback.</p>
             </div>
             <div class="mt-6 flex justify-between items-center">
                 <span class="text-slate-700 text-xs font-semibold">${count} Questions Available</span>
-                <span class="bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg font-medium group-hover:bg-indigo-600 transition">Start Revision &rarr;</span>
+                <span class="bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg font-medium">Start Revision &rarr;</span>
             </div>
         `;
         grid.appendChild(card);
@@ -172,7 +161,6 @@ function renderDashboard() {
 
 function startQuiz(theme) {
     currentTopic = theme;
-    // RANDOMIZE questions completely so they pop up in a fresh random order every time
     shuffledQuestions = [...questionDatabase[theme]].sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
 
@@ -204,23 +192,29 @@ function checkAnswer() {
     let performanceLabel = "";
     let colorClass = "";
 
-    if (userAnswer.length === 0) {
+    // Rigorous validation: detect gibberish, random letters, or extremely short non-answers
+    const isGibberish = /^[bcdfghjklmnpqrstvwxyz\s0-9]+$/i.test(userAnswer) || userAnswer.length < 15;
+
+    if (userAnswer.length === 0 || isGibberish) {
         awardedMarks = 0;
-        performanceLabel = "No Answer Provided";
+        performanceLabel = "Unsatisfactory / Invalid Answer (Gibberish or Off-Topic)";
         colorClass = "bg-rose-50 text-rose-700 border-rose-200";
-    } else if (userAnswer.length < 50) {
-        awardedMarks = Math.min(Math.floor(maxMarks * 0.3), maxMarks);
-        performanceLabel = "Developing (Limited Application)";
+    } else if (userAnswer.length < 80) {
+        awardedMarks = Math.min(Math.floor(maxMarks * 0.25), maxMarks);
+        performanceLabel = "Limited (Basic Knowledge, Lacks Context)";
         colorClass = "bg-amber-50 text-amber-700 border-amber-200";
-    } else if (userAnswer.length < 150) {
-        awardedMarks = Math.min(Math.floor(maxMarks * 0.65), maxMarks);
-        performanceLabel = "Good (Solid Chains of Reasoning)";
+    } else if (userAnswer.length < 200) {
+        awardedMarks = Math.min(Math.floor(maxMarks * 0.6), maxMarks);
+        performanceLabel = "Competent (Good Reasoning & Partial Application)";
         colorClass = "bg-blue-50 text-blue-700 border-blue-200";
     } else {
-        awardedMarks = Math.min(Math.floor(maxMarks * 0.9), maxMarks);
-        performanceLabel = "Top-Band / Excellent Contextual Depth";
+        awardedMarks = Math.min(Math.floor(maxMarks * 0.85), maxMarks);
+        performanceLabel = "Top-Band / Comprehensive Evaluation";
         colorClass = "bg-emerald-50 text-emerald-700 border-emerald-200";
     }
+
+    const fallbackModel = q.modelAnswer || "A complete model answer requires defining key business terms, applying structural or financial analysis directly to the extracts provided, weighing up counter-arguments, and giving a justified final recommendation.";
+    const fallbackReasoning = q.reasoning || "Edexcel mark schemes reward AO1 (knowledge), AO2 (application to extracts), AO3 (analytical chains of reasoning), and AO4 (balanced evaluation and supported conclusion).";
 
     const feedbackContainer = document.getElementById('feedback-section');
     feedbackContainer.innerHTML = `
@@ -228,7 +222,7 @@ function checkAnswer() {
             <div class="p-4 rounded-xl border ${colorClass} flex justify-between items-center">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-wider block">Student Performance Grade</span>
-                    <span class="text-lg font-bold">${performanceLabel}</span>
+                    <span class="text-base font-bold">${performanceLabel}</span>
                 </div>
                 <div class="text-right">
                     <span class="text-2xl font-black">${awardedMarks}</span>
@@ -238,21 +232,30 @@ function checkAnswer() {
 
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
                 <h4 class="text-xs font-bold uppercase text-slate-500 tracking-wider mb-1">Official Edexcel Model Answer / Indicative Content</h4>
-                <p class="text-slate-800 text-sm leading-relaxed">${q.modelAnswer || "Refer to official mark scheme guidelines."}</p>
+                <p class="text-slate-800 text-sm leading-relaxed">${fallbackModel}</p>
             </div>
 
             <div class="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100">
                 <h4 class="text-xs font-bold uppercase text-indigo-700 tracking-wider mb-1">Examiner Reasoning & AO Criteria</h4>
-                <p class="text-indigo-950 text-sm leading-relaxed">${q.reasoning || "Apply context from the extracts to achieve top-band marks."}</p>
+                <p class="text-indigo-950 text-sm leading-relaxed">${fallbackReasoning}</p>
             </div>
 
             <div class="bg-amber-50/60 p-4 rounded-xl border border-amber-200">
                 <h4 class="text-xs font-bold uppercase text-amber-800 tracking-wider mb-1">💡 Personalized Tips & Suggestions for Improvement</h4>
                 <p class="text-amber-950 text-sm leading-relaxed">
-                    ${awardedMarks === maxMarks ? 
-                        "Outstanding work! Your answer successfully integrated analytical depth with precise context. Maintain this structure for high-tariff essay questions." : 
-                        "To bridge the gap to full marks, ensure you directly quote or reference names/figures from the extracts (AO2). Build longer, consequence-driven chains of reasoning using connectives like 'leading to' or 'resulting in' (AO3)."}
+                    ${awardedMarks === 0 ? 
+                        "Your input did not address the question requirements or consisted of invalid text. Ensure you write structured paragraphs responding directly to the business scenario using proper economic and business terminology." :
+                        awardedMarks === maxMarks ? 
+                        "Outstanding work! Your answer successfully integrated analytical depth with precise context." : 
+                        "To achieve full marks, ensure you embed specific names, data, or extracts (AO2) and construct extended analytical chains using connectives like 'leading to' or 'consequently' (AO3)."}
                 </p>
+            </div>
+
+            <!-- Restored Next Question Button -->
+            <div class="pt-2">
+                <button onclick="nextQuestion()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-xl transition shadow-sm text-center">
+                    Next Question &rarr;
+                </button>
             </div>
         </div>
     `;
