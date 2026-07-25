@@ -68,6 +68,54 @@ function loadQuestion() {
     document.getElementById("student-answer-input").value = "";
     document.getElementById("feedback-section").style.display = "none";
     document.getElementById("input-section").style.display = "block";
+<<<<<<< HEAD
+=======
+}
+
+function submitAnswer() {
+    const questions = questionsData[currentTheme];
+    const q = questions[currentQuestionIndex];
+    const studentInput = document.getElementById("student-answer-input").value.trim();
+    
+    if (!studentInput) {
+        alert("Please enter an answer before submitting.");
+        return;
+    }
+    
+    let awardedMarks = 0;
+    if (q.type === "calculation") {
+        const numVal = parseFloat(studentInput);
+        if (!isNaN(numVal) && numVal >= q.min && numVal <= q.max) {
+            awardedMarks = q.marks;
+        }
+    } else {
+        // Extended writing evaluation rule
+        awardedMarks = studentInput.length > 20 ? q.marks : 0;
+    }
+    
+    // Populate Feedback View including the user's submitted answer
+    document.getElementById("displayed-student-answer").innerText = `"${studentInput}"`;
+    document.getElementById("marks-awarded-display").innerText = `Marks Awarded: ${awardedMarks} / ${q.marks}`;
+    document.getElementById("model-answer-text").innerText = q.correctAnswer;
+    document.getElementById("explanation-text").innerText = q.explanation;
+    
+    document.getElementById("input-section").style.display = "none";
+    document.getElementById("feedback-section").style.display = "block";
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questionsData[currentTheme].length) {
+        loadQuestion();
+    } else {
+        backToThemes();
+    }
+}
+
+function backToThemes() {
+    document.getElementById("question-container").style.display = "none";
+    document.getElementById("theme-selection").style.display = "block";
+>>>>>>> d1c2e6a50251f5c756507a1b0ed829e62908ea5e
 }
 
 function submitAnswer() {
