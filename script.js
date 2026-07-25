@@ -3,14 +3,23 @@ let currentTopic = '';
 let currentQuestionIndex = 0;
 let shuffledQuestions = [];
 
-// List all your past-paper JSON paths here
+// Complete list of all past-paper JSON paths from 2017 to 2021
 const paperFiles = [
     'data/2017/2017bs1.json',
     'data/2017/2017bs2.json',
     'data/2017/2017bs3.json',
     'data/2018/2018bs1.json',
     'data/2018/2018bs2.json',
-    'data/2018/2018bs3.json'
+    'data/2018/2018bs3.json',
+    'data/2019/2019bs1.json',
+    'data/2019/2019bs2.json',
+    'data/2019/2019bs3.json',
+    'data/2020/2020bs1.json',
+    'data/2020/2020bs2.json',
+    'data/2020/2020bs3.json',
+    'data/2021/2021bs1.json',
+    'data/2021/2021bs2.json',
+    'data/2021/2021bs3.json'
 ];
 
 async function loadQuestionData() {
@@ -84,7 +93,7 @@ function renderDashboard() {
         card.innerHTML = `
             <div>
                 <h3 class="text-lg font-bold text-slate-900 mb-1">${topic}</h3>
-                <p class="text-xs text-slate-500">Revise past-paper style questions with detailed examiner reasoning.</p>
+                <p class="text-xs text-slate-500">Revise Edexcel past-paper questions with structured marking criteria and feedback tips.</p>
             </div>
             <div class="mt-4 flex justify-between items-center">
                 <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full">${count} Questions</span>
@@ -125,8 +134,19 @@ function loadQuestion() {
 
 function checkAnswer() {
     const q = shuffledQuestions[currentQuestionIndex];
+    
+    // Populate model answer and examiner reasoning/Edexcel breakdown
     document.getElementById('model-answer-text').innerText = q.modelAnswer || q.indicativeContent || "Refer to official mark scheme guidelines.";
-    document.getElementById('reasoning-text').innerText = q.reasoning || q.examinerAdvice || "Apply context from the extracts to achieve top-band marks.";
+    
+    const reasoningBox = q.reasoning || q.examinerAdvice || "Apply context from the extracts to achieve top-band marks.";
+    
+    // Append structured Edexcel tips and advice format
+    document.getElementById('reasoning-text').innerHTML = `
+        <div class="space-y-2">
+            <p><strong>Edexcel Mark Scheme Breakdown:</strong> ${reasoningBox}</p>
+            <p class="text-indigo-900 font-medium">💡 <strong>Exam Tip & Suggestion:</strong> Ensure you explicitly tie your analysis back to names, figures, or extracts provided in the question. Avoid generic statements to secure strong AO2 application and AO3 analytical marks.</p>
+        </div>
+    `;
     
     document.getElementById('submit-btn').classList.add('hidden');
     document.getElementById('feedback-section').classList.remove('hidden');
