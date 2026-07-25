@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-Level Business Studies Revision Portal (Edexcel)</title>
+    <title>A-Level Business Studies Exam Hub (Edexcel)</title>
     <style>
         :root {
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --bg-color: #f8fafc;
+            --primary: #0f172a; /* Slate 900 for a sophisticated corporate look */
+            --primary-hover: #1e293b;
+            --accent: #2563eb; /* Royal blue interactive highlights */
+            --bg-color: #f1f5f9;
             --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
+            --text-main: #334155;
+            --text-heading: #0f172a;
+            --border: #cbd5e1;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
@@ -24,29 +26,36 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            line-height: 1.6;
         }
 
         header {
             background-color: var(--card-bg);
             border-bottom: 1px solid var(--border);
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         header h1 {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
+            font-weight: 700;
             margin: 0;
-            color: var(--primary);
+            color: var(--text-heading);
+            letter-spacing: -0.025em;
         }
 
         main {
             flex: 1;
-            max-width: 900px;
+            max-width: 960px;
             width: 100%;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
             box-sizing: border-box;
         }
 
@@ -54,120 +63,142 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
             margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            color: var(--text-heading);
+            font-size: 1.5rem;
+            margin-top: 0;
+            letter-spacing: -0.02em;
         }
 
         .theme-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.25rem;
             margin-top: 1.5rem;
         }
 
         .theme-btn {
             background-color: var(--card-bg);
-            border: 2px solid var(--border);
+            border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 1.5rem;
-            font-size: 1rem;
+            padding: 1.5rem 1.25rem;
+            font-size: 0.95rem;
             font-weight: 600;
-            color: var(--text-main);
+            color: var(--text-heading);
             cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: center;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
         }
 
         .theme-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background-color: #eef2ff;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            background-color: #fafafa;
         }
 
         .primary-btn {
-            background-color: var(--primary);
+            background-color: var(--accent);
             color: white;
             border: none;
             border-radius: 6px;
             padding: 0.75rem 1.5rem;
             font-weight: 600;
+            font-size: 0.95rem;
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: background-color 0.15s ease;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         }
 
         .primary-btn:hover {
-            background-color: var(--primary-hover);
+            background-color: #1d4ed8;
         }
 
         .secondary-btn {
-            background-color: transparent;
-            color: var(--text-muted);
+            background-color: white;
+            color: var(--text-main);
             border: 1px solid var(--border);
             border-radius: 6px;
-            padding: 0.75rem 1.5rem;
+            padding: 0.65rem 1.25rem;
             font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.15s ease;
         }
 
         .secondary-btn:hover {
-            background-color: var(--border);
-            color: var(--text-main);
+            background-color: #f8fafc;
+            border-color: #94a3b8;
+            color: var(--text-heading);
         }
 
         .meta-tag {
             display: inline-block;
-            background: #eef2ff;
-            color: var(--primary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin-bottom: 1rem;
         }
 
         .extract-box {
             background-color: #f8fafc;
-            border-left: 4px solid var(--primary);
-            padding: 1rem;
-            margin: 1rem 0;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem;
+            margin: 1.25rem 0;
             font-style: italic;
             color: #475569;
             border-radius: 0 6px 6px 0;
+            line-height: 1.5;
         }
 
         textarea {
             width: 100%;
-            height: 120px;
-            padding: 0.75rem;
+            height: 140px;
+            padding: 1rem;
             border: 1px solid var(--border);
             border-radius: 6px;
             font-family: inherit;
+            font-size: 0.95rem;
             box-sizing: border-box;
             resize: vertical;
             margin-top: 0.5rem;
+            background-color: #ffffff;
+            color: var(--text-heading);
         }
 
         textarea:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         }
 
         .feedback-box {
             background-color: #f0fdf4;
             border: 1px solid #bbf7d0;
-            padding: 1.5rem;
+            padding: 1.75rem;
             border-radius: 8px;
-            margin-top: 1rem;
+            margin-top: 1.25rem;
         }
 
         .action-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
         }
     </style>
 </head>
@@ -184,10 +215,10 @@
             <h2>Select Exam Theme</h2>
             <p style="color: var(--text-muted);">Choose a theme to practice high-frequency A-Level Business questions complete with extracts, calculations, and model mark schemes.</p>
             <div class="theme-grid">
-                <button class="theme-btn" onclick="selectTheme('Theme 1')">Theme 1<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Marketing & People</span></button>
-                <button class="theme-btn" onclick="selectTheme('Theme 2')">Theme 2<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Managing Business Activities</span></button>
-                <button class="theme-btn" onclick="selectTheme('Theme 3')">Theme 3<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Business Decisions & Strategy</span></button>
-                <button class="theme-btn" onclick="selectTheme('Theme 4')">Theme 4<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Global Business</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 1')">Theme 1<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Marketing & People</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 2')">Theme 2<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Managing Business Activities</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 3')">Theme 3<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Business Decisions & Strategy</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 4')">Theme 4<br><span style="font-size:0.8rem; font-weight:normal; color:#64748b;">Global Business</span></button>
             </div>
         </div>
 
@@ -195,17 +226,17 @@
         <div id="question-container" class="card" style="display: none;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span id="question-meta" class="meta-tag">Theme 1 (Marks: 4)</span>
-                <span id="question-counter" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Question 1 of 10</span>
+                <span id="question-counter" style="font-size: 0.85rem; font-weight: 600; color: #64748b;">Question 1 of 10</span>
             </div>
             
             <div id="extract-text" class="extract-box">Loading extract...</div>
-            <h3 id="question-text" style="margin-top: 1rem; font-size: 1.1rem;">Loading question text...</h3>
+            <h3 id="question-text" style="margin-top: 1rem; font-size: 1.15rem; color: var(--text-heading);">Loading question text...</h3>
 
             <!-- Input Section -->
             <div id="input-section" style="margin-top: 1.5rem;">
-                <label for="student-answer-input" style="font-weight: 600; font-size: 0.9rem; display: block;">Your Answer / Calculation:</label>
+                <label for="student-answer-input" style="font-weight: 600; font-size: 0.9rem; display: block; color: var(--text-heading);">Your Answer / Calculation:</label>
                 <textarea id="student-answer-input" placeholder="Type your calculation steps or extended analytical response here..."></textarea>
-                <div style="margin-top: 1rem; text-align: right;">
+                <div style="margin-top: 1.25rem; text-align: right;">
                     <button class="primary-btn" onclick="submitAnswer()">Submit & View Mark Scheme</button>
                 </div>
             </div>
@@ -213,17 +244,17 @@
             <!-- Feedback / Mark Scheme Section -->
             <div id="feedback-section" style="display: none; margin-top: 1.5rem;">
                 <div class="feedback-box">
-                    <h4 style="margin-top: 0; color: #166534;">📊 Evaluation & Mark Scheme Guidance</h4>
+                    <h4 style="margin-top: 0; color: #166534; font-size: 1.1rem;">📊 Evaluation & Mark Scheme Guidance</h4>
                     <p><strong>Your Answer:</strong> <span id="displayed-student-answer" style="font-style: italic;"></span></p>
                     <div id="marks-awarded-display" style="font-weight: 700; margin-bottom: 1rem;"></div>
                     
                     <hr style="border: 0; border-top: 1px solid #bbf7d0; margin: 1rem 0;">
                     
                     <p style="margin-bottom: 0.2rem; font-weight: 600; color: #166534;">Official Model Mark Scheme Answer:</p>
-                    <p id="model-answer-text" style="white-space: pre-line; background: white; padding: 0.75rem; border: 1px solid #bbf7d0; border-radius: 6px;"></p>
+                    <p id="model-answer-text" style="white-space: pre-line; background: white; padding: 1rem; border: 1px solid #bbf7d0; border-radius: 6px; color: #334155;"></p>
                     
                     <p style="margin-bottom: 0.2rem; font-weight: 600; color: #166534; margin-top: 1rem;">Examiner Tips & Breakdown:</p>
-                    <p id="explanation-text" style="white-space: pre-line; background: white; padding: 0.75rem; border: 1px solid #bbf7d0; border-radius: 6px;"></p>
+                    <p id="explanation-text" style="white-space: pre-line; background: white; padding: 1rem; border: 1px solid #bbf7d0; border-radius: 6px; color: #334155;"></p>
                 </div>
 
                 <div class="action-bar">
