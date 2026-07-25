@@ -1,1 +1,15 @@
-
+{
+  "year": "2019",
+  "paper": "Paper 3",
+  "title": "Investigating Business in a Competitive Environment",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "marks": 8,
+      "topic": "Marketing - Income Elasticity of Demand (YED)",
+      "stimulus": "Contextual extracts examining the global holiday and travel market.",
+      "question_text": "Assess two reasons why the demand for holidays is typically income elastic.",
+      "mark_scheme": "AO1 (2 marks) Definition of YED. AO2 (2 marks) Application to leisure/travel. AO3/AO4 (4 marks) Analysis of luxury classification and economic shifts."
+    }
+  ]
+}
