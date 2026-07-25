@@ -1,13 +1,13 @@
-// Complete A-Level Business Question Bank (2017-2021) - Upgraded with Self-Assessment & Edexcel Mark Schemes
+// Complete A-Level Business Question Bank (Edexcel Aligned) - Full Extracts, Figures & Mark Scheme Standards
 const questionsData = {
     "Theme 1": [
         {
             id: "1a",
             marks: 4,
-            question: "Calculate the Income Elasticity of Demand (YED) when income changes from 27,000 to 27,195 and quantity changes from 140 to 144.",
-            extract: "Context: Extract A details changing consumer demographics and rising average disposable incomes in regional test markets for a startup snack manufacturer.",
-            correctAnswer: "3.97 (Income elastic)",
-            explanation: "Full Mark Scheme Breakdown & Calculation:\n• Formula: % Change in Quantity Demanded / % Change in Income\n• Step 1 (% Change in Q): (4 / 140) * 100 = 2.857%\n• Step 2 (% Change in Income): (195 / 27,000) * 100 = 0.7222%\n• Step 3 (YED): 2.857 / 0.7222 = 3.965 (rounds to 3.97).\n\n💡 Examiner Tips for Max Marks:\n1. Always state the formula clearly before plugging in numbers to secure method marks even if a minor arithmetic error occurs.\n2. State the interpretation (+3.97 means it is a normal luxury good and income elastic) to ensure complete credit.",
+            question: "Calculate the Income Elasticity of Demand (YED) when consumer average disposable income changes from £27,000 to £27,195 and quantity demanded changes from 140,000 to 144,000 units.",
+            extract: "Extract A: Market research data for 'CrunchSnack' gourmet crisps following a regional promotional campaign and demographic shift in target test markets.",
+            correctAnswer: "3.97 (Income elastic / Normal luxury good)",
+            explanation: "Full Mark Scheme Breakdown & Calculation:\n• Formula: % Change in Quantity Demanded / % Change in Income\n• Step 1 (% Change in Q): (4,000 / 140,000) * 100 = 2.857%\n• Step 2 (% Change in Income): (195 / 27,000) * 100 = 0.7222%\n• Step 3 (YED): 2.857 / 0.7222 = 3.965 (rounds to 3.97).\n\n💡 Examiner Tips for Max Marks:\n1. Always state the formula clearly before substituting numbers to secure method marks even if a minor calculation slip occurs.\n2. State the full economic interpretation (+3.97 indicates a luxury normal good where demand rises significantly as income increases) to achieve full marks.",
             type: "calculation",
             min: 3.96,
             max: 3.98
@@ -15,19 +15,19 @@ const questionsData = {
         {
             id: "1b",
             marks: 12,
-            question: "Assess the importance of market segmentation for a small retail start-up launching a new product line.",
-            extract: "Extract B: Boutique Apparel Co operates in a crowded clothing market dominated by fast-fashion giants. Managing Director Sarah plans to target vegan consumers aged 18-25 who prioritize ethical sourcing.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge (Level 1 - 2 marks): Identification of segmentation (dividing a market into distinct groups of consumers based on demographics, psychographics, etc.).\n• Application (Level 2 - 2 marks): Contextual linkage to Boutique Apparel Co targeting vegan consumers aged 18-25 seeking ethical sourcing.\n• Analysis (Level 3 - 4 marks): Explaining that segmentation allows small start-ups to avoid direct price competition with giants like fast-fashion brands, building tailored marketing mixes that maximize customer loyalty.\n• Evaluation (Level 4 - 4 marks): Weighing up limitations such as small market size restricting total revenue growth, or the risk of high marketing costs relative to a narrow customer base, concluding that survival for a start-up depends on capturing a profitable niche.",
-            explanation: "💡 Examiner Tips for Max Marks (Level 4 Evaluation):\n1. Use the 'It depends on...' framework (e.g., depends on the accuracy of market research and the size of the niche segment).\n2. Balance your argument: while segmentation prevents mass market destruction by larger competitors, it limits economies of scale.",
+            question: "Assess the importance of market segmentation for a small retail start-up launching a new product line in a competitive market.",
+            extract: "Extract B: Boutique Apparel Co operates in a crowded clothing market dominated by fast-fashion giants. Managing Director Sarah plans to target vegan consumers aged 18-25 who prioritize ethical sourcing and sustainable supply chains.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge (Level 1 - 2 marks): Clear identification of market segmentation (sub-dividing a market into distinct customer groups based on shared characteristics like psychographics or demographics).\n• Application (Level 2 - 2 marks): Contextual linkage to Boutique Apparel Co targeting vegan consumers aged 18-25 seeking ethical sourcing.\n• Analysis (Level 3 - 4 marks): Explaining that segmentation allows small start-ups to avoid direct price competition with giants like fast-fashion brands, building tailored marketing mixes (product, price, place, promotion) that maximize customer loyalty and brand differentiation.\n• Evaluation (Level 4 - 4 marks): Weighing up limitations such as small niche market size restricting total revenue growth, or high unit marketing costs relative to a narrow customer base, concluding that survival for a start-up depends on capturing a profitable niche where premium pricing can offset lower sales volume.",
+            explanation: "💡 Examiner Tips for Max Marks (Level 4 Evaluation):\n1. Use the 'It depends on...' framework (e.g., depends on the accuracy of market research and the size of the target segment).\n2. Balance your argument: while segmentation prevents mass market destruction by larger competitors, it limits economies of scale.",
             type: "extended"
         },
         {
             id: "1c",
             marks: 4,
-            question: "Calculate the market share (by value) of Business X if it sold 45,000 units at an average price of £150 in a total market revenue of £13.5 million.",
-            extract: "Extract (June 2019): Industry data showing total sector revenue relative to individual firm sales volumes.",
+            question: "Calculate the market share (by value) of Business X if it sold 45,000 units at an average selling price of £150, given that total industry market revenue is £13.5 million.",
+            extract: "Extract C: Industry performance report detailing total sector revenue relative to individual firm sales volumes for electronic home appliances.",
             correctAnswer: "50%",
-            explanation: "Full Mark Scheme Breakdown & Calculation:\n• Formula: (Business Revenue / Total Market Revenue) * 100\n• Step 1: Calculate Business X Revenue = 45,000 units * £150 = £6,750,000.\n• Step 2: Divide by total market revenue = (£6,750,000 / £13,500,000) * 100 = 50%.\n\n💡 Examiner Tips for Max Marks:\n1. Show units clearly (£6.75m vs £13.5m) to avoid mixing up values with volumes.\n2. Always include the percentage sign (%) in your final answer.",
+            explanation: "Full Mark Scheme Breakdown & Calculation:\n• Formula: (Business Revenue / Total Market Revenue) * 100\n• Step 1: Calculate Business X Revenue = 45,000 units * £150 = £6,750,000.\n• Step 2: Divide by total market revenue = (£6,750,000 / £13,500,000) * 100 = 50%.\n\n💡 Examiner Tips for Max Marks:\n1. Show intermediate financial figures clearly (£6.75m vs £13.5m) to avoid mixing up values with sales volumes.\n2. Always include the percentage sign (%) in your final answer.",
             type: "calculation",
             min: 50,
             max: 50
@@ -36,9 +36,9 @@ const questionsData = {
             id: "1d",
             marks: 10,
             question: "Evaluate whether financial or non-financial motivators are more effective in reducing staff turnover in a service-sector business.",
-            extract: "Extract (October 2020): TechFirm Ltd experienced high staff turnover in its customer service department and weighed bonuses against job enrichment.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: Financial motivators (bonuses, PRP) vs non-financial (job enrichment, empowerment) applied to customer service environments.\n• Analysis: Financial rewards satisfy lower-level economic needs (Taylor, Herzberg hygiene factors), providing quick boosts. Non-financial motivators tackle root causes of burnout and monotony in customer service roles (Herzberg motivators).\n• Evaluation: Short-term cash fixes retention only temporarily if workplace stress or poor culture persists; therefore, non-financial empowerment delivers superior long-term retention.",
-            explanation: "💡 Examiner Tips for Max Marks:\n1. Reference motivational theorists explicitly (Taylor, Maslow, Herzberg) to score higher AO1/AO3 marks.\n2. Contextualize your answer specifically to the service sector where employee attitude directly dictates customer retention.",
+            extract: "Extract D: TechFirm Ltd experienced high staff turnover (35% annually) in its customer service department and evaluated performance-related pay bonuses against job enrichment schemes.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: Financial motivators (bonuses, piece rate, commission) vs non-financial motivators (job enrichment, empowerment, consultation) applied to customer service environments.\n• Analysis: Financial rewards satisfy lower-level economic needs (Taylor, Herzberg hygiene factors), providing quick boosts. Non-financial motivators tackle root causes of burnout and monotony in customer service roles (Herzberg motivators, Maslow self-actualization).\n• Evaluation: Short-term cash fixes retention only temporarily if workplace stress, poor leadership, or toxic company culture persists; therefore, non-financial empowerment delivers superior long-term workforce stability.",
+            explanation: "💡 Examiner Tips for Max Marks:\n1. Reference motivational theorists explicitly (Taylor, Maslow, Herzberg) to score higher AO1/AO3 marks.\n2. Contextualize your answer specifically to the service sector where employee attitude and emotional labor directly dictate customer retention.",
             type: "extended"
         }
     ],
@@ -46,18 +46,18 @@ const questionsData = {
         {
             id: "2a",
             marks: 10,
-            question: "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.",
-            extract: "Extract C: CoffeeCorner operates in a saturated high street market where consumers can easily switch to automated vending or rival artisan cafés across the street.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: PED > 1 means demand is price elastic, illustrated by CoffeeCorner's direct exposure to local substitutes.\n• Analysis: A price increase leads to a proportionately greater fall in quantity demanded, destroying total revenue because consumers immediately switch to cheaper alternatives.\n• Evaluation: The impact depends heavily on whether CoffeeCorner can build brand loyalty or differentiate its product offering to make demand inelastic.",
+            question: "Evaluate the likely impact of a 15% price increase on a business operating in a market with high price elasticity of demand (PED).",
+            extract: "Extract A: CoffeeCorner operates in a saturated high street market where consumers can easily switch to automated vending machines or rival artisan cafés located directly across the street.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: PED > 1 means demand is price elastic, illustrated by CoffeeCorner's direct exposure to readily available local substitutes.\n• Analysis: A price increase leads to a proportionately greater fall in quantity demanded, destroying total revenue because consumers immediately switch to cheaper alternatives, reducing gross profit.\n• Evaluation: The impact depends heavily on whether CoffeeCorner can build strong brand loyalty or differentiate its product offering to make demand inelastic over time.",
             explanation: "💡 Examiner Tips for Max Marks:\n1. Sketch or reference the revenue implications of elastic demand (raising price reduces total revenue).\n2. Ensure you weave the extract context (rival artisan cafés/vending machines) directly into your analysis.",
             type: "extended"
         },
         {
             id: "2b",
             marks: 10,
-            question: "Calculate the Payback Period for Project A and evaluate whether the business should choose Project A or Project B.",
-            extract: "Extract (June 2018): Project A requires £150k outlay with cash inflows of £40k, £50k, £60k, £70k. Project B requires £120k with steady inflows of £45k.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer & Calculation:\n• Project A Cumulative: Yr 1 (£40k), Yr 2 (£90k), Yr 3 (£150k). Payback = Exactly 3 years.\n• Project B Payback: £120,000 / £45,000 = 2.67 years (2 years and 8 months).\n• Evaluation: Project B provides faster liquidity recovery, reducing risk. However, Project A yields higher overall profitability (£220k total inflows vs £180k), making long-term strategic choice dependent on cash flow priorities.",
+            question: "Calculate the Payback Period for Project A and evaluate whether the business should choose Project A or Project B based on investment appraisal data.",
+            extract: "Extract B: Capital investment options for a logistics firm. Project A requires an initial outlay of £150,000 with net cash inflows of: Year 1: £40k, Year 2: £50k, Year 3: £60k, Year 4: £70k. Project B requires £120,000 outlay with steady annual cash inflows of £45,000.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer & Calculation:\n• Project A Cumulative: Yr 1 (£40k), Yr 2 (£90k), Yr 3 (£150k). Payback = Exactly 3.0 years.\n• Project B Payback: £120,000 / £45,000 = 2.67 years (2 years and 8 months).\n• Evaluation: Project B provides faster liquidity recovery, reducing cash flow risk. However, Project A yields higher overall profitability (£220k total inflows vs £180k), making long-term strategic choice dependent on company risk appetite.",
             explanation: "💡 Examiner Tips for Max Marks:\n1. Show month conversions clearly for partial years (e.g., 0.67 years * 12 months = 8 months).\n2. Combine quantitative findings with qualitative considerations (risk aversion vs overall return).",
             type: "extended"
         },
@@ -65,9 +65,9 @@ const questionsData = {
             id: "2c",
             marks: 10,
             question: "Calculate the Acid Test Ratio (Quick Ratio) for Retail PLC and assess its short-term liquidity health.",
-            extract: "Extract (November 2021): Retail PLC reports current assets of £2.4m (including inventory of £1.4m), current liabilities of £1.6m.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer & Calculation:\n• Formula: (Current Assets - Inventory) / Current Liabilities\n• Calculation: (£2,400,000 - £1,400,000) / £1,600,000 = £1,000,000 / £1,600,000 = 0.63:1 (or 0.625:1).\n• Assessment: Below the standard 1:1 benchmark, signaling liquidity vulnerability if immediate debts fall due, though typical for high-turnover retailers.",
-            explanation: "💡 Examiner Tips for Max Marks:\n1. Explain *why* inventory is subtracted (it cannot be turned into immediate cash to pay short-term creditors without selling first).\n2. Always evaluate the figure against standard business benchmarks (1:1).",
+            extract: "Extract C: Financial summary for Retail PLC showing Current Assets of £2,400,000 (which includes Inventories of £1,400,000 and Trade Receivables of £1,000,000) and Current Liabilities of £1,600,000.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer & Calculation:\n• Formula: (Current Assets - Inventory) / Current Liabilities\n• Calculation: (£2,400,000 - £1,400,000) / £1,600,000 = £1,000,000 / £1,600,000 = 0.63:1 (or 0.625:1).\n• Assessment: Below the standard 1:1 benchmark, signaling liquidity vulnerability if immediate debts fall due, though typical for high-turnover retailers holding minimal cash.",
+            explanation: "💡 Examiner Tips for Max Marks:\n1. Explain *why* inventory is subtracted (it cannot be turned into immediate cash to pay short-term creditors without selling first).\n2. Always evaluate the numerical ratio against standard business benchmarks (1:1).",
             type: "extended"
         }
     ],
@@ -75,19 +75,19 @@ const questionsData = {
         {
             id: "3a",
             marks: 8,
-            question: "Calculate the Expected Values (EV) for both options and recommend which strategic path the business should choose.",
-            extract: "Extract (June 2017): Option 1 (Online expansion, cost £50k) has 0.7 prob of £150k return, 0.3 of £20k. Option 2 (Physical store, cost £80k) has 0.5 prob of £220k return, 0.5 of £10k.",
+            question: "Calculate the Expected Values (EV) and Net Gains for both strategic options and recommend which path the business should choose.",
+            extract: "Extract A: Decision tree analysis for a retail expansion project. Option 1 (Online platform development, initial cost £50,000) has a 0.7 probability of high return (£150,000) and 0.3 probability of low return (£20,000). Option 2 (Physical flagship store, initial cost £80,000) has a 0.5 probability of high return (£220,000) and 0.5 probability of low return (£10,000).",
             correctAnswer: "Exemplar Mark Scheme Model Answer & Calculation:\n• EV Option 1 Gross: (0.7 * 150,000) + (0.3 * 20,000) = 105,000 + 6,000 = £111,000. Net Gain: £111,000 - £50,000 = £61,000.\n• EV Option 2 Gross: (0.5 * 220,000) + (0.5 * 10,000) = 110,000 + 5,000 = £115,000. Net Gain: £115,000 - £80,000 = £35,000.\n• Recommendation: Choose Option 1 due to higher net expected return (£61k vs £35k) and lower financial risk exposure.",
-            explanation: "💡 Examiner Tips for Max Marks:\n1. Clearly calculate *Net Gain* by subtracting initial outlay from gross expected value.\n2. Add a concluding recommendation linking back to risk profiles.",
+            explanation: "💡 Examiner Tips for Max Marks:\n1. Clearly calculate *Net Gain* by subtracting initial financial outlay from gross expected value.\n2. Conclude with a clear recommendation linking back to risk profiles and probabilities.",
             type: "extended"
         },
         {
             id: "3b",
             marks: 12,
-            question: "Evaluate the potential risks and rewards of pursuing unrelated diversification (Ansoff's Matrix) for an established manufacturer.",
-            extract: "Extract (June 2019): A dominant food manufacturer considered diversifying into financial services via corporate acquisition.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: Unrelated diversification involves taking new products into completely new markets, breaking away from the firm's core competencies.\n• Analysis: Rewards include spreading business risk across industries and capturing high growth/margin opportunities. Risks include managerial diseconomies of scale and lack of industry expertise.\n• Evaluation: High failure rate unless backed by strong financial reserves and expert external leadership.",
-            explanation: "💡 Examiner Tips for Max Marks:\n1. Explicitly reference Ansoff's Matrix and define diversification as the highest risk quadrant.\n2. Use business terminology like 'core competencies' and 'managerial diseconomies'.",
+            question: "Evaluate the potential risks and rewards of pursuing unrelated diversification as a growth strategy.",
+            extract: "Extract B: A dominant food manufacturing corporation is considering diversifying into financial services via corporate acquisition of an insurance provider to boost shareholder value.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: Unrelated diversification (Ansoff's Matrix) involves taking new products into completely new markets, breaking away from the firm's core competencies.\n• Analysis: Rewards include spreading business risk across disparate industries and capturing high growth/margin opportunities. Risks include managerial diseconomies of scale and lack of industry expertise.\n• Evaluation: High failure rate unless backed by strong financial reserves, expert external leadership, and robust strategic management systems.",
+            explanation: "💡 Examiner Tips for Max Marks:\n1. Explicitly reference Ansoff's Matrix and define diversification as the highest risk quadrant.\n2. Use rigorous business terminology like 'core competencies' and 'managerial diseconomies'.",
             type: "extended"
         }
     ],
@@ -96,18 +96,18 @@ const questionsData = {
             id: "4a",
             marks: 8,
             question: "Assess the impact of a GBP depreciation from £1 = $1.30 to £1 = $1.15 on a UK manufacturer importing US raw materials and exporting finished goods.",
-            extract: "Extract (October 2020): Foreign exchange rate movements affecting international procurement and sales revenues.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: SPICED principle (Strong Pound Imports Cheap, Exports Dear -> Weak Pound means Imports Dear, Exports Cheap).\n• Analysis: US raw material imports become more expensive, increasing cost of production and putting pressure on profit margins. Conversely, UK exports to the US become cheaper and more price-competitive, boosting international sales volume.\n• Assessment: Net impact depends on trade balance; if raw material import costs exceed export revenue gains, overall profitability will fall.",
-            explanation: "💡 Examiner Tips for Max Marks:\n1. State the SPICED mnemonic clearly at the start of your answer.\n2. Evaluate both sides of the coin (costs of inputs vs revenues of outputs) to secure full analytical credit.",
+            extract: "Extract A: Macroeconomic exchange rate fluctuations affecting international procurement and global sales revenue for an engineering firm.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: SPICED principle (Strong Pound Imports Cheap, Exports Dear -> Weak Pound means Imports Dear, Exports Cheap).\n• Analysis: US raw material imports become more expensive, increasing cost of production and putting downward pressure on profit margins. Conversely, UK exports to the US become cheaper and more price-competitive, boosting international sales volume.\n• Assessment: Net impact depends on trade balance; if raw material import costs exceed export revenue gains, overall profitability will fall.",
+            explanation: "💡 Examiner Tips for Max Marks:\n1. State the SPICED mnemonic clearly at the start of your answer.\n2. Evaluate both sides of the coin (costs of imported inputs vs revenues of exported outputs) to secure full analytical credit.",
             type: "extended"
         },
         {
             id: "4b",
             marks: 12,
             question: "Evaluate whether maintaining strict corporate social responsibility (CSR) standards globally outweighs the cost advantages of low-cost manufacturing.",
-            extract: "Extract (November 2021): A multinational clothing corporation facing public scrutiny over developing-nation supply chain conditions.",
-            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: CSR involves ethical obligations to stakeholders beyond shareholders, especially regarding supply chain labor standards.\n• Analysis: Maintaining high CSR protects brand equity and avoids damaging consumer boycotts or ESG investor divestment. Ignoring CSR maximizes short-term profit margins through cheap labor.\n• Evaluation: In the digital age, brand reputation is vulnerable; long-term PR damage from ethical scandals far outweighs short-term cost savings.",
-            explanation: "💡 Examiner Tips for Max Marks:\n1. Weigh short-term financial savings against long-term intangible asset value (brand reputation).\n2. Conclude with a justified final judgment supported by recent industry trends (ESG investing).",
+            extract: "Extract B: A multinational clothing corporation facing intense public scrutiny over developing-nation supply chain labor conditions and environmental pollution.",
+            correctAnswer: "Exemplar Mark Scheme Model Answer:\n• Knowledge/Application: CSR involves ethical obligations to stakeholders beyond shareholders, especially regarding global supply chain labor standards and ecological impact.\n• Analysis: Maintaining high CSR protects brand equity and avoids damaging consumer boycotts or ESG investor divestment. Ignoring CSR maximizes short-term profit margins through cheap overseas labor.\n• Evaluation: In the modern digital age, brand reputation is highly vulnerable; long-term PR damage from ethical scandals far outweighs short-term operational cost savings.",
+            explanation: "💡 Examiner Tips for Max Marks:\n1. Weigh short-term financial cost savings against long-term intangible asset value (brand reputation and customer loyalty).\n2. Conclude with a justified final judgment supported by contemporary business trends (ESG investing).",
             type: "extended"
         }
     ]
