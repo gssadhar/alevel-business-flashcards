@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-Level Business Hub (Edexcel)</title>
+    <title>A-Level Revision Hub (Business & Economics)</title>
     <style>
         :root {
             --primary: #4f46e5;
@@ -84,13 +84,13 @@
             line-height: 1.5;
         }
 
-        .theme-grid {
+        .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
             gap: 1.5rem;
         }
 
-        .theme-btn {
+        .selection-btn {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 14px;
@@ -106,7 +106,7 @@
             justify-content: flex-start;
         }
 
-        .theme-btn h3 {
+        .selection-btn h3 {
             color: var(--primary);
             font-size: 1.35rem;
             font-weight: 700;
@@ -114,14 +114,14 @@
             letter-spacing: -0.01em;
         }
 
-        .theme-btn p {
+        .selection-btn p {
             margin: 0;
             font-size: 0.95rem;
             color: var(--text-main);
             line-height: 1.5;
         }
 
-        .theme-btn:hover {
+        .selection-btn:hover {
             border-color: var(--primary);
             transform: translateY(-3px);
             box-shadow: var(--shadow-hover);
@@ -224,7 +224,7 @@
         }
 
         @media (max-width: 768px) {
-            .theme-grid {
+            .grid-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -233,34 +233,78 @@
 <body>
 
     <header>
-        <h1>A-Level Business Hub (Edexcel)</h1>
+        <h1>A-Level Revision Hub</h1>
     </header>
 
     <main>
-        <!-- Theme Selection Screen -->
-        <div id="theme-selection">
+        <!-- Subject Selection Screen -->
+        <div id="subject-selection">
             <div class="center-heading">
-                <h2>Select a Theme to Revise</h2>
-                <p>Choose an Edexcel Business theme below. Complete past paper extracts, detailed mark schemes, calculations, examiner tips, and essay self-assessment are provided on-screen after every submission.</p>
+                <h2>Select a Subject to Revise</h2>
+                <p>Choose your subject below to access past paper extracts, calculations, structured mark schemes, and examiner guidance.</p>
             </div>
             
-            <div class="theme-grid">
-                <button class="theme-btn" onclick="selectTheme('Theme 1')">
+            <div class="grid-container">
+                <button class="selection-btn" onclick="selectSubject('Business')">
+                    <h3>Business Studies (Edexcel)</h3>
+                    <p>Covers Themes 1, 2, 3, and 4 covering marketing, finance, human resources, strategy, and global business.</p>
+                </button>
+                <button class="selection-btn" onclick="selectSubject('Economics')">
+                    <h3>Economics (Edexcel)</h3>
+                    <p>Covers Microeconomics and Macroeconomics, including market failure, government policy, and global trade.</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- Theme Selection Screen (Business) -->
+        <div id="business-theme-selection" style="display: none;">
+            <div class="center-heading">
+                <h2>Business Studies: Select a Theme</h2>
+                <p>Choose an Edexcel Business theme below to start practicing high-frequency exam questions.</p>
+            </div>
+            
+            <div class="grid-container">
+                <button class="selection-btn" onclick="selectTheme('Theme 1')">
                     <h3>Theme 1: Marketing & People</h3>
                     <p>Meeting customer needs, market research, marketing mix, and human resource management.</p>
                 </button>
-                <button class="theme-btn" onclick="selectTheme('Theme 2')">
+                <button class="selection-btn" onclick="selectTheme('Theme 2')">
                     <h3>Theme 2: Managing Business Activities</h3>
                     <p>Raising finance, financial planning, managing resources, quality, and economic influences.</p>
                 </button>
-                <button class="theme-btn" onclick="selectTheme('Theme 3')">
+                <button class="selection-btn" onclick="selectTheme('Theme 3')">
                     <h3>Theme 3: Business Decisions & Strategy</h3>
                     <p>Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
                 </button>
-                <button class="theme-btn" onclick="selectTheme('Theme 4')">
+                <button class="selection-btn" onclick="selectTheme('Theme 4')">
                     <h3>Theme 4: Global Business</h3>
                     <p>Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
                 </button>
+            </div>
+            <div style="margin-top: 2rem; text-align: center;">
+                <button class="secondary-btn" onclick="backToSubjects()">← Back to Subject Selection</button>
+            </div>
+        </div>
+
+        <!-- Theme Selection Screen (Economics) -->
+        <div id="economics-theme-selection" style="display: none;">
+            <div class="center-heading">
+                <h2>Economics: Select a Module</h2>
+                <p>Choose an Economics section below to practice core microeconomic and macroeconomic concepts.</p>
+            </div>
+            
+            <div class="grid0 grid-container">
+                <button class="selection-btn" onclick="selectTheme('Microeconomics')">
+                    <h3>Microeconomics</h3>
+                    <p>Nature of economics, how markets work, market failure, and government intervention.</p>
+                </button>
+                <button class="selection-btn" onclick="selectTheme('Macroeconomics')">
+                    <h3>Macroeconomics</h3>
+                    <p>Economic growth, economic objectives, aggregate demand/supply, and macroeconomic policies.</p>
+                </button>
+            </div>
+            <div style="margin-top: 2rem; text-align: center;">
+                <button class="secondary-btn" onclick="backToSubjects()">← Back to Subject Selection</button>
             </div>
         </div>
 
@@ -307,6 +351,34 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        // Simple navigation control stubs to bridge the multi-subject view
+        function selectSubject(subject) {
+            document.getElementById('subject-selection').style.display = 'none';
+            if (subject === 'Business') {
+                document.getElementById('business-theme-selection').style.display = 'block';
+            } else {
+                document.getElementById('economics-theme-selection').style.display = 'block';
+            }
+        }
+
+        function backToSubjects() {
+            document.getElementById('business-theme-selection').style.display = 'none';
+            document.getElementById('economics-theme-selection').style.display = 'none';
+            document.getElementById('subject-selection').style.display = 'block';
+        }
+
+        function selectTheme(themeName) {
+            document.getElementById('business-theme-selection').style.display = 'none';
+            document.getElementById('economics-theme-selection').style.display = 'none';
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('question-meta').innerText = themeName + ' (Marks: 4)';
+        }
+
+        function backToThemes() {
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('subject-selection').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
