@@ -1,23 +1,63 @@
 {
   "year": "2019",
-  "paper": "Paper 2",
+  "paper": "2",
+  "reference": "9BS0/02",
   "title": "Business Activities, Decisions and Strategy",
-  "questions": [
+  "sections": [
     {
-      "question_number": "1(a)",
-      "marks": 4,
-      "topic": "Finance - Profit Calculation",
-      "stimulus": "Extract A details cost and revenue figures for VisionSpring production.",
-      "question_text": "Using Extract A, calculate the profit per pair of glasses made by VisionSpring. Show your working.",
-      "mark_scheme": "1 mark for identifying revenue per unit, 1 mark for total costs per unit, 2 marks for correct subtraction and final value."
-    },
-    {
-      "question_number": "2(d)",
-      "marks": 12,
-      "topic": "Finance - Investment Appraisal",
-      "stimulus": "Extracts outline projected cash flows for new automated machinery.",
-      "question_text": "Assess the usefulness of investment appraisal methods (such as Payback or ARR) when deciding on new production technology.",
-      "mark_scheme": "AO1 (2 marks) Knowledge of methods. AO2 (2 marks) Contextual application to manufacturing. AO3 (4 marks) Analysis of quantitative reliability vs qualitative limitations. AO4 (4 marks) Balanced conclusion."
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Finance",
+          "marks": 4,
+          "question": "Using Extract A, calculate the profit per pair of glasses made by VisionSpring. Show your working.",
+          "modelAnswer": "Profit per unit = Total Revenue per unit minus Total Cost per unit. Correct substitution yields the exact financial profit per pair.",
+          "reasoning": "1 mark for formula identification, 2 marks for working steps, 1 mark for correct final numerical figure with currency units."
+        },
+        {
+          "topic": "Finance",
+          "marks": 12,
+          "question": "Assess the usefulness of investment appraisal methods (such as Payback or ARR) when deciding on new production technology.",
+          "modelAnswer": "Quantitative methods provide objective financial comparisons and risk metrics. However, they rely on forecasted cash flows which can be inaccurate and ignore qualitative factors like workforce morale.",
+          "reasoning": "Award 2 marks for knowledge of appraisal methods, 2 marks for contextual application, 4 marks for financial analysis, and 4 marks for balanced evaluation."
+        }
+      ]
     }
-  ]
+  ],
+  "topics": {
+    "Finance": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Profit per unit calculation",
+        "marks": 4,
+        "text": "Using Extract A, calculate the profit per pair of glasses made by VisionSpring. Show your working."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Internal finance vs external debt",
+        "marks": 4,
+        "text": "Explain one reason why a social enterprise might use internal finance rather than external debt."
+      },
+      {
+        "question_number": "2 (b)",
+        "topic": "Manufacturing cost variance",
+        "marks": 4,
+        "text": "Using quantitative data from extracts, calculate variance or percentage change in manufacturing costs."
+      }
+    ],
+    "Operations": [
+      {
+        "question_number": "2 (d)",
+        "topic": "Investment appraisal methods",
+        "marks": 12,
+        "text": "Assess the usefulness of investment appraisal methods when deciding on new production technology."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Cost competitiveness strategy",
+        "marks": 20,
+        "text": "Evaluate strategies for an established manufacturer to regain cost competitiveness against low-cost international rivals."
+      }
+    ]
+  }
 }
