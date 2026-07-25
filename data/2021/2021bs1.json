@@ -1,1 +1,15 @@
-
+{
+  "year": "2021",
+  "paper": "Paper 1",
+  "title": "Marketing, People and Global Businesses",
+  "questions": [
+    {
+      "question_number": "2(b)",
+      "marks": 4,
+      "topic": "Global Business - Relative Unit Labor Costs",
+      "stimulus": "Extract B provides labor cost indices across multiple manufacturing economies.",
+      "question_text": "Using the data in Extract B, calculate the percentage change in unit labor costs for the designated country. Show your working.",
+      "mark_scheme": "1 mark formula identification, 2 marks working substitution, 1 mark correct final figure."
+    }
+  ]
+}
