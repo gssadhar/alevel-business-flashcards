@@ -1,0 +1,10 @@
+{
+  "1a": {
+    "question": "Calculate the Income Elasticity of Demand (YED) when income changes from 27,000 to 27,195 and quantity changes from 140 to 144.",
+    "min_acceptable": 3.96,
+    "max_acceptable": 3.98,
+    "correct_answer": "3.97 (Income elastic)",
+    "max_marks": 4,
+    "explanation": "Calculated by % change in quantity demanded (2.86%) divided by % change in income (0.72%)."
+  }
+}
