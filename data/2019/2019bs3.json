@@ -1,15 +1,56 @@
 {
   "year": "2019",
-  "paper": "Paper 3",
+  "paper": "3",
+  "reference": "9BS0/03",
   "title": "Investigating Business in a Competitive Environment",
-  "questions": [
+  "sections": [
     {
-      "question_number": "1(a)",
-      "marks": 8,
-      "topic": "Marketing - Income Elasticity of Demand (YED)",
-      "stimulus": "Contextual extracts examining the global holiday and travel market.",
-      "question_text": "Assess two reasons why the demand for holidays is typically income elastic.",
-      "mark_scheme": "AO1 (2 marks) Definition of YED. AO2 (2 marks) Application to leisure/travel. AO3/AO4 (4 marks) Analysis of luxury classification and economic shifts."
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Strategy & Marketing",
+          "marks": 8,
+          "question": "Assess two reasons why the demand for holidays is typically income elastic.",
+          "modelAnswer": "Holidays are generally luxury discretionary goods. When consumer disposable incomes rise, demand increases disproportionately; conversely, in economic downturns, bookings drop sharply as households cut non-essential spending.",
+          "reasoning": "Award 2 marks for knowledge of YED, 2 marks for application to travel markets, and 4 marks for analytical chains of reasoning regarding income shifts."
+        }
+      ]
     }
-  ]
+  ],
+  "topics": {
+    "External Environment": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Income elasticity of demand (YED)",
+        "marks": 8,
+        "text": "Assess two reasons why the demand for holidays is typically income elastic."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "International location choice",
+        "marks": 10,
+        "text": "Assess the factors that a global leisure business should consider when choosing an international location."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Exchange rate fluctuations",
+        "marks": 12,
+        "text": "Assess the impact of exchange rate fluctuations on UK-based holiday businesses and domestic tourism."
+      }
+    ],
+    "Competitive Strategy": [
+      {
+        "question_number": "1 (d)",
+        "topic": "Pricing strategies in competitive markets",
+        "marks": 20,
+        "text": "Evaluate alternative pricing strategies for a budget tour operator operating in a highly competitive global market."
+      },
+      {
+        "question_number": "2 (d)",
+        "topic": "Cost competitiveness vs product differentiation",
+        "marks": 20,
+        "text": "Evaluate whether cost competitiveness or product differentiation is a more successful long-term strategy for a major airline group."
+      }
+    ]
+  }
 }
