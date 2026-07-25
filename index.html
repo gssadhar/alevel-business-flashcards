@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-Level Business Hub (Edexcel)</title>
+    <title>A-Level Business Studies Revision Portal (Edexcel)</title>
     <style>
         :root {
             --primary: #4f46e5;
@@ -16,7 +16,7 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
@@ -27,16 +27,18 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
+            font-size: 1.25rem;
             margin: 0;
-            font-size: 2.25rem;
+            color: var(--primary);
         }
 
         main {
@@ -48,111 +50,103 @@
             box-sizing: border-box;
         }
 
-        /* Theme Selection View */
-        #theme-selection {
-            text-align: center;
-        }
-
-        #theme-selection h2 {
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #theme-selection p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .theme-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 1.5rem;
-            text-align: left;
-        }
-
-        .theme-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-        }
-
-        .theme-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-        }
-
-        .theme-card h3 {
-            margin-top: 0;
-            color: var(--primary);
-            font-size: 1.25rem;
-        }
-
-        .theme-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        /* Question Container View */
-        #question-container {
+        .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-
-        .question-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             margin-bottom: 1.5rem;
         }
 
-        #question-meta {
-            font-weight: 600;
-            color: var(--primary);
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
-        #question-counter {
+        .theme-btn {
+            background-color: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .theme-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background-color: #eef2ff;
+        }
+
+        .primary-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .primary-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .secondary-btn {
+            background-color: transparent;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .secondary-btn:hover {
+            background-color: var(--border);
+            color: var(--text-main);
+        }
+
+        .meta-tag {
+            display: inline-block;
+            background: #eef2ff;
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
 
         .extract-box {
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
             border-left: 4px solid var(--primary);
             padding: 1rem;
-            border-radius: 4px;
-            margin-bottom: 1.5rem;
+            margin: 1rem 0;
             font-style: italic;
-            color: #334155;
-        }
-
-        #question-text {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
+            color: #475569;
+            border-radius: 0 6px 6px 0;
         }
 
         textarea {
             width: 100%;
-            height: 140px;
+            height: 120px;
             padding: 0.75rem;
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 6px;
             font-family: inherit;
-            font-size: 1rem;
             box-sizing: border-box;
             resize: vertical;
-            margin-bottom: 1rem;
+            margin-top: 0.5rem;
         }
 
         textarea:focus {
@@ -161,172 +155,84 @@
             box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
         }
 
-        button.primary-btn {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        button.primary-btn:hover {
-            background-color: var(--primary-hover);
-        }
-
-        button.secondary-btn {
-            background-color: #e2e8f0;
-            color: var(--text-main);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-right: 0.75rem;
-        }
-
-        button.secondary-btn:hover {
-            background-color: #cbd5e1;
-        }
-
-        /* Feedback Section */
-        #feedback-section {
-            background-color: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: 8px;
+        .feedback-box {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
             padding: 1.5rem;
+            border-radius: 8px;
             margin-top: 1rem;
         }
 
-        .feedback-block {
-            margin-bottom: 1rem;
-        }
-
-        .feedback-block h4 {
-            margin: 0 0 0.25rem 0;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .feedback-block p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .action-row {
+        .action-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 1.5rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border);
-            background-color: white;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>A-Level Business Hub (Edexcel)</h1>
+        <h1>A-Level Business Studies Exam Hub</h1>
+        <button class="secondary-btn" onclick="backToThemes()" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Switch Theme</button>
     </header>
 
     <main>
-        <!-- Theme Selection View -->
-        <div id="theme-selection">
-            <h2>Select a Theme to Revise</h2>
-            <p>Choose an Edexcel Business theme below. Complete past paper extracts, detailed mark schemes, calculations, examiner tips, and essay self-assessment are provided on-screen after every submission.</p>
-            
+        <!-- Theme Selection Screen -->
+        <div id="theme-selection" class="card">
+            <h2>Select Exam Theme</h2>
+            <p style="color: var(--text-muted);">Choose a theme to practice high-frequency A-Level Business questions complete with extracts, calculations, and model mark schemes.</p>
             <div class="theme-grid">
-                <div class="theme-card" onclick="selectTheme('Theme 1')">
-                    <h3>Theme 1: Marketing & People</h3>
-                    <p>Meeting customer needs, market research, marketing mix, and human resource management.</p>
-                </div>
-                
-                <div class="theme-card" onclick="selectTheme('Theme 2')">
-                    <h3>Theme 2: Managing Business Activities</h3>
-                    <p>Raising finance, financial planning, managing resources, quality, and economic influences.</p>
-                </div>
-                
-                <div class="theme-card" onclick="selectTheme('Theme 3')">
-                    <h3>Theme 3: Business Decisions & Strategy</h3>
-                    <p>Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
-                </div>
-                
-                <div class="theme-card" onclick="selectTheme('Theme 4')">
-                    <h3>Theme 4: Global Business</h3>
-                    <p>Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
-                </div>
+                <button class="theme-btn" onclick="selectTheme('Theme 1')">Theme 1<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Marketing & People</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 2')">Theme 2<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Managing Business Activities</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 3')">Theme 3<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Business Decisions & Strategy</span></button>
+                <button class="theme-btn" onclick="selectTheme('Theme 4')">Theme 4<br><span style="font-size:0.8rem; font-weight:normal; color:var(--text-muted);">Global Business</span></button>
             </div>
         </div>
 
-        <!-- Question Container View (Hidden Initially) -->
-        <div id="question-container" style="display: none;">
-            <div class="question-header">
-                <span id="question-meta">Theme 1 (Marks: 4)</span>
-                <span id="question-counter">Question 1 of 4</span>
+        <!-- Question & Practice Screen -->
+        <div id="question-container" class="card" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span id="question-meta" class="meta-tag">Theme 1 (Marks: 4)</span>
+                <span id="question-counter" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Question 1 of 10</span>
             </div>
-
-            <div class="extract-box" id="extract-text">
-                Extract details go here...
-            </div>
-
-            <div id="question-text">
-                Question statement goes here...
-            </div>
+            
+            <div id="extract-text" class="extract-box">Loading extract...</div>
+            <h3 id="question-text" style="margin-top: 1rem; font-size: 1.1rem;">Loading question text...</h3>
 
             <!-- Input Section -->
-            <div id="input-section">
-                <textarea id="student-answer-input" placeholder="Type your structured exam answer or calculation response here..."></textarea>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <button class="secondary-btn" onclick="backToThemes()">Back to Themes</button>
-                    <button class="primary-btn" onclick="submitAnswer()">Submit Answer</button>
+            <div id="input-section" style="margin-top: 1.5rem;">
+                <label for="student-answer-input" style="font-weight: 600; font-size: 0.9rem; display: block;">Your Answer / Calculation:</label>
+                <textarea id="student-answer-input" placeholder="Type your calculation steps or extended analytical response here..."></textarea>
+                <div style="margin-top: 1rem; text-align: right;">
+                    <button class="primary-btn" onclick="submitAnswer()">Submit & View Mark Scheme</button>
                 </div>
             </div>
 
-            <!-- Feedback Section (Hidden Initially) -->
-            <div id="feedback-section" style="display: none;">
-                <div class="feedback-block">
-                    <h4>Your Answer:</h4>
-                    <p id="displayed-student-answer" style="font-style: italic; color: #475569;"></p>
+            <!-- Feedback / Mark Scheme Section -->
+            <div id="feedback-section" style="display: none; margin-top: 1.5rem;">
+                <div class="feedback-box">
+                    <h4 style="margin-top: 0; color: #166534;">📊 Evaluation & Mark Scheme Guidance</h4>
+                    <p><strong>Your Answer:</strong> <span id="displayed-student-answer" style="font-style: italic;"></span></p>
+                    <div id="marks-awarded-display" style="font-weight: 700; margin-bottom: 1rem;"></div>
+                    
+                    <hr style="border: 0; border-top: 1px solid #bbf7d0; margin: 1rem 0;">
+                    
+                    <p style="margin-bottom: 0.2rem; font-weight: 600; color: #166534;">Official Model Mark Scheme Answer:</p>
+                    <p id="model-answer-text" style="white-space: pre-line; background: white; padding: 0.75rem; border: 1px solid #bbf7d0; border-radius: 6px;"></p>
+                    
+                    <p style="margin-bottom: 0.2rem; font-weight: 600; color: #166534; margin-top: 1rem;">Examiner Tips & Breakdown:</p>
+                    <p id="explanation-text" style="white-space: pre-line; background: white; padding: 0.75rem; border: 1px solid #bbf7d0; border-radius: 6px;"></p>
                 </div>
 
-                <div class="feedback-block" style="margin-top: 1rem;">
-                    <div id="marks-awarded-display" style="font-weight: 700;">Marks Awarded: 0 / 0</div>
-                </div>
-
-                <div class="feedback-block" style="margin-top: 1rem;">
-                    <h4>Model Answer / Mark Scheme:</h4>
-                    <p id="model-answer-text" style="white-space: pre-line;"></p>
-                </div>
-
-                <div class="feedback-block" style="margin-top: 1rem;">
-                    <h4>Examiner Explanation & Theory Tips:</h4>
-                    <p id="explanation-text" style="white-space: pre-line;"></p>
-                </div>
-
-                <div class="action-row">
+                <div class="action-bar">
                     <button class="secondary-btn" onclick="backToThemes()">Back to Themes</button>
-                    <button class="primary-btn" onclick="nextQuestion()">Next Question &rarr;</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next Question ➔</button>
                 </div>
             </div>
         </div>
     </main>
-
-    <footer>
-        A-Level Business Studies Revision Platform &bull; Edexcel Aligned
-    </footer>
 
     <script src="script.js"></script>
 </body>
