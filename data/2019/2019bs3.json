@@ -11,7 +11,7 @@
           "topic": "Strategy & Marketing",
           "marks": 8,
           "question": "Assess two reasons why the demand for holidays is typically income elastic.",
-          "modelAnswer": "Holidays are generally luxury discretionary goods. When consumer disposable incomes rise, demand increases disproportionately; conversely, in economic downturns, bookings drop sharply as households cut non-essential spending.",
+          "modelAnswer": "Holidays are generally luxury discretionary goods. When consumer disposable incomes rise, demand increases disproportionately; conversely, in economic downturns, bookings drop sharply.",
           "reasoning": "Award 2 marks for knowledge of YED, 2 marks for application to travel markets, and 4 marks for analytical chains of reasoning regarding income shifts."
         }
       ]
@@ -30,26 +30,6 @@
         "topic": "International location choice",
         "marks": 10,
         "text": "Assess the factors that a global leisure business should consider when choosing an international location."
-      },
-      {
-        "question_number": "1 (c)",
-        "topic": "Exchange rate fluctuations",
-        "marks": 12,
-        "text": "Assess the impact of exchange rate fluctuations on UK-based holiday businesses and domestic tourism."
-      }
-    ],
-    "Competitive Strategy": [
-      {
-        "question_number": "1 (d)",
-        "topic": "Pricing strategies in competitive markets",
-        "marks": 20,
-        "text": "Evaluate alternative pricing strategies for a budget tour operator operating in a highly competitive global market."
-      },
-      {
-        "question_number": "2 (d)",
-        "topic": "Cost competitiveness vs product differentiation",
-        "marks": 20,
-        "text": "Evaluate whether cost competitiveness or product differentiation is a more successful long-term strategy for a major airline group."
       }
     ]
   }
