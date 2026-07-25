@@ -1,1 +1,15 @@
-
+{
+  "year": "2020",
+  "paper": "Paper 2",
+  "title": "Business Activities, Decisions and Strategy",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "marks": 4,
+      "topic": "Finance - Break-Even Output",
+      "stimulus": "Extract A provides fixed and variable cost structures for a retail business.",
+      "question_text": "Calculate the break-even output level using the data provided in Extract A. Show your working.",
+      "mark_scheme": "Formula: Fixed Costs / Contribution per unit. Correct formula application and output number."
+    }
+  ]
+}
