@@ -1,15 +1,62 @@
 {
   "year": "2020",
-  "paper": "Paper 1",
+  "paper": "1",
+  "reference": "9BS0/01",
   "title": "Marketing, People and Global Businesses",
-  "questions": [
+  "sections": [
     {
-      "question_number": "1(a)",
-      "marks": 4,
-      "topic": "Marketing - Market Share",
-      "stimulus": "Extract A provides sales figures for competing mass-market retailers.",
-      "question_text": "Calculate, to 2 decimal places, the market share of the specified business using the data in Extract A. Show your working.",
-      "mark_scheme": "Formula: (Firm Sales / Total Market Sales) * 100. Correct substitution and percentage output."
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Marketing",
+          "marks": 4,
+          "question": "Calculate percentage market share using the sales data tables provided in Extract A. Show your working.",
+          "modelAnswer": "Market Share = (Firm Sales / Total Market Sales) * 100. Correct substitution yields the final percentage rounded to 2 decimal places.",
+          "reasoning": "1 mark for formula selection, 2 marks for data extraction and substitution, 1 mark for correct final percentage calculation."
+        }
+      ]
     }
-  ]
+  ],
+  "topics": {
+    "Marketing": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Market share calculation",
+        "marks": 4,
+        "text": "Calculate percentage market share or sales growth using extract tables."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Income elasticity response",
+        "marks": 4,
+        "text": "Explain one way a retail business can respond to a change in consumer income elasticity."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Primary market research",
+        "marks": 10,
+        "text": "Assess the value of primary market research when launching a new product line."
+      }
+    ],
+    "Global Business": [
+      {
+        "question_number": "2 (a)",
+        "topic": "Drivers of globalisation",
+        "marks": 4,
+        "text": "Define globalisation and explain one driver of globalisation for a retail business."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Protectionist tariffs",
+        "marks": 10,
+        "text": "Assess the impact of protectionist tariffs on a multinational manufacturing company."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Standardisation vs Glocalisation",
+        "marks": 20,
+        "text": "Evaluate whether multinational corporations should adopt a glocalisation strategy or standardise their global marketing mix."
+      }
+    ]
+  }
 }
