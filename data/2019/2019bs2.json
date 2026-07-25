@@ -1,1 +1,23 @@
-
+{
+  "year": "2019",
+  "paper": "Paper 2",
+  "title": "Business Activities, Decisions and Strategy",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "marks": 4,
+      "topic": "Finance - Profit Calculation",
+      "stimulus": "Extract A details cost and revenue figures for VisionSpring production.",
+      "question_text": "Using Extract A, calculate the profit per pair of glasses made by VisionSpring. Show your working.",
+      "mark_scheme": "1 mark for identifying revenue per unit, 1 mark for total costs per unit, 2 marks for correct subtraction and final value."
+    },
+    {
+      "question_number": "2(d)",
+      "marks": 12,
+      "topic": "Finance - Investment Appraisal",
+      "stimulus": "Extracts outline projected cash flows for new automated machinery.",
+      "question_text": "Assess the usefulness of investment appraisal methods (such as Payback or ARR) when deciding on new production technology.",
+      "mark_scheme": "AO1 (2 marks) Knowledge of methods. AO2 (2 marks) Contextual application to manufacturing. AO3 (4 marks) Analysis of quantitative reliability vs qualitative limitations. AO4 (4 marks) Balanced conclusion."
+    }
+  ]
+}
