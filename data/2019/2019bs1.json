@@ -1,23 +1,95 @@
 {
   "year": "2019",
-  "paper": "Paper 1",
+  "paper": "1",
+  "reference": "9BS0/01",
   "title": "Marketing, People and Global Businesses",
-  "questions": [
+  "sections": [
     {
-      "question_number": "1(a)",
-      "marks": 4,
-      "topic": "Marketing - Percentage Change",
-      "stimulus": "Extract A provides music streaming subscriber figures showing growth from 80m to 100m.",
-      "question_text": "Using the data in Extract A, calculate, to 2 decimal places, the percentage increase in subscribers. Show your working.",
-      "mark_scheme": "1 mark for formula ((Change / Original) * 100), 1 mark for absolute change (20m), 1 mark for substitution, 1 mark for correct final answer (25.00%)."
-    },
-    {
-      "question_number": "1(e)",
-      "marks": 20,
-      "topic": "Marketing - Product Life Cycle & Growth",
-      "stimulus": "Extracts detail Spotify's market strategy and extension strategies in digital media.",
-      "question_text": "Evaluate whether extending the product life cycle is the most effective strategy for a music streaming business to achieve long-term growth.",
-      "mark_scheme": "Level 4 (16-20 marks): Balanced evaluation of extension strategies (e.g., updating features, international expansion) versus continuous innovation, supported by contextual application to digital streaming."
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Marketing",
+          "marks": 4,
+          "question": "Using the data in Extract A, calculate, to 2 decimal places, the percentage increase in subscribers for Spotify. Show your working.",
+          "modelAnswer": "Percentage change = ((100m - 80m) / 80m) * 100 = 25.00%.",
+          "reasoning": "1 mark for formula, 1 mark for calculating absolute change, 1 mark for substitution, 1 mark for correct final answer with 2 decimal places."
+        },
+        {
+          "topic": "Marketing",
+          "marks": 20,
+          "question": "Evaluate whether extending the product life cycle is the most effective strategy for a music streaming business to achieve long-term growth.",
+          "modelAnswer": "Extension strategies (like exclusive content or platform redesigns) maintain user base without incurring huge R&D costs. However, in a dynamic tech market, continuous innovation and new market development are vital to prevent obsolescence against giants like Apple.",
+          "reasoning": "Award up to 4 marks for knowledge/application, 8 marks for balanced analysis of extension vs innovation, and 8 marks for a supported evaluation."
+        }
+      ]
     }
-  ]
+  ],
+  "topics": {
+    "Marketing": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Percentage growth calculation",
+        "marks": 4,
+        "text": "Using the data in Extract A, calculate, to 2 decimal places, the percentage increase in music streaming subscribers."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Operating at a loss",
+        "marks": 4,
+        "text": "Explain one reason why music streaming businesses may operate at a loss during rapid expansion phases."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Public Limited Company flotation",
+        "marks": 10,
+        "text": "Assess the likely benefits for Spotify of becoming a public limited company through a stock market flotation."
+      },
+      {
+        "question_number": "1 (d)",
+        "topic": "Dynamic markets",
+        "marks": 12,
+        "text": "Assess the implications for a business such as Spotify of operating in a highly dynamic digital market."
+      }
+    ],
+    "Managing People": [
+      {
+        "question_number": "1 (e)",
+        "topic": "Product life cycle and growth",
+        "marks": 20,
+        "text": "Evaluate whether extending the product life cycle is the most effective strategy for a music streaming business to achieve long-term growth."
+      }
+    ],
+    "Global Business & International Trade": [
+      {
+        "question_number": "2 (a)",
+        "topic": "Market share calculation",
+        "marks": 4,
+        "text": "Using extract data, calculate the market share of a specified independent music provider."
+      },
+      {
+        "question_number": "2 (b)",
+        "topic": "Global operations benefit",
+        "marks": 4,
+        "text": "Explain one way a record label could benefit from operating globally."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Copyright infringement",
+        "marks": 10,
+        "text": "Assess the challenges of copyright infringement for businesses operating in Asian digital markets."
+      },
+      {
+        "question_number": "2 (d)",
+        "topic": "Competitive pressure from tech giants",
+        "marks": 12,
+        "text": "Assess the likely impact of increased competition from tech giants on independent music streaming services."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Market development in developing economies",
+        "marks": 20,
+        "text": "Evaluate alternative market development strategies for a global digital media business entering developing economies."
+      }
+    ]
+  }
 }
