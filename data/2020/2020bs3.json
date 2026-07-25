@@ -30,21 +30,9 @@
         "topic": "International location decision",
         "marks": 10,
         "text": "Assess the challenges faced by a business choosing a new international production location."
-      },
-      {
-        "question_number": "1 (c)",
-        "topic": "Interest rate changes",
-        "marks": 12,
-        "text": "Assess the strategic implications of changes in interest rates on business investment decisions."
       }
     ],
     "Operations & Project Management": [
-      {
-        "question_number": "2 (a)",
-        "topic": "Total Quality Management (TQM)",
-        "marks": 8,
-        "text": "Assess two operational benefits of implementing Total Quality Management (TQM)."
-      },
       {
         "question_number": "2 (b)",
         "topic": "Network diagrams / Critical Path Analysis",
