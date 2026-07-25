@@ -1,1 +1,15 @@
-
+{
+  "year": "2020",
+  "paper": "Paper 3",
+  "title": "Investigating Business in a Competitive Environment",
+  "questions": [
+    {
+      "question_number": "1(d)",
+      "marks": 20,
+      "topic": "Strategy - Ansoff's Matrix",
+      "stimulus": "Extracts detail market expansion plans for a mature retail corporation.",
+      "question_text": "Evaluate alternative growth strategies using Ansoff's Matrix for a mature retail corporation.",
+      "mark_scheme": "Level 4 (16-20 marks): In-depth evaluation assessing risk versus reward of market development versus diversification, heavily backed by context."
+    }
+  ]
+}
