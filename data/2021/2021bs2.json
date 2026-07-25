@@ -1,1 +1,15 @@
-
+{
+  "year": "2021",
+  "paper": "Paper 2",
+  "title": "Business Activities, Decisions and Strategy",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "marks": 4,
+      "topic": "Finance - Net Present Value (NPV)",
+      "stimulus": "Extract A provides cash flow tables and a discount factor table.",
+      "question_text": "Calculate the Net Present Value (NPV) for the proposed project using the discount factors provided. Show your working.",
+      "mark_scheme": "Multiply net cash flows by respective discount factors and subtract initial capital outlay to reach final NPV total."
+    }
+  ]
+}
