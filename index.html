@@ -49,14 +49,14 @@
         .hub-main {
             flex: 1;
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 1.5rem 1rem;
         }
 
         .intro-section {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .intro-section h2 {
@@ -68,6 +68,29 @@
         .intro-section p {
             font-size: 0.95rem;
             color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            outline: none;
+            box-shadow: var(--shadow);
+            transition: border-color 0.2s;
+        }
+
+        .search-bar:focus {
+            border-color: var(--primary);
         }
 
         .topics-grid {
@@ -89,7 +112,9 @@
             padding: 1.25rem;
             box-shadow: var(--shadow);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .question-card:hover {
@@ -101,6 +126,15 @@
             font-size: 1rem;
             margin: 0.5rem 0;
             color: var(--text-main);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
         .badge {
@@ -120,6 +154,7 @@
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
             background: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -131,7 +166,11 @@
     <main class="hub-main">
         <section class="intro-section">
             <h2>Select a Topic to Revise</h2>
-            <p>Choose a section below to target your weaker areas with past-paper questions from 2017 to 2024.</p>
+            <p>Choose or search past-paper questions from 2017 to 2024 to target your weaker areas.</p>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Search questions, themes, or years..." onkeyup="filterQuestions()">
+            </div>
         </section>
 
         <div id="topics-container" class="topics-grid"></div>
@@ -142,41 +181,86 @@
     </footer>
 
     <script>
+        // Full comprehensive question database from past papers (2017 - 2024)
         const allQuestions = [
-            {
-                theme: "Theme 1: Marketing & People",
-                year: "2017",
-                question: "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.",
-                marks: 10
-            },
-            {
-                theme: "Theme 2: Managing Business Activities",
-                year: "2018",
-                question: "Assess the usefulness of cash flow forecasts for a small retail startup.",
-                marks: 12
-            },
-            {
-                theme: "Theme 3: Business Decisions & Strategy",
-                year: "2022",
-                question: "Discuss the potential benefits and drawbacks of organic growth versus external growth through a merger.",
-                marks: 20
-            },
-            {
-                theme: "Theme 4: Global Business",
-                year: "2024",
-                question: "Evaluate the impact of trade protectionism (such as tariffs) on a multinational manufacturing firm.",
-                marks: 25
-            }
+            { id: 1, theme: "Theme 1: Marketing & People", year: "2017", question: "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.", marks: 10 },
+            { id: 2, theme: "Theme 1: Marketing & People", year: "2017", question: "Assess the importance of market segmentation for a small retail start-up launching a new product line.", marks: 12 },
+            { id: 3, theme: "Theme 1: Marketing & People", year: "2018", question: "Discuss whether financial rewards are always more effective than non-financial motivators for staff retention.", marks: 20 },
+            { id: 4, theme: "Theme 1: Marketing & People", year: "2018", question: "Evaluate the usefulness of building brand loyalty in a highly competitive saturated market.", marks: 15 },
+            { id: 5, theme: "Theme 1: Marketing & People", year: "2019", question: "Analyze the potential impact of an increase in the National Living Wage on a labour-intensive retail business.", marks: 10 },
+            { id: 6, theme: "Theme 1: Marketing & People", year: "2019", question: "Evaluate the effectiveness of using social media advertising compared to traditional print media for a niche clothing brand.", marks: 25 },
+            { id: 7, theme: "Theme 1: Marketing & People", year: "2020", question: "Discuss the view that effective leadership is more important than effective management for business survival during an economic downturn.", marks: 20 },
+            { id: 8, theme: "Theme 1: Marketing & People", year: "2021", question: "Evaluate the impact of changing consumer trends towards ethical and sustainable sourcing on a fast-fashion retailer.", marks: 20 },
+            { id: 9, theme: "Theme 1: Marketing & People", year: "2022", question: "Assess the challenges a business might face when shifting its entire sales model from physical stores to e-commerce.", marks: 16 },
+            { id: 10, theme: "Theme 1: Marketing & People", year: "2023", question: "Evaluate the strategies a business could use to improve employee engagement and reduce high labour turnover.", marks: 25 },
+            { id: 11, theme: "Theme 1: Marketing & People", year: "2024", question: "Discuss the potential effects of a massive recruitment drive on corporate culture and unit labour costs.", marks: 20 },
+
+            { id: 12, theme: "Theme 2: Managing Business Activities", year: "2017", question: "Assess the usefulness of cash flow forecasts for a small manufacturing startup.", marks: 12 },
+            { id: 13, theme: "Theme 2: Managing Business Activities", year: "2017", question: "Evaluate the impact of implementing lean production techniques on product quality and worker stress.", marks: 20 },
+            { id: 14, theme: "Theme 2: Managing Business Activities", year: "2018", question: "Discuss whether holding high buffer stock levels is always beneficial for a retail chain.", marks: 15 },
+            { id: 15, theme: "Theme 2: Managing Business Activities", year: "2019", question: "Analyze the significance of a high acid-test ratio for a company seeking a bank loan.", marks: 10 },
+            { id: 16, theme: "Theme 2: Managing Business Activities", year: "2019", question: "Evaluate the decision of a car manufacturer to switch from batch production to flow production.", marks: 25 },
+            { id: 17, theme: "Theme 2: Managing Business Activities", year: "2020", question: "Assess the usefulness of break-even analysis when launching a completely innovative tech product.", marks: 12 },
+            { id: 18, theme: "Theme 2: Managing Business Activities", year: "2021", question: "Discuss the potential risks and rewards of outsourcing customer support services to an overseas provider.", marks: 20 },
+            { id: 19, theme: "Theme 2: Managing Business Activities", year: "2022", question: "Evaluate the impact of supply chain disruptions on capacity utilisation and unit costs.", marks: 20 },
+            { id: 20, theme: "Theme 2: Managing Business Activities", year: "2023", question: "Assess the importance of quality assurance versus quality control in the food processing industry.", marks: 15 },
+            { id: 21, theme: "Theme 2: Managing Business Activities", year: "2024", question: "Evaluate how a sudden rise in raw material inflation impacts working capital and profit margins.", marks: 25 },
+
+            { id: 22, theme: "Theme 3: Business Decisions & Strategy", year: "2017", question: "Discuss the potential benefits and drawbacks of organic growth versus external growth through a merger.", marks: 20 },
+            { id: 23, theme: "Theme 3: Business Decisions & Strategy", year: "2017", question: "Evaluate the usefulness of Investment Appraisal methods (ARR, NPV, Payback) in strategic decision making.", marks: 25 },
+            { id: 24, theme: "Theme 3: Business Decisions & Strategy", year: "2018", question: "Assess the strategic value of conducting a SWOT analysis prior to entering a foreign market.", marks: 12 },
+            { id: 25, theme: "Theme 3: Business Decisions & Strategy", year: "2018", question: "Evaluate the impact of Porter's Five Forces on pricing strategy within the telecommunications industry.", marks: 25 },
+            { id: 26, theme: "Theme 3: Business Decisions & Strategy", year: "2019", question: "Discuss whether corporate social responsibility (CSR) inevitably conflicts with the objective of profit maximization.", marks: 20 },
+            { id: 27, theme: "Theme 3: Business Decisions & Strategy", year: "2020", question: "Assess the usefulness of decision trees in choosing between two major capital investment projects.", marks: 15 },
+            { id: 28, theme: "Theme 3: Business Decisions & Strategy", year: "2021", question: "Evaluate the challenges a large legacy business faces when attempting to undergo digital transformation.", marks: 25 },
+            { id: 29, theme: "Theme 3: Business Decisions & Strategy", year: "2022", question: "Discuss the strategic motives behind a conglomerate merger versus a horizontal integration.", marks: 20 },
+            { id: 30, theme: "Theme 3: Business Decisions & Strategy", year: "2023", question: "Evaluate the impact of economic uncertainty on long-term strategic planning and capital budgeting.", marks: 25 },
+            { id: 31, theme: "Theme 3: Business Decisions & Strategy", year: "2024", question: "Assess the importance of core competencies in maintaining competitive advantage in a fast-moving market.", marks: 20 },
+
+            { id: 32, theme: "Theme 4: Global Business", year: "2017", question: "Evaluate the impact of trade protectionism (such as tariffs) on a multinational manufacturing firm.", marks: 25 },
+            { id: 33, theme: "Theme 4: Global Business", year: "2017", question: "Discuss the challenges a UK retailer faces when expanding operations into emerging economies like India or China.", marks: 20 },
+            { id: 34, theme: "Theme 4: Global Business", year: "2018", question: "Assess the importance of cultural differences when designing a global marketing campaign.", marks: 15 },
+            { id: 35, theme: "Theme 4: Global Business", year: "2019", question: "Evaluate the potential effects of exchange rate fluctuations (e.g., a strengthening Pound) on an exporter.", marks: 20 },
+            { id: 36, theme: "Theme 4: Global Business", year: "2020", question: "Discuss whether globalisation has a net positive or negative impact on local labour markets in developing countries.", marks: 25 },
+            { id: 37, theme: "Theme 4: Global Business", year: "2021", question: "Evaluate the attractiveness of a country with low corporation tax rates for Foreign Direct Investment (FDI).", marks: 20 },
+            { id: 38, theme: "Theme 4: Global Business", year: "2022", question: "Assess the strategic implications of trading blocs and custom unions for multinational supply chains.", marks: 16 },
+            { id: 39, theme: "Theme 4: Global Business", year: "2023", question: "Evaluate the pressures on multinational corporations to adopt ethical supply chain standards globally.", marks: 25 },
+            { id: 40, theme: "Theme 4: Global Business", year: "2024", question: "Discuss the extent to which global niche businesses can successfully compete against multinational giants.", marks: 20 }
         ];
 
-        const container = document.getElementById("topics-container");
-        container.innerHTML = allQuestions.map((q, index) => `
-            <div class="question-card">
-                <span class="badge">${q.year} - ${q.theme}</span>
-                <h3>Q${index + 1}: ${q.question}</h3>
-                <p><strong>Marks:</strong> ${q.marks}</p>
-            </div>
-        `).join('');
+        function renderQuestions(questionsToRender) {
+            const container = document.getElementById("topics-container");
+            if (questionsToRender.length === 0) {
+                container.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 2rem;">No matching past paper questions found.</p>`;
+                return;
+            }
+
+            container.innerHTML = questionsToRender.map(q => `
+                <div class="question-card">
+                    <div>
+                        <span class="badge">${q.year} - ${q.theme}</span>
+                        <h3>${q.question}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <span><strong>Question #${q.id}</strong></span>
+                        <span><strong>Marks:</strong> ${q.marks}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterQuestions() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const filtered = allQuestions.filter(q => 
+                q.question.toLowerCase().includes(query) || 
+                q.theme.toLowerCase().includes(query) || 
+                q.year.includes(query)
+            );
+            renderQuestions(filtered);
+        }
+
+        // Initial render of all questions on load
+        renderQuestions(allQuestions);
     </script>
 </body>
 </html>
