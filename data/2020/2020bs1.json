@@ -1,1 +1,15 @@
-
+{
+  "year": "2020",
+  "paper": "Paper 1",
+  "title": "Marketing, People and Global Businesses",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "marks": 4,
+      "topic": "Marketing - Market Share",
+      "stimulus": "Extract A provides sales figures for competing mass-market retailers.",
+      "question_text": "Calculate, to 2 decimal places, the market share of the specified business using the data in Extract A. Show your working.",
+      "mark_scheme": "Formula: (Firm Sales / Total Market Sales) * 100. Correct substitution and percentage output."
+    }
+  ]
+}
