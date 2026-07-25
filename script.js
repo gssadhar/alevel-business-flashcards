@@ -185,4 +185,8 @@ function nextQuestion() {
 function backToThemes() {
     document.getElementById("question-container").style.display = "none";
     document.getElementById("theme-selection").style.display = "block";
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9372b972118b912dbf5ee56d2435619bb862dbf0
