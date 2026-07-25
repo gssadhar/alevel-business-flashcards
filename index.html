@@ -246,7 +246,7 @@
         <!-- Theme Selection View -->
         <div id="theme-selection">
             <h2>Select a Theme to Revise</h2>
-            <p>Choose an Edexcel Business theme below. Complete detailed feedback, model answers, reasoning, and key terminology are provided on-screen after every submission.</p>
+            <p>Choose an Edexcel Business theme below. Complete mark scheme model answers, calculations, examiner tips, and essay self-assessment are provided on-screen after every submission.</p>
             
             <div class="theme-grid">
                 <div class="theme-card" onclick="selectTheme('Theme 1')">
@@ -303,17 +303,17 @@
                 </div>
 
                 <div class="feedback-block" style="margin-top: 1rem;">
-                    <h4 id="marks-awarded-display" style="color: var(--primary); font-weight: 700;">Marks Awarded: 0 / 0</h4>
+                    <div id="marks-awarded-display" style="font-weight: 700;">Marks Awarded: 0 / 0</div>
                 </div>
 
                 <div class="feedback-block" style="margin-top: 1rem;">
-                    <h4>Model Answer / Guidance:</h4>
+                    <h4>Model Answer / Mark Scheme:</h4>
                     <p id="model-answer-text" style="white-space: pre-line;"></p>
                 </div>
 
                 <div class="feedback-block" style="margin-top: 1rem;">
-                    <h4>Examiner Explanation & Theory:</h4>
-                    <p id="explanation-text"></p>
+                    <h4>Examiner Explanation & Theory Tips:</h4>
+                    <p id="explanation-text" style="white-space: pre-line;"></p>
                 </div>
 
                 <div class="action-row">

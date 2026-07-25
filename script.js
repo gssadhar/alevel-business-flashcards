@@ -1,4 +1,4 @@
-// Complete A-Level Business Question Bank (2017-2021) - Upgraded with Edexcel Mark Scheme Model Answers & Examiner Guidance
+// Complete A-Level Business Question Bank (2017-2021) - Upgraded with Self-Assessment & Edexcel Mark Schemes
 const questionsData = {
     "Theme 1": [
         {
@@ -155,22 +155,52 @@ function submitAnswer() {
     }
     
     let awardedMarks = 0;
+    let markDisplayHtml = "";
+
     if (q.type === "calculation") {
         const numVal = parseFloat(studentInput);
         if (!isNaN(numVal) && numVal >= q.min && numVal <= q.max) {
             awardedMarks = q.marks;
         }
+        markDisplayHtml = `Marks Awarded: ${awardedMarks} / ${q.marks} (Auto-graded calculation)`;
     } else {
-        awardedMarks = studentInput.length > 20 ? q.marks : 0;
+        // Self-assessment mode for essay/extended questions
+        markDisplayHtml = `
+            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 8px; margin-bottom: 0.5rem;">
+                <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #312e81;">✍️ Essay Self-Assessment Mode</p>
+                <p style="margin: 0; font-size: 0.95rem; color: #4338ca;">Compare your answer against the official mark scheme below and honestly evaluate your chains of reasoning (AO2, AO3, AO4):</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-top: 0.75rem;">
+                <label style="font-weight: 600; font-size: 0.95rem;">Select your self-assessed marks (out of ${q.marks}):</label>
+                <select id="self-score" style="padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600;">
+                    ${generateMarkOptions(q.marks)}
+                </select>
+                <button class="primary-btn" style="padding: 0.35rem 0.75rem; font-size: 0.9rem;" onclick="confirmSelfScore(${q.marks})">Confirm Score</button>
+            </div>
+            <p id="confirmed-score-text" style="margin-top: 0.5rem; font-weight: 700; color: var(--primary);"></p>
+        `;
     }
     
     document.getElementById("displayed-student-answer").innerText = `"${studentInput}"`;
-    document.getElementById("marks-awarded-display").innerText = `Marks Awarded: ${awardedMarks} / ${q.marks}`;
+    document.getElementById("marks-awarded-display").innerHTML = markDisplayHtml;
     document.getElementById("model-answer-text").innerText = q.correctAnswer;
     document.getElementById("explanation-text").innerText = q.explanation;
     
     document.getElementById("input-section").style.display = "none";
     document.getElementById("feedback-section").style.display = "block";
+}
+
+function generateMarkOptions(maxMarks) {
+    let options = "";
+    for (let i = 0; i <= maxMarks; i++) {
+        options += `<option value="${i}">${i} marks</option>`;
+    }
+    return options;
+}
+
+function confirmSelfScore(maxMarks) {
+    const selectedScore = document.getElementById("self-score").value;
+    document.getElementById("confirmed-score-text").innerText = `✓ Self-Assessed Score Saved: ${selectedScore} / ${maxMarks} marks`;
 }
 
 function nextQuestion() {
