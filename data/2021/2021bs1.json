@@ -1,15 +1,62 @@
 {
   "year": "2021",
-  "paper": "Paper 1",
+  "paper": "1",
+  "reference": "9BS0/01",
   "title": "Marketing, People and Global Businesses",
-  "questions": [
+  "sections": [
     {
-      "question_number": "2(b)",
-      "marks": 4,
-      "topic": "Global Business - Relative Unit Labor Costs",
-      "stimulus": "Extract B provides labor cost indices across multiple manufacturing economies.",
-      "question_text": "Using the data in Extract B, calculate the percentage change in unit labor costs for the designated country. Show your working.",
-      "mark_scheme": "1 mark formula identification, 2 marks working substitution, 1 mark correct final figure."
+      "section": "Section A",
+      "questions": [
+        {
+          "topic": "Global Business",
+          "marks": 4,
+          "question": "Using the data in Extract B, calculate the relative unit labour cost percentage change. Show your working.",
+          "modelAnswer": "Formula: ((New Value - Original Value) / Original Value) * 100. Correct substitution yields the percentage shift.",
+          "reasoning": "1 mark formula identification, 2 marks working steps, 1 mark correct final numerical output."
+        }
+      ]
     }
-  ]
+  ],
+  "topics": {
+    "Marketing & Design": [
+      {
+        "question_number": "1 (a)",
+        "topic": "Demographic trends and percentage change",
+        "marks": 4,
+        "text": "Calculate percentage change and interpret demographic data trends from extract tables."
+      },
+      {
+        "question_number": "1 (b)",
+        "topic": "Design mix factors",
+        "marks": 4,
+        "text": "Explain one factor that influences the design mix of a physical product (function, aesthetics, economic cost)."
+      },
+      {
+        "question_number": "1 (c)",
+        "topic": "Brand extension",
+        "marks": 10,
+        "text": "Assess the importance of brand extension as a marketing strategy for established businesses."
+      }
+    ],
+    "Global Business & Ethics": [
+      {
+        "question_number": "2 (a)",
+        "topic": "Offshoring operations",
+        "marks": 4,
+        "text": "Explain one reason why a business might choose to offshore its back-office operations."
+      },
+      {
+        "question_number": "2 (c)",
+        "topic": "Exchange rate appreciation impact",
+        "marks": 10,
+        "text": "Assess the impact of exchange rate appreciation on a manufacturing firm that exports heavily."
+      },
+      {
+        "question_number": "2 (e)",
+        "topic": "Ethical dilemmas in supply chains",
+        "marks": 20,
+        "text": "Evaluate the ethical dilemmas faced by multinational corporations operating supply chains in developing nations."
+      }
+    ]
+  }
 }
