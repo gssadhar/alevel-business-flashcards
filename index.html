@@ -3,539 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-Level Business Hub - Edexcel Revision</title>
+    <title>A-Level Business Hub (Edexcel)</title>
+    <!-- Bootstrap CSS for clean styling matching your UI -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --radius: 12px;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            line-height: 1.5;
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        .hub-header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+        .header-bg {
+            background-color: #4f46e5;
             color: white;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-
-        .hub-header h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .hub-main {
-            flex: 1;
-            width: 100%;
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-
-        .intro-section {
-            text-align: center;
+            padding: 2rem 0;
             margin-bottom: 2rem;
-        }
-
-        .intro-section h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .intro-section p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .topics-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-
-        @media (min-width: 640px) {
-            .topics-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .topic-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .topic-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-color: var(--primary);
-        }
-
-        .topic-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .quiz-container {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            display: none;
-        }
-
-        .question-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .badge {
-            background: #e0e7ff;
-            color: var(--primary);
-            font-weight: 600;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-        }
-
-        .question-text {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--text-main);
-        }
-
-        textarea {
-            width: 100%;
-            height: 140px;
-            padding: 0.75rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 1rem;
-            resize: vertical;
-            outline: none;
-            margin-bottom: 1rem;
-        }
-
-        textarea:focus {
-            border-color: var(--primary);
-        }
-
-        .btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .btn:hover {
-            background: var(--primary-hover);
-        }
-
-        .btn-secondary {
-            background: #64748b;
-            margin-left: 0.5rem;
-        }
-
-        .btn-secondary:hover {
-            background: #475569;
-        }
-
-        /* Detailed Feedback Layout on the Same Page */
-        .feedback-box {
-            margin-top: 1.5rem;
-            padding: 1.5rem;
-            background: #f8fafc;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            border-left: 6px solid var(--primary);
-            display: none;
-        }
-
-        .feedback-box h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .feedback-section-block {
-            margin-bottom: 1rem;
-        }
-
-        .feedback-section-block strong {
-            display: block;
-            color: var(--text-main);
-            margin-bottom: 0.25srem;
-            font-size: 0.95rem;
-        }
-
-        .feedback-section-block p, .feedback-section-block ul {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            padding-left: 0.25rem;
-        }
-
-        .term-list {
-            list-style-type: disc;
-            margin-left: 1.2rem;
-            margin-top: 0.25rem;
-        }
-
-        .hub-footer {
             text-align: center;
+        }
+        .theme-card {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .theme-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        .extract-box {
+            background-color: #f1f5f9;
+            border-left: 4px solid #4f46e5;
             padding: 1rem;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            background: white;
-            margin-top: auto;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .student-answer-box {
+            background-color: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 <body>
-    <header class="hub-header">
-        <h1>A-Level Business Hub (Edexcel)</h1>
-    </header>
 
-    <main class="hub-main">
-        <div id="selection-view">
-            <section class="intro-section">
-                <h2>Select a Theme to Revise</h2>
-                <p>Choose an Edexcel Business theme below. Complete detailed feedback, model answers, reasoning, and key terminology are provided on-screen after every submission.</p>
-            </section>
+    <!-- Header -->
+    <div class="header-bg shadow-sm">
+        <h1 class="fw-bold">A-Level Business Hub (Edexcel)</h1>
+    </div>
 
-            <div class="topics-grid">
-                <div class="topic-card" onclick="startQuiz('Theme 1')">
-                    <h3>Theme 1: Marketing & People</h3>
-                    <p>Meeting customer needs, market research, marketing mix, and human resource management.</p>
-                </div>
-                <div class="topic-card" onclick="startQuiz('Theme 2')">
-                    <h3>Theme 2: Managing Business Activities</h3>
-                    <p>Raising finance, financial planning, managing resources, quality, and economic influences.</p>
-                </div>
-                <div class="topic-card" onclick="startQuiz('Theme 3')">
-                    <h3>Theme 3: Business Decisions & Strategy</h3>
-                    <p>Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
-                </div>
-                <div class="topic-card" onclick="startQuiz('Theme 4')">
-                    <h3>Theme 4: Global Business</h3>
-                    <p>Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="quiz-view" class="quiz-container">
-            <div class="question-header">
-                <span id="question-theme" class="badge">Theme</span>
-                <span id="question-counter">Question 1 of X</span>
+    <div class="container mb-5" style="max-width: 900px;">
+        
+        <!-- VIEW 1: Theme Selection -->
+        <div id="theme-selection">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">Select a Theme to Revise</h3>
+                <p class="text-muted">Choose an Edexcel Business theme below. Complete detailed feedback, model answers, reasoning, and key terminology are provided on-screen after every submission.</p>
             </div>
             
-            <div id="question-title" class="question-text">Loading question...</div>
-
-            <div id="answer-section">
-                <textarea id="studentAnswer" placeholder="Type your structured answer here (include business terminology, context, and counter-arguments)..."></textarea>
-                <button class="btn" onclick="submitAnswer()">Submit & View Detailed Feedback</button>
-                <button class="btn btn-secondary" onclick="returnToThemes()">Back to Themes</button>
-            </div>
-
-            <!-- Detailed Feedback Block on the Same Page -->
-            <div id="feedback-section" class="feedback-box">
-                <h3 id="feedback-marks">Marks Awarded: --</h3>
-                
-                <div class="feedback-section-block">
-                    <strong>1. Why Your Answer Scored This Mark (Critique & Flaws):</strong>
-                    <p id="feedback-critique"></p>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 1')">
+                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 1: Marketing & People</h5>
+                        <p class="text-muted mb-0">Meeting customer needs, market research, marketing mix, and human resource management.</p>
+                    </div>
                 </div>
-
-                <div class="feedback-section-block">
-                    <strong>2. Complete Exemplar Model Answer:</strong>
-                    <p id="feedback-model"></p>
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 2')">
+                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 2: Managing Business Activities</h5>
+                        <p class="text-muted mb-0">Raising finance, financial planning, managing resources, quality, and economic influences.</p>
+                    </div>
                 </div>
-
-                <div class="feedback-section-block">
-                    <strong>3. Deep Economic & Business Reasoning:</strong>
-                    <p id="feedback-reasoning"></p>
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 3')">
+                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 3: Business Decisions & Strategy</h5>
+                        <p class="text-muted mb-0">Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
+                    </div>
                 </div>
-
-                <div class="feedback-section-block">
-                    <strong>4. Key Topic Terminology & Definitions:</strong>
-                    <ul id="feedback-terms" class="term-list"></ul>
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 shadow-sm theme-card border-0 rounded-4" onclick="selectTheme('Theme 4')">
+                        <h5 class="fw-bold text-primary" style="color: #4f46e5 !important;">Theme 4: Global Business</h5>
+                        <p class="text-muted mb-0">Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
+                    </div>
                 </div>
-
-                <button class="btn" style="margin-top: 1rem;" onclick="nextQuestion()">Next Question ➔</button>
-                <button class="btn btn-secondary" style="margin-top: 1rem;" onclick="returnToThemes()">Back to Themes</button>
             </div>
         </div>
-    </main>
 
-    <footer class="hub-footer">
-        <p>A-Level Business Studies Revision Platform • Edexcel Aligned</p>
+        <!-- VIEW 2: Question & Feedback Container (Hidden by default) -->
+        <div id="question-container" class="card shadow p-4 border-0 rounded-4" style="display: none;">
+            
+            <!-- Meta & Counter Header -->
+            <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <span id="question-meta" class="badge bg-light text-primary p-2 fs-6 border" style="color: #4f46e5 !important;">Theme 1 (Marks: 10)</span>
+                <span id="question-counter" class="text-muted fw-semibold">Question 1 of 2</span>
+            </div>
+
+            <!-- Reading Material / Extract Context -->
+            <div id="extract-text" class="extract-box text-secondary fst-italic">
+                Extract loading...
+            </div>
+
+            <!-- Question Text -->
+            <h4 id="question-text" class="fw-bold mb-4 text-dark">
+                Question loading...
+            </h4>
+
+            <!-- INPUT SECTION -->
+            <div id="input-section">
+                <textarea id="student-answer-input" class="form-control mb-4 p-3" rows="6" placeholder="Type your detailed answer or numerical calculation here..."></textarea>
+                <div class="d-flex gap-2">
+                    <button class="btn text-white px-4 py-2 fw-semibold" style="background-color: #4f46e5;" onclick="submitAnswer()">Submit & View Detailed Feedback</button>
+                    <button class="btn btn-secondary px-4 py-2 fw-semibold" onclick="backToThemes()">Back to Themes</button>
+                </div>
+            </div>
+
+            <!-- FEEDBACK SECTION (Hidden by default) -->
+            <div id="feedback-section" style="display: none;">
+                
+                <!-- NEW: Student Answer Display Box -->
+                <div class="student-answer-box">
+                    <h6 class="fw-bold text-uppercase text-secondary mb-1" style="font-size: 0.8rem;">Your Submitted Answer:</h6>
+                    <p id="displayed-student-answer" class="mb-0 fw-medium text-dark fst-italic"></p>
+                </div>
+
+                <!-- Marks Awarded Display -->
+                <h4 id="marks-awarded-display" class="fw-bold mb-3" style="color: #4f46e5;">Marks Awarded: 0 / 10</h4>
+                <hr>
+
+                <!-- Model Answer -->
+                <div class="mb-4">
+                    <h6 class="fw-bold text-dark">1. Complete Exemplar Model Answer:</h6>
+                    <p id="model-answer-text" class="text-secondary mb-0"></p>
+                </div>
+
+                <!-- Economic & Business Reasoning -->
+                <div class="mb-4">
+                    <h6 class="fw-bold text-dark">2. Deep Economic & Business Reasoning:</h6>
+                    <p id="explanation-text" class="text-secondary mb-0"></p>
+                </div>
+
+                <div class="d-flex gap-2 mt-4 pt-2 border-top">
+                    <button class="btn text-white px-4 py-2 fw-semibold" style="background-color: #4f46e5;" onclick="nextQuestion()">Next Question ➜</button>
+                    <button class="btn btn-secondary px-4 py-2 fw-semibold" onclick="backToThemes()">Back to Themes</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 text-muted border-top mt-5" style="font-size: 0.9rem;">
+        A-Level Business Studies Revision Platform • Edexcel Aligned
     </footer>
 
-    <script>
-        const questionDatabase = {
-            "Theme 1": [
-                { 
-                    id: 1, 
-                    q: "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.", 
-                    marks: 10, 
-                    keywords: ["elastic", "ped", "revenue", "substitutes", "demand", "price", "increase"], 
-                    critiqueBase: "Your answer needed to clearly connect the Price Elasticity of Demand (PED > 1) formula directly to total revenue outcomes and account for product substitutes.",
-                    model: "A price increase when demand is price elastic causes a disproportionately larger fall in quantity demanded, leading to a severe drop in total revenue. For example, if a luxury coffee shop raises prices by 10% and demand drops by 25%, total revenue falls sharply. However, if the business can build strong brand differentiation or customer loyalty, it can partially offset this substitution effect.",
-                    reasoning: "When PED is elastic (>1), consumers are highly sensitive to price changes because close substitutes are readily available. Raising prices forces consumers to switch competitors instantly, destroying sales volume faster than the higher unit price compensates for.",
-                    terms: [
-                        "Price Elasticity of Demand (PED): A measure of the responsiveness of quantity demanded to a change in price.",
-                        "Total Revenue: Calculated as Price × Quantity Sold; moves in the opposite direction to price when demand is elastic.",
-                        "Substitutes: Alternative goods or services that consumers can easily switch to if prices rise."
-                    ]
-                },
-                { 
-                    id: 2, 
-                    q: "Assess the importance of market segmentation for a small retail start-up launching a new product line.", 
-                    marks: 12, 
-                    keywords: ["segmentation", "target", "niche", "start-up", "resources", "marketing", "demographic"], 
-                    critiqueBase: "Your answer required explicit context regarding start-up constraints (e.g., limited capital) and how targeting specific customer segments maximizes promotional efficiency.",
-                    model: "Segmentation allows start-ups with scarce financial resources to target specific demographic or psychographic consumer groups precisely, maximizing return on marketing expenditure. Instead of wasting capital on mass-market advertising, a start-up can focus on a profitable niche.",
-                    reasoning: "Start-ups face a liability of newness and restricted cash flows. Blanket marketing campaigns lead to high cash burn with low conversion rates. Focusing on a distinct segment ensures higher marketing productivity and establishes an initial loyal customer base.",
-                    terms: [
-                        "Market Segmentation: Dividing a broad target market into subsets of consumers who have common needs and priorities.",
-                        "Niche Market: A small, specialized segment of a larger market targeted by businesses with distinct offerings.",
-                        "Liability of Newness: The higher risk of failure associated with newly established startup firms."
-                    ]
-                }
-            ],
-            "Theme 2": [
-                { 
-                    id: 3, 
-                    q: "Assess the usefulness of cash flow forecasts for a small manufacturing startup.", 
-                    marks: 12, 
-                    keywords: ["cash", "flow", "forecast", "liquidity", "overdraft", "startup", "profit"], 
-                    critiqueBase: "Your answer needed to highlight the distinction between profit and cash flow, explaining how forecasts identify liquidity shortages but remain vulnerable to inaccurate sales assumptions.",
-                    model: "Cash flow forecasts help identify potential liquidity gaps well in advance, allowing founders to negotiate bank overdrafts or manage trade credit terms. However, they rely heavily on subjective sales estimates, which can easily prove inaccurate for an unproven manufacturing startup.",
-                    reasoning: "Profit is recorded when sales are made, but cash flow tracks actual physical money entering and leaving the bank account. Manufacturing startups have heavy upfront inventory and machinery costs before receiving customer payments, making cash flow forecasting vital for survival.",
-                    terms: [
-                        "Cash Flow Forecast: A prediction of future cash inflows and outflows over a specific time period.",
-                        "Liquidity: Measure of how easily a business can access cash to meet short-term financial obligations.",
-                        "Working Capital: Current assets minus current liabilities, representing day-to-day operating funds."
-                    ]
-                },
-                { 
-                    id: 4, 
-                    q: "Evaluate the impact of implementing lean production techniques on product quality and worker stress.", 
-                    marks: 20, 
-                    keywords: ["lean", "waste", "jit", "quality", "kaizen", "stress", "efficiency"], 
-                    critiqueBase: "Your answer needed to balance the long-term efficiency gains and waste reduction of lean methods against JIT supply chain risks and employee burnout.",
-                    model: "Lean manufacturing eliminates operational waste and reduces inventory holding costs, boosting efficiency and product quality through continuous improvement (Kaizen). However, zero-buffer Just-In-Time (JIT) systems leave operations highly vulnerable to supplier delays and increase workplace pressure on employees.",
-                    reasoning: "Lean production removes safety buffers like excess stock or idle staff. While this cuts costs, it creates a high-pressure environment where any single supply chain bottleneck or machine failure halts total production, raising worker anxiety.",
-                    terms: [
-                        "Lean Production: Systematic methods aimed at minimizing waste within manufacturing systems while simultaneously maximizing productivity.",
-                        "Just-in-Time (JIT): Inventory management strategy where materials are ordered and delivered only as they are needed in the production process.",
-                        "Kaizen: Japanese business philosophy focusing on continuous, incremental workplace improvements."
-                    ]
-                }
-            ],
-            "Theme 3": [
-                { 
-                    id: 5, 
-                    q: "Evaluate the usefulness of Investment Appraisal methods (ARR, NPV, Payback) in strategic decision making.", 
-                    marks: 25, 
-                    keywords: ["npv", "payback", "arr", "discount", "investment", "cash", "time"], 
-                    critiqueBase: "Your answer required a critical comparison between NPV (accounting for the time value of money) and Payback limitations, supported by quantitative versus qualitative evaluation.",
-                    model: "NPV is the superior investment appraisal method because it accounts for the time value of money by discounting future cash flows, whereas payback ignores cash flows generated after the payback threshold. Nonetheless, all quantitative methods must be balanced against qualitative strategic factors like brand alignment and management risk tolerance.",
-                    reasoning: "Money received today is worth more than money received in five years due to inflation and potential return on investment. NPV captures this economic reality, whereas simpler methods like payback can encourage short-termism by ignoring long-term profitability.",
-                    terms: [
-                        "Net Present Value (NPV): Calculates the present value of future cash flows discounted back at a specific rate.",
-                        "Payback Period: The length of time required for an investment project to recover its initial outlay.",
-                        "Time Value of Money: The financial principle that money available at the present time is worth more than the identical sum in the future."
-                    ]
-                },
-                { 
-                    id: 6, 
-                    q: "Discuss the potential benefits and drawbacks of organic growth versus external growth through a merger.", 
-                    marks: 20, 
-                    keywords: ["organic", "merger", "external", "growth", "synergy", "culture", "risk"], 
-                    critiqueBase: "Your answer needed to compare the lower risk profile and cultural preservation of organic growth against the rapid market dominance and integration risks of a merger.",
-                    model: "Organic growth is slower and lower risk, protecting corporate culture and avoiding large financial debt. Conversely, external growth via mergers provides rapid market entry and economies of scale, but frequently fails due to severe cultural clashes and integration friction.",
-                    reasoning: "Organic growth relies on a firm's own internal resources and expanded output, keeping financial control intact. Mergers instantly combine assets and market share, creating potential synergies, but human and operational integration barriers often destroy expected shareholder value.",
-                    terms: [
-                        "Organic Growth: Expansion achieved from within a business by increasing output, launching new products, or expanding stores.",
-                        "External Growth: Business expansion achieved by merging with or acquiring another business.",
-                        "Synergy: The financial concept that combined entities produce greater value than the sum of their individual parts (1 + 1 = 3)."
-                    ]
-                }
-            ],
-            "Theme 4": [
-                { 
-                    id: 7, 
-                    q: "Evaluate the impact of trade protectionism (such as tariffs) on a multinational manufacturing firm.", 
-                    marks: 25, 
-                    keywords: ["tariffs", "protectionism", "trade", "multinational", "costs", "supply", "chain"], 
-                    critiqueBase: "Your answer required thorough analysis of import cost inflation, international competitiveness reduction, retaliatory tariff risks, and supply chain restructuring.",
-                    model: "Tariffs artificially inflate import costs for multinational manufacturers, reducing price competitiveness in overseas markets and forcing firms to restructure supply chains or shift production locally. However, domestic tariffs can protect local market share from subsidized foreign competitors.",
-                    reasoning: "Tariffs act as a tax on imports, raising landed product costs. Multinationals operating globally face squeezed profit margins unless they pass costs to consumers or relocate manufacturing facilities inside protected trade blocs.",
-                    terms: [
-                        "Protectionism: Government actions and policies that restrict international trade to protect local businesses and jobs.",
-                        "Tariff: A tax or duty imposed by a government on imported goods and services.",
-                        "Multinational Corporation (MNC): A corporate enterprise that manages production or delivers services in more than one country."
-                    ]
-                },
-                { 
-                    id: 8, 
-                    q: "Evaluate the pressures on multinational corporations to adopt ethical supply chain standards globally.", 
-                    marks: 25, 
-                    keywords: ["ethics", "supply", "chain", "csr", "reputation", "stakeholder", "transparency"], 
-                    critiqueBase: "Your answer needed to evaluate brand reputation protection and stakeholder activism against low-cost manufacturing pressures in developing countries.",
-                    model: "Global supply chain transparency is heavily scrutinized by social media activism and ethical consumers, making adherence to fair labor and environmental standards a strategic necessity. Failing to do so risks catastrophic brand damage, although companies face ongoing pressure to cut costs in developing nations.",
-                    reasoning: "Stakeholder theory highlights that modern corporations are accountable to employees, suppliers, and society at large—not just shareholders. Unethical practices exposed in overseas supply chains spread instantly online, destroying consumer trust and long-term revenues.",
-                    terms: [
-                        "Corporate Social Responsibility (CSR): A business model that helps a company be socially accountable to itself, its stakeholders, and the public.",
-                        "Stakeholder: Any individual or group with an interest in the business operations and performance.",
-                        "Supply Chain Transparency: The degree to which a company's supply chain data is publicly open and verifiable."
-                    ]
-                }
-            ]
-        };
-
-        let currentTheme = '';
-        let currentQuestions = [];
-        let currentIndex = 0;
-
-        function startQuiz(themeName) {
-            currentTheme = themeName;
-            currentQuestions = [...questionDatabase[themeName]].sort(() => Math.random() - 0.5);
-            currentIndex = 0;
-
-            document.getElementById('selection-view').style.display = 'none';
-            document.getElementById('quiz-view').style.display = 'block';
-            loadCurrentQuestion();
-        }
-
-        function loadCurrentQuestion() {
-            const q = currentQuestions[currentIndex];
-            document.getElementById('question-theme').innerText = `${currentTheme} (Marks: ${q.marks})`;
-            document.getElementById('question-counter').innerText = `Question ${currentIndex + 1} of ${currentQuestions.length}`;
-            document.getElementById('question-title').innerText = q.q;
-            document.getElementById('studentAnswer').value = '';
-            document.getElementById('feedback-section').style.display = 'none';
-            document.getElementById('answer-section').style.display = 'block';
-        }
-
-        function submitAnswer() {
-            const studentText = document.getElementById('studentAnswer').value.trim().toLowerCase();
-            if (!studentText) {
-                alert('Please type your answer before submitting.');
-                return;
-            }
-
-            const q = currentQuestions[currentIndex];
-            const words = studentText.split(/\s+/);
-            
-            // Validation check for gibberish or extremely short answers
-            if (words.length < 5 || /^[asdfghjklqwertyuiopzxcvbnm\s]+$/.test(studentText)) {
-                displayFullFeedback(0, q, "Your answer was detected as invalid or gibberish. No relevant business terminology, context, or analytical structure was included, resulting in 0 marks.");
-                return;
-            }
-
-            // Keyword match count
-            let matchedKeywords = 0;
-            q.keywords.forEach(kw => {
-                if (studentText.includes(kw)) matchedKeywords++;
-            });
-
-            const keywordRatio = matchedKeywords / q.keywords.length;
-            let calculatedMarks = 0;
-
-            if (keywordRatio >= 0.7 && words.length >= 40) {
-                calculatedMarks = Math.floor(q.marks * 0.85);
-            } else if (keywordRatio >= 0.4 && words.length >= 25) {
-                calculatedMarks = Math.floor(q.marks * 0.5);
-            } else if (words.length >= 10) {
-                calculatedMarks = Math.floor(q.marks * 0.2);
-            } else {
-                calculatedMarks = 0;
-            }
-
-            let critique = `Your response matched ${matchedKeywords} out of ${q.keywords.length} key mark-scheme terms. `;
-            if (calculatedMarks < q.marks * 0.4) {
-                critique += `Specific Flaws: ${q.critiqueBase} Your answer lacked sufficient business vocabulary and structured chains of reasoning to secure higher bands.`;
-            } else {
-                critique += `Good attempt with sound terminology, though ensure you strengthen your counter-arguments and commercial context to achieve full top-band marks.`;
-            }
-
-            displayFullFeedback(calculatedMarks, q, critique);
-        }
-
-        function displayFullFeedback(marks, q, critiqueText) {
-            document.getElementById('feedback-marks').innerText = `Marks Awarded: ${marks} / ${q.marks}`;
-            document.getElementById('feedback-critique').innerText = critiqueText;
-            document.getElementById('feedback-model').innerText = q.model;
-            document.getElementById('feedback-reasoning').innerText = q.reasoning;
-            
-            const termsList = document.getElementById('feedback-terms');
-            termsList.innerHTML = '';
-            q.terms.forEach(term => {
-                const li = document.createElement('li');
-                li.innerText = term;
-                termsList.appendChild(li);
-            });
-
-            document.getElementById('answer-section').style.display = 'none';
-            document.getElementById('feedback-section').style.display = 'block';
-        }
-
-        function nextQuestion() {
-            currentIndex++;
-            if (currentIndex < currentQuestions.length) {
-                loadCurrentQuestion();
-            } else {
-                alert('You have completed all questions in this theme! Returning to theme selection.');
-                returnToThemes();
-            }
-        }
-
-        function returnToThemes() {
-            document.getElementById('quiz-view').style.display = 'none';
-            document.getElementById('selection-view').style.display = 'block';
-        }
-    </script>
+    <!-- Connect Frontend Script -->
+    <script src="script.js"></script>
 </body>
 </html>
