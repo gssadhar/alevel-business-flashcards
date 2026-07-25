@@ -6,15 +6,16 @@
     <title>A-Level Business Studies Exam Hub (Edexcel)</title>
     <style>
         :root {
-            --primary: #0f172a; /* Slate 900 for a sophisticated corporate look */
-            --primary-hover: #1e293b;
-            --accent: #2563eb; /* Royal blue interactive highlights */
-            --bg-color: #f1f5f9;
+            --primary: #4338ca; /* Deep Indigo */
+            --primary-hover: #3730a3;
+            --accent: #06b6d4; /* Vibrant Cyan */
+            --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+            --bg-color: #f8fafc;
             --card-bg: #ffffff;
             --text-main: #334155;
             --text-heading: #0f172a;
-            --border: #cbd5e1;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --border: #e2e8f0;
+            --shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.08);
         }
 
         body {
@@ -30,23 +31,25 @@
         }
 
         header {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 2.5rem;
+            background: var(--card-bg);
+            border-bottom: 2px solid #e0e7ff;
+            padding: 1.25rem 2.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         header h1 {
-            font-size: 1.15rem;
-            font-weight: 700;
+            font-size: 1.25rem;
+            font-weight: 800;
             margin: 0;
-            color: var(--text-heading);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             letter-spacing: -0.025em;
         }
 
@@ -62,15 +65,16 @@
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 2.5rem;
             box-shadow: var(--shadow);
             margin-bottom: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card h2 {
             color: var(--text-heading);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-top: 0;
             letter-spacing: -0.02em;
         }
@@ -83,92 +87,111 @@
         }
 
         .theme-btn {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
+            background: linear-gradient(to bottom, #ffffff, #fafafa);
+            border: 2px solid var(--border);
+            border-radius: 12px;
             padding: 1.5rem 1.25rem;
-            font-size: 0.95rem;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 700;
             color: var(--text-heading);
             cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: left;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.2s ease;
         }
 
         .theme-btn:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
-            background-color: #fafafa;
+            border-color: #6366f1;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -5px rgba(99, 102, 241, 0.15);
+            background-color: #f5f3ff;
+        }
+
+        .theme-btn:hover::before {
+            opacity: 1;
         }
 
         .primary-btn {
-            background-color: var(--accent);
+            background: var(--accent-gradient);
             color: white;
             border: none;
-            border-radius: 6px;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
+            border-radius: 8px;
+            padding: 0.85rem 1.75rem;
+            font-weight: 700;
             font-size: 0.95rem;
             cursor: pointer;
-            transition: background-color 0.15s ease;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
         }
 
         .primary-btn:hover {
-            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+            filter: brightness(1.05);
         }
 
         .secondary-btn {
             background-color: white;
-            color: var(--text-main);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 0.65rem 1.25rem;
-            font-weight: 600;
+            color: var(--primary);
+            border: 2px solid #e0e7ff;
+            border-radius: 8px;
+            padding: 0.75rem 1.4rem;
+            font-weight: 700;
             font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.2s ease;
         }
 
         .secondary-btn:hover {
-            background-color: #f8fafc;
-            border-color: #94a3b8;
-            color: var(--text-heading);
+            background-color: #eef2ff;
+            border-color: #c7d2fe;
+            transform: translateY(-1px);
         }
 
         .meta-tag {
             display: inline-block;
-            background: #e0f2fe;
-            color: #0369a1;
-            padding: 0.3rem 0.85rem;
-            border-radius: 6px;
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 1rem;
         }
 
         .extract-box {
-            background-color: #f8fafc;
+            background: linear-gradient(to right, #f8fafc, #f1f5f9);
             border: 1px solid var(--border);
-            border-left: 4px solid var(--accent);
-            padding: 1.25rem;
+            border-left: 5px solid #4f46e5;
+            padding: 1.25rem 1.5rem;
             margin: 1.25rem 0;
             font-style: italic;
             color: #475569;
-            border-radius: 0 6px 6px 0;
-            line-height: 1.5;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.6;
         }
 
         textarea {
             width: 100%;
             height: 140px;
             padding: 1rem;
-            border: 1px solid var(--border);
-            border-radius: 6px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
             font-family: inherit;
             font-size: 0.95rem;
             box-sizing: border-box;
@@ -176,20 +199,22 @@
             margin-top: 0.5rem;
             background-color: #ffffff;
             color: var(--text-heading);
+            transition: all 0.2s ease;
         }
 
         textarea:focus {
             outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+            border-color: #6366f1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
         }
 
         .feedback-box {
-            background-color: #f0fdf4;
+            background: linear-gradient(to bottom, #f0fdf4, #dcfce7);
             border: 1px solid #bbf7d0;
-            padding: 1.75rem;
-            border-radius: 8px;
-            margin-top: 1.25rem;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 12px rgba(22, 101, 52, 0.05);
         }
 
         .action-bar {
@@ -197,7 +222,7 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 2rem;
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--border);
             padding-top: 1.5rem;
         }
     </style>
