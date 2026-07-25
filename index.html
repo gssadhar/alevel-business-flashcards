@@ -104,7 +104,6 @@
             font-size: 1.1rem;
         }
 
-        /* Quiz UI Container */
         .quiz-container {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -140,7 +139,7 @@
 
         textarea {
             width: 100%;
-            height: 120px;
+            height: 140px;
             padding: 0.75rem;
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -218,30 +217,29 @@
         <div id="selection-view">
             <section class="intro-section">
                 <h2>Select a Theme to Revise</h2>
-                <p>Choose an Edexcel Business theme below. Questions are randomised and include past papers alongside predicted future exam questions.</p>
+                <p>Choose an Edexcel Business theme below. Rigorous keyword-based Edexcel mark-scheme validation enabled.</p>
             </section>
 
             <div class="topics-grid">
                 <div class="topic-card" onclick="startQuiz('Theme 1')">
                     <h3>Theme 1: Marketing & People</h3>
-                    <p>Meeting customer needs, market research, marketing mix, entrepreneurs, and human resource management.</p>
+                    <p>Meeting customer needs, market research, marketing mix, and human resource management.</p>
                 </div>
                 <div class="topic-card" onclick="startQuiz('Theme 2')">
                     <h3>Theme 2: Managing Business Activities</h3>
-                    <p>Raising finance, financial planning, managing resource, quality, and economic influences.</p>
+                    <p>Raising finance, financial planning, managing resources, quality, and economic influences.</p>
                 </div>
                 <div class="topic-card" onclick="startQuiz('Theme 3')">
                     <h3>Theme 3: Business Decisions & Strategy</h3>
-                    <p>Business objectives, growth, decision-making techniques, competitiveness, and managing change.</p>
+                    <p>Business objectives, growth, decision-making tools, competitiveness, and strategic management.</p>
                 </div>
                 <div class="topic-card" onclick="startQuiz('Theme 4')">
                     <h3>Theme 4: Global Business</h3>
-                    <p>Globalisation, global markets, expansion strategies, multinational corporations, and ethics.</p>
+                    <p>Globalisation, global markets, expansion strategies, multinational corporations, and global ethics.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Quiz View -->
         <div id="quiz-view" class="quiz-container">
             <div class="question-header">
                 <span id="question-theme" class="badge">Theme</span>
@@ -251,7 +249,7 @@
             <div id="question-title" class="question-text">Loading question...</div>
 
             <div id="answer-section">
-                <textarea id="studentAnswer" placeholder="Type your structured answer here (apply evaluation, context, and chain of reasoning)..."></textarea>
+                <textarea id="studentAnswer" placeholder="Type your structured answer here (include business terminology, context, and counter-arguments)..."></textarea>
                 <button class="btn" onclick="submitAnswer()">Submit & Mark Answer</button>
                 <button class="btn btn-secondary" onclick="returnToThemes()">Back to Themes</button>
             </div>
@@ -260,7 +258,7 @@
                 <h4 id="feedback-marks">Marks Awarded: --</h4>
                 <p><strong>Edexcel Mark Scheme Guidance:</strong> <span id="feedback-rationale"></span></p>
                 <p><strong>Exemplar Model Answer:</strong> <span id="feedback-model"></span></p>
-                <p><strong>Examiner Tips & Suggestions:</strong> <span id="feedback-tips"></span></p>
+                <p><strong>Examiner Feedback & Missing Elements:</strong> <span id="feedback-tips"></span></p>
                 <button class="btn" style="margin-top: 1rem;" onclick="nextQuestion()">Next Question ➔</button>
             </div>
         </div>
@@ -271,29 +269,22 @@
     </footer>
 
     <script>
-        // Comprehensive Question Database including past papers and predicted high-probability future questions
         const questionDatabase = {
             "Theme 1": [
-                { q: "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.", marks: 10, rationale: "Award up to 2 marks for knowledge, 2 marks for application, 3 marks for analysis of revenue fall, and 3 marks for evaluation regarding substitutes and brand loyalty.", model: "A price increase will cause a disproportionate drop in quantity demanded, leading to a significant fall in total revenue. However, if paired with strong brand differentiation, impact can be cushioned.", tips: "Always state PED formula or definition clearly and link price changes directly to total revenue impact." },
-                { q: "Assess the importance of market segmentation for a small retail start-up launching a new product line.", marks: 12, rationale: "Up to 4 marks for knowledge and application, 4 marks for analyzing targeted marketing efficiency, 4 marks for evaluating resource constraints of start-ups.", model: "Segmentation allows start-ups to target limited marketing budgets effectively at specific consumer profiles, maximizing return on investment.", tips: "Give concrete demographic or psychographic examples to secure top-band application marks." },
-                { q: "Discuss whether financial rewards are always more effective than non-financial motivators for staff retention.", marks: 20, rationale: "Balanced argument required. Taylor vs Mayo/Herzberg models, financial vs job enrichment, long-term vs short-term impact.", model: "While financial rewards satisfy primary physiological needs and short-term output, non-financial motivators like empowerment foster long-term loyalty and reduce turnover.", tips: "In a 20-marker, introduce motivational theorists (e.g., Herzberg's two-factor theory) to anchor your analysis." },
-                { q: "Evaluate the impact of changing consumer trends towards ethical sourcing on a fast-fashion retailer.", marks: 20, rationale: "Weigh short-term transition costs against long-term brand equity and consumer switching behavior.", model: "Ethical sourcing increases unit production costs initially, but protects long-term brand reputation against severe negative publicity.", tips: "Use quantitative context where possible (e.g., percentage shifts in Gen Z purchasing habits)." },
-                { q: "Evaluate the potential effects of a massive recruitment drive on corporate culture and unit labour costs.", marks: 25, rationale: "Comprehensive evaluation of onboarding strain, communication breakdowns, dilution of culture vs scaling capacity.", model: "Rapid scaling often causes short-term productivity lags and higher induction costs, temporarily inflating unit labour costs before long-term economies of scale kick in.", tips: "Structure with clear thesis, counter-argument, and synthesized final judgment." }
+                { id: 1, q: "Evaluate the likely impact of a price increase on a business with high price elasticity of demand.", marks: 10, keywords: ["elastic", "ped", "revenue", "substitutes", "demand", "price", "increase"], rationale: "Level 4 (8-10 marks): Detailed analysis of PED formula (>1), impact on total revenue drop, and evaluated against brand loyalty or lack of substitutes.", model: "A price increase when demand is price elastic causes a disproportionately larger fall in quantity demanded, leading to a severe drop in total revenue unless brand equity creates inelastic segments.", tips: "You must explicitly mention PED > 1 and explain the inverse relationship between price and total revenue." },
+                { id: 2, q: "Assess the importance of market segmentation for a small retail start-up launching a new product line.", marks: 12, rationale: "Level 4 (10-12 marks): Clear application to start-ups, analysis of target efficiency, and evaluation of limited budgets or tiny niche sizing.", model: "Segmentation allows start-ups with scarce resources to target specific consumer groups efficiently, minimizing wasted marketing expenditure.", tips: "Always tie your answer back to the constraints or benefits unique to a start-up business." }
             ],
             "Theme 2": [
-                { q: "Assess the usefulness of cash flow forecasts for a small manufacturing startup.", marks: 12, rationale: "Examine liquidity management, overdraft negotiation vs uncertainty of sales predictions.", model: "Cash flow forecasts identify potential liquidity shortfalls in advance, allowing founders to arrange overdrafts, but rely heavily on subjective sales estimates.", tips: "Distinguish clearly between profit and cash flow to score highly." },
-                { q: "Evaluate the impact of implementing lean production techniques on product quality and worker stress.", marks: 20, rationale: "Weigh waste reduction and efficiency gains against JIT supply chain vulnerability and employee burnout.", model: "Lean manufacturing eliminates waste and cuts holding costs, but zero-buffer JIT leaves operations highly susceptible to supplier delays and increases stress.", tips: "Reference specific lean tools such as Kaizen, JIT, or cell production." },
-                { q: "Evaluate how a sudden rise in raw material inflation impacts working capital and profit margins.", marks: 25, rationale: "Analyze cash lock-up in debtors/stock, inability to pass costs to consumers immediately due to competitive pressure.", model: "Raw material inflation squeezes gross profit margins unless prices are raised, which in turn risks sales volume and strains working capital.", tips: "Define working capital clearly and explain the cash operating cycle." }
+                { id: 3, q: "Assess the usefulness of cash flow forecasts for a small manufacturing startup.", marks: 12, rationale: "Level 4 (10-12 marks): Analysis of liquidity management, overdraft planning, and evaluation against subjective/inaccurate sales predictions.", model: "Cash flow forecasts help identify liquidity gaps early so managers can secure overdrafts, though they are only as reliable as underlying sales assumptions.", tips: "Clearly distinguish between profit and cash flow to secure full credit." },
+                { id: 4, q: "Evaluate the impact of implementing lean production techniques on product quality and worker stress.", marks: 20, rationale: "Level 5 (16-20 marks): Balanced evaluation of waste reduction, JIT vulnerabilities, kaizen benefits, and employee burnout risks.", model: "Lean manufacturing cuts waste and lowers unit holding costs, but zero-buffer JIT creates high vulnerability to supply chain shocks and raises workplace stress.", tips: "Incorporate specific lean terminologies such as Kaizen, cell production, or Kanban." }
             ],
             "Theme 3": [
-                { q: "Discuss the potential benefits and drawbacks of organic growth versus external growth through a merger.", marks: 20, rationale: "Compare risk levels, speed of growth, cultural clashes, and control retention.", model: "Organic growth is slower and lower risk, protecting corporate culture, whereas mergers offer rapid market entry and synergy at the cost of integration clashes.", tips: "Use real-world business illustrations to contrast both growth methods." },
-                { q: "Evaluate the usefulness of Investment Appraisal methods (ARR, NPV, Payback) in strategic decision making.", marks: 25, rationale: "Compare accounting return vs cash-flow discounting over time, factoring in discount rate assumptions.", model: "NPV is superior as it accounts for the time value of money, whereas payback ignores cash flows after the payback period.", tips: "Explicitly contrast the limitations of Payback against NPV." },
-                { q: "Evaluate the challenges a large legacy business faces when attempting to undergo digital transformation.", marks: 25, rationale: "Examine inertia, workforce skill gaps, legacy IT integration, and sunk costs.", model: "Legacy systems and entrenched organizational culture create severe resistance to change, risking disruption from agile digital-first competitors.", tips: "Reference Kotter's change model or organizational inertia concepts." }
+                { id: 5, q: "Evaluate the usefulness of Investment Appraisal methods (ARR, NPV, Payback) in strategic decision making.", marks: 25, rationale: "Level 5 (21-25 marks): Deep critical comparison of NPV (time value of money) versus Payback and ARR limitations, supported by strategic context.", model: "NPV is superior for long-term investments as it discounts future cash flows to present value, whereas payback ignores cash flows generated after the payback period.", tips: "For top-band 25 markers, you must explicitly contrast quantitative figures against qualitative strategic factors like brand image." },
+                { id: 6, q: "Discuss the potential benefits and drawbacks of organic growth versus external growth through a merger.", marks: 20, rationale: "Level 5 (16-20 marks): Thorough comparison of risk, speed, control, synergy, and corporate culture integration clashes.", model: "Organic growth is lower risk and preserves corporate culture, but is slow. Mergers provide instant market dominance and synergies, but risk culture clashes.", tips: "Use real business terminology such as economies of scale, integration friction, and synergy." }
             ],
             "Theme 4": [
-                { q: "Evaluate the impact of trade protectionism (such as tariffs) on a multinational manufacturing firm.", marks: 25, rationale: "Analyze cost increases, relocation of production facilities, retaliatory measures, and local market protection.", model: "Tariffs inflate import costs and reduce international competitiveness, forcing multinationals to consider localized production or supply chain restructuring.", tips: "Distinguish between tariffs, quotas, and non-tariff barriers." },
-                { q: "Discuss the challenges a UK retailer faces when expanding operations into emerging economies.", marks: 20, rationale: "Address cultural barriers, distribution infrastructure gaps, regulatory hurdles, and brand unfamiliarity.", model: "Emerging markets offer high volume growth potential, but lack of reliable logistics infrastructure and distinct consumer preferences pose severe execution risks.", tips: "Apply cultural frameworks or strategic choice models (e.g., Bartlett & Ghoshal)." },
-                { q: "Evaluate the pressures on multinational corporations to adopt ethical supply chain standards globally.", marks: 25, rationale: "Examine reputational risk, social media activism, regulatory fines versus cost minimization pressures in developing nations.", model: "Global supply chain transparency is increasingly enforced by consumer activism and legislation, making ethical oversight a strategic necessity rather than optional choice.", tips: "Incorporate stakeholder theory and CSR concepts into your evaluation." }
+                { id: 7, q: "Evaluate the impact of trade protectionism (such as tariffs) on a multinational manufacturing firm.", marks: 25, rationale: "Level 5 (21-25 marks): Detailed analysis of cost inflation, import barriers, relocation strategies, retaliatory tariffs, and global supply chain effects.", model: "Tariffs artificially increase import costs, reducing international price competitiveness and forcing multinationals to restructure supply chains or shift production locally.", tips: "Distinguish between tariffs, import quotas, and non-tariff regulatory barriers." },
+                { id: 8, q: "Evaluate the pressures on multinational corporations to adopt ethical supply chain standards globally.", marks: 25, rationale: "Level 5 (21-25 marks): Comprehensive evaluation of brand reputation protection, stakeholder activism, versus cost-cutting pressures in developing nations.", model: "Global supply chain transparency is heavily policed by social media and ethical consumers, making adherence to fair labor standards a strategic necessity.", tips: "Integrate stakeholder theory and corporate social responsibility (CSR) concepts into your evaluation." }
             ]
         };
 
@@ -303,7 +294,6 @@
 
         function startQuiz(themeName) {
             currentTheme = themeName;
-            // Randomize questions within the selected theme
             currentQuestions = [...questionDatabase[themeName]].sort(() => Math.random() - 0.5);
             currentIndex = 0;
 
@@ -323,22 +313,56 @@
         }
 
         function submitAnswer() {
-            const studentText = document.getElementById('studentAnswer').value.trim();
+            const studentText = document.getElementById('studentAnswer').value.trim().toLowerCase();
             if (!studentText) {
                 alert('Please type your answer before submitting.');
                 return;
             }
 
             const q = currentQuestions[currentIndex];
-            // Simulated Edexcel examiner evaluation based on answer length and keyword quality
-            const wordCount = studentText.split(/\s+/).length;
-            let awardedMarks = Math.min(q.marks, Math.max(Math.floor(q.marks * 0.4), Math.floor(wordCount / 5)));
-            if (awardedMarks >= q.marks) awardedMarks = q.marks - 1; // realistic grading touch
+            
+            // STRICT MARKING ALGORITHM: Check for keyword matches and substantive length
+            const words = studentText.split(/\s+/);
+            if (words.length < 5 || /^[asdfghjklqwertyuiopzxcvbnm\s]+$/.test(studentText)) {
+                // Gibberish or too short check
+                displayFeedback(0, q, "Invalid answer or gibberish detected. No business terminology or reasoning structures were found.");
+                return;
+            }
 
-            document.getElementById('feedback-marks').innerText = `Marks Awarded: ${awardedMarks} / ${q.marks}`;
+            // Count how many required Edexcel keywords the student actually used
+            let matchedKeywords = 0;
+            q.keywords.forEach(kw => {
+                if (studentText.includes(kw)) matchedKeywords++;
+            });
+
+            const keywordRatio = matchedKeywords / q.keywords.length;
+            let calculatedMarks = 0;
+
+            if (keywordRatio >= 0.7 && words.length >= 40) {
+                calculatedMarks = Math.floor(q.marks * 0.85); // High level
+            } else if (keywordRatio >= 0.4 && words.length >= 25) {
+                calculatedMarks = Math.floor(q.marks * 0.5);  // Mid level
+            } else if (words.length >= 10) {
+                calculatedMarks = Math.floor(q.marks * 0.2);  // Low level / limited knowledge
+            } else {
+                calculatedMarks = 0;
+            }
+
+            let feedbackMsg = `You included ${matchedKeywords} out of ${q.keywords.length} key Edexcel mark-scheme terms. `;
+            if (calculatedMarks < q.marks * 0.4) {
+                feedbackMsg += "Your answer lacked sufficient depth, business terminology, or a structured chain of reasoning.";
+            } else {
+                feedbackMsg += "Good use of context and analysis, though ensure your evaluation paragraph weighs long-term vs short-term impacts.";
+            }
+
+            displayFeedback(calculatedMarks, q, feedbackMsg);
+        }
+
+        function displayFeedback(marks, q, customTip) {
+            document.getElementById('feedback-marks').innerText = `Marks Awarded: ${marks} / ${q.marks}`;
             document.getElementById('feedback-rationale').innerText = q.rationale;
             document.getElementById('feedback-model').innerText = q.model;
-            document.getElementById('feedback-tips').innerText = q.tips;
+            document.getElementById('feedback-tips').innerText = `${customTip} | Tip: ${q.tips}`;
 
             document.getElementById('answer-section').style.display = 'none';
             document.getElementById('feedback-section').style.display = 'block';
