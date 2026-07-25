@@ -1,1 +1,15 @@
-
+{
+  "year": "2021",
+  "paper": "Paper 3",
+  "title": "Investigating Business in a Competitive Environment",
+  "questions": [
+    {
+      "question_number": "2(b)",
+      "marks": 10,
+      "topic": "Strategy - Decision Trees",
+      "stimulus": "Case study insert detailing options for corporate technological upgrades.",
+      "question_text": "Assess the usefulness of decision trees in strategic decision-making under conditions of uncertainty.",
+      "mark_scheme": "AO1 (2 marks) Knowledge of expected values/probabilities. AO2 (2 marks) Application to case options. AO3/AO4 (6 marks) Analysis and evaluation of quantitative limitations versus qualitative factors."
+    }
+  ]
+}
