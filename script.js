@@ -1,11 +1,20 @@
 let currentQuestions = [];
 let questionIndex = 0;
-let userPerformance = JSON.parse(localStorage.getItem('revision-stats')) || {}; 
-// Tracks { 'Theme 1': { correct: 0, total: 0 }, ... }
+let userPerformance = JSON.parse(localStorage.getItem('revision-stats')) || {};
+
+// Fisher-Yates shuffle to ensure questions appear in random order
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 function showSection(id) {
     document.querySelectorAll('main > div').forEach(div => div.style.display = 'none');
     document.getElementById(id).style.display = 'block';
+    if (id === 'level-selection') updateProgressDashboard();
 }
 
 function trackResult(theme, isCorrect) {
@@ -15,11 +24,34 @@ function trackResult(theme, isCorrect) {
     localStorage.setItem('revision-stats', JSON.stringify(userPerformance));
 }
 
+function updateProgressDashboard() {
+    const container = document.getElementById('progress-dashboard');
+    if (!container) return;
+    
+    let html = '<h2 class="text-xl font-bold mb-4">Your Revision Status</h2>';
+    for (const theme in userPerformance) {
+        const stats = userPerformance[theme];
+        const percentage = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
+        const color = percentage < 50 ? 'text-red-600' : 'text-emerald-600';
+        
+        html += `
+            <div class="mb-2">
+                <div class="flex justify-between">
+                    <span class="font-medium">${theme}</span>
+                    <span class="${color} font-bold">${percentage}% Correct</span>
+                </div>
+                ${percentage < 50 ? '<p class="text-xs text-red-500 italic">Needs more practice!</p>' : ''}
+            </div>
+        `;
+    }
+    container.innerHTML = html;
+}
+
 function selectALevelSubject(theme) {
     fetch('./data/alevel.json')
         .then(r => r.json())
         .then(data => {
-            currentQuestions = data[theme];
+            currentQuestions = shuffleArray([...data[theme]]);
             questionIndex = 0;
             showSection('question-container');
             showQuestion();
@@ -29,6 +61,7 @@ function selectALevelSubject(theme) {
 
 function showQuestion() {
     const q = currentQuestions[questionIndex];
+    document.getElementById('question-counter').innerText = `Question ${questionIndex + 1} of ${currentQuestions.length}`;
     document.getElementById('question-meta').innerText = q.meta;
     document.getElementById('extract-text').innerText = q.extract;
     document.getElementById('question-text').innerText = q.question;
@@ -38,9 +71,7 @@ function showQuestion() {
 
 function submitAnswer() {
     const q = currentQuestions[questionIndex];
-    const userAnswer = document.getElementById('student-answer-input').value.trim();
-    
-    // Logic to mark as correct (simple keyword match or manual self-check)
+    // In a production app, use a proper modal instead of confirm()
     const isCorrect = confirm("Did you match the key points of the Model Answer?");
     trackResult(q.meta.split(' • ')[0], isCorrect);
     
@@ -54,8 +85,7 @@ function nextQuestion() {
     if (questionIndex < currentQuestions.length) {
         showQuestion();
     } else {
-        alert("Well done! You've finished this set. Check the console for your overall performance stats.");
-        console.table(userPerformance);
+        alert("Well done! You've finished this set.");
         showSection('level-selection');
     }
 }
