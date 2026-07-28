@@ -4,11 +4,13 @@ let userPerformance = JSON.parse(localStorage.getItem('revision-stats')) || {};
 
 // Fisher-Yates shuffle to ensure questions appear in random order
 function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
+    // Create a shallow copy to avoid mutating the original source data
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-    return array;
+    return shuffled;
 }
 
 function showSection(id) {
@@ -22,6 +24,9 @@ function trackResult(theme, isCorrect) {
     userPerformance[theme].total++;
     if (isCorrect) userPerformance[theme].correct++;
     localStorage.setItem('revision-stats', JSON.stringify(userPerformance));
+    
+    // Ensure dashboard updates immediately after tracking
+    updateProgressDashboard();
 }
 
 function updateProgressDashboard() {
@@ -73,7 +78,8 @@ function showQuestion() {
 
 function submitAnswer() {
     const q = currentQuestions[questionIndex];
-    // Using a visual check instead of confirm() for better UI flow
+    
+    // Simplified flow: logic remains, but now triggers the update correctly
     const isCorrect = confirm("Did you match the key points of the Model Answer?");
     trackResult(q.meta.split(' • ')[0], isCorrect);
     
