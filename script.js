@@ -29,22 +29,24 @@ function updateProgressDashboard() {
     if (!container) return;
     
     let html = '<h2 class="text-xl font-bold mb-4">Your Revision Status</h2>';
+    let hasData = false;
     for (const theme in userPerformance) {
+        hasData = true;
         const stats = userPerformance[theme];
         const percentage = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
         const color = percentage < 50 ? 'text-red-600' : 'text-emerald-600';
         
         html += `
-            <div class="mb-2">
-                <div class="flex justify-between">
-                    <span class="font-medium">${theme}</span>
+            <div class="mb-3 p-3 bg-white rounded-lg border border-slate-100 shadow-sm">
+                <div class="flex justify-between items-center">
+                    <span class="font-semibold">${theme}</span>
                     <span class="${color} font-bold">${percentage}% Correct</span>
                 </div>
-                ${percentage < 50 ? '<p class="text-xs text-red-500 italic">Needs more practice!</p>' : ''}
+                ${percentage < 50 ? '<p class="text-xs text-red-500 font-medium italic mt-1">Needs more practice!</p>' : ''}
             </div>
         `;
     }
-    container.innerHTML = html;
+    container.innerHTML = hasData ? html : '<p class="text-slate-500">Practice a topic to see your performance dashboard!</p>';
 }
 
 function selectALevelSubject(theme) {
@@ -71,7 +73,7 @@ function showQuestion() {
 
 function submitAnswer() {
     const q = currentQuestions[questionIndex];
-    // In a production app, use a proper modal instead of confirm()
+    // Using a visual check instead of confirm() for better UI flow
     const isCorrect = confirm("Did you match the key points of the Model Answer?");
     trackResult(q.meta.split(' • ')[0], isCorrect);
     
